@@ -37,7 +37,7 @@ begin
 	C(14) <= G(13) OR (P(13) AND (G(12) OR (P(12) AND (G(11) OR (P(11) AND C(11))))));
 	C(15) <= G(14) OR (P(14) AND (G(13) OR (P(13) AND (G(12) OR (P(12) AND (G(11) OR (P(11) AND C(11))))))));
 	
-	Cout <= G(15) OR (P(15) AND (G(14) OR (P(14) AND (G(13) OR (P(13) AND (G(12) OR (P(12) AND (G(11) OR (P(11) AND C(11))))))))));
 	S <= P XOR C;
+	Cout <= G(15) OR (P(15) AND (G(14) OR (P(14) AND (G(13) OR (P(13) AND (G(12) OR (P(12) AND (G(11) OR (P(11) AND C(11))))))))));
 	
 end behavioral; 
