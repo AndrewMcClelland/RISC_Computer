@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\Project\simulation\modelsim
+Ebus_mux_32_to_1
+Z1 w1486943588
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\Project\simulation\modelsim
+Z5 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd
+Z6 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd
+l0
+L4
+Vz`o=DUccM68Z=oC3<0OGF1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1486949372.478000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd|
+Z10 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 lgHJnAoi:N_hmJfRCESfh1
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 15 bus_mux_32_to_1 0 22 z`o=DUccM68Z=oC3<0OGF1
+l36
+L35
+VS2?Tn@LCVN35^M`GPH0hb3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 0=l;8O@Q@::JjB_F0O9;^2
+!i10b 1
+Ebus_mux_32_to_1_tb
+Z13 w1486949348
+R2
+R3
+R4
+Z14 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd
+Z15 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd
+l0
+L4
+V>UhhbCVMGQzo16U;XHN?B1
+!s100 iV7`BAeZXFn8CQjIR0AJk0
+R7
+31
+!i10b 1
+Z16 !s108 1486949373.291000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd|
+Z18 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd|
+R11
+R12
+Abus_mux_32_to_1_tb_arch
+R2
+R3
+DEx4 work 18 bus_mux_32_to_1_tb 0 22 >UhhbCVMGQzo16U;XHN?B1
+l67
+L8
+V`BDZoklM=Nm0Bjge>cJf]3
+!s100 iiAcc1k710aR32R6US]dk0
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

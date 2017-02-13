@@ -1,0 +1,31 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+
+entity booth_32 is 
+	PORT(	multiplier, multiplicand : in std_logic_vector(31 downto 0);
+				out_product : out std_logic_vector(63 downto 0)
+			 );
+end booth_32;
+
+architecture behavioral of booth_32 is
+begin
+	variable temp_product : std_logic_vector(64 downto 0);	-- 65 bit vector where 64 bits holds 32 bit upper and 32 bit multiplicand, and lowest bit is the previous "bit"
+	variable low_bit : std_logic_vector(1 downto 0);
+	temp_product <= (-multiplicand sll 1) srl 32;									-- create 64 bit (?) product value with negative multiplicand as lower 32 bits
+	low_bit <= temp_product(1 downto 0)								-- set low bit to least sig digit of product
+	
+	for count in 0 to 31 loop
+		low_bit <= temp_product(1 downto 0); 			-- store lower 2 bits in variable
+		
+		if (low_bit = "01") then -- add
+		
+		elsif (low_bit = "10") then -- subtract
+		
+		end if;
+		
+		-- SHIFT PRODUCT RIGHT BY 1 NO MATTER WHAT
+		temp_product <= temp_product srl 1;
+			
+	end loop;
+	
+	out_product <= temp_product(64 downto 1); -- assign output product as the high 64 bits (excludes lowest bit because that is prev bit)
