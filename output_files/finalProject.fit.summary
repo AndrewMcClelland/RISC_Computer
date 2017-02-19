@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sun Feb 12 20:12:25 2017
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Fitter Status : Failed - Mon Feb 13 09:38:46 2017
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : finalProject
-Top-level Entity Name : encoder_32_to_5
+Top-level Entity Name : bus_mux_32_to_1
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 93 / 15,408 ( < 1 % )
-    Total combinational functions : 93 / 15,408 ( < 1 % )
+Total logic elements : 513 / 15,408 ( 3 % )
+    Total combinational functions : 513 / 15,408 ( 3 % )
     Dedicated logic registers : 0 / 15,408 ( 0 % )
 Total registers : 0
-Total pins : 29 / 347 ( 8 % )
+Total pins : 805 / 347 ( 232 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )

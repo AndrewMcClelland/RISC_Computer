@@ -12,12 +12,12 @@ entity bus_mux_32_to_1 is
 	BusMuxIn_R7,
 	BusMuxIn_R8,
 	BusMuxIn_R9,
-	BusMuxIn_R10,
-	BusMuxIn_R11,
-	BusMuxIn_R12,
-	BusMuxIn_R13,
-	BusMuxIn_R14,
-	BusMuxIn_R15,
+	BusMuxIn_R10x,
+	BusMuxIn_R11x,
+	BusMuxIn_R12x,
+	BusMuxIn_R13x,
+	BusMuxIn_R14x,
+	BusMuxIn_R15x,
 	BusMuxIn_HI,
 	BusMuxIn_LO,
 	BusMuxIn_Zlow,
@@ -44,12 +44,12 @@ begin
 	BusMuxIn_R7,
 	BusMuxIn_R8,
 	BusMuxIn_R9,
-	BusMuxIn_R10,
-	BusMuxIn_R11,
-	BusMuxIn_R12,
-	BusMuxIn_R13,
-	BusMuxIn_R14,
-	BusMuxIn_R15,
+	BusMuxIn_R10x,
+	BusMuxIn_R11x,
+	BusMuxIn_R12x,
+	BusMuxIn_R13x,
+	BusMuxIn_R14x,
+	BusMuxIn_R15x,
 	BusMuxIn_HI,
 	BusMuxIn_LO,
 	BusMuxIn_Zlow,
@@ -71,12 +71,12 @@ begin
 			when "00111" => temp:= BusMuxIn_R7;
 			when "01000" => temp:= BusMuxIn_R8;
 			when "01001" => temp:= BusMuxIn_R9;
-			when "01010" => temp:= BusMuxIn_R10;
-			when "01011" => temp:= BusMuxIn_R11;
-			when "01100" => temp:= BusMuxIn_R12;
-			when "01101" => temp:= BusMuxIn_R13;
-			when "01110" => temp:= BusMuxIn_R14;
-			when "01111" => temp:= BusMuxIn_R15;
+			when "01010" => temp:= BusMuxIn_R10x;
+			when "01011" => temp:= BusMuxIn_R11x;
+			when "01100" => temp:= BusMuxIn_R12x;
+			when "01101" => temp:= BusMuxIn_R13x;
+			when "01110" => temp:= BusMuxIn_R14x;
+			when "01111" => temp:= BusMuxIn_R15x;
 			when "10000" => temp:= BusMuxIn_HI;
 			when "10001" => temp:= BusMuxIn_LO;
 			when "10010" => temp:= BusMuxIn_Zlow;
