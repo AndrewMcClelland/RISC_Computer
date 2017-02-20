@@ -16,13 +16,14 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
   
   SIGNAL R0_out_tb, R1_out_tb, R2_out_tb, R3_out_tb, R4_out_tb, R5_out_tb, R6_out_tb, R7_out_tb : std_logic_vector(31 downto 0); --bidirectional pins for registers
   SIGNAL R8_out_tb, R9_out_tb, R10_out_tb, R11_out_tb, R12_out_tb, R13_out_tb, R14_out_tb, R15_out_tb : std_logic_vector(31 downto 0); --bidirectional pins for registers
-  SIGNAL BusMuxOut_tb, HI_out_tb, LO_out_tb, Zhigh_out_tb, Zlow_out_tb, PC_out_tb, MDR_out_tb, Zhigh_in_tb, Zlow_in_tb, MDR_in_tb : std_logic_vector (31 downto 0); --bidirectional pins for registers
+  SIGNAL BusMuxOut_tb, HI_out_tb, LO_out_tb, Zhigh_out_tb, Zlow_out_tb, PC_out_tb, MDR_out_tb, Zhigh_in_tb, Zlow_in_tb, MDR_in_tb, In_port_out_tb, C_sign_out_tb : std_logic_vector (31 downto 0); --bidirectional pins for registers
   SIGNAL Z_in_tb, ALU_out_tb : std_logic_vector (63 downto 0); --bidirectional pins for registers
   SIGNAL S_out_tb : std_logic_vector (4 downto 0); --bidirectional pins for registers
   
   SIGNAL R0out_tb, R1out_tb, R2out_tb, R3out_tb, R4out_tb, R5out_tb, R6out_tb, R7out_tb, R8out_tb, R9out_tb, R10out_tb, R11out_tb, R12out_tb : std_logic; --inputs to encoder
-  SIGNAL R13out_tb, R14out_tb, R15out_tb, HIout_tb, LOout_tb, Zlowout_tb, Zhighout_tb, PCout_tb, MDRout_tb, in_portout_tb, Cout_tb : std_logic; --inputs to encoder
-
+  SIGNAL R13out_tb, R14out_tb, R15out_tb, HIout_tb, LOout_tb, Zlowout_tb, Zhighout_tb, PCout_tb, MDRout_tb, In_portout_tb, Cout_tb : std_logic; --inputs to encoder
+  
+  SIGNAL Mdatain_tb : std_logic_vector (31 downto 0);
   SIGNAL read_tb : std_logic; --MDMUX read 
   SIGNAL ALU_cs_tb : std_logic_vector(3 downto 0); --ALU control signal
   
@@ -65,7 +66,7 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 			Zhighout :  in  STD_LOGIC;
 			PCout :  in  STD_LOGIC;
 			MDRout :  in  STD_LOGIC;
-			in_portout :  in  STD_LOGIC;
+			In_portout :  in  STD_LOGIC;
 			Cout :  in  STD_LOGIC;
 
 			register_in0 :  in  STD_LOGIC;
@@ -130,7 +131,7 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 			C_sign_out => C_sign_out_tb,
 			Zhigh_in => Zhigh_in_tb,
 			Zlow_in => Zlow_in_tb,
-			MDR_in = MDR_in_tb,
+			MDR_in => MDR_in_tb,
 			Z_in => Z_in_tb,
 			ALU_out => ALU_out_tb,
 			S_out => S_out_tb,
@@ -164,7 +165,7 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 			Zhighout => Zhighout_tb,
 			PCout => PCout_tb,
 			MDRout => MDRout_tb,
-			in_portout => in_portout_tb,
+			In_portout => In_portout_tb,
 			Cout => Cout_tb,
 
 			register_in0 => register_in0_tb,
@@ -200,13 +201,13 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 --add test logic here
 			Clock_process: PROCESS
 			BEGIN
-				clk_tb <= ‘1’, ‘0’ after 10 ns;
+				clk_tb <= '1', '0' after 10 ns;
 				wait for 20 ns;
 			END PROCESS Clock_process;
 			
 			PROCESS (clk_tb) -- finite state machine
 			BEGIN
-				IF (clk_tb'EVENT AND clk_tb = ‘1’) THEN -- if clock rising-edge
+				IF (clk_tb'EVENT AND clk_tb = '1') THEN
 					CASE Present_state IS
 						WHEN Default =>
 							Present_state <= Reg_load1;
@@ -292,56 +293,57 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 							register_in_MAR_tb <= '0';
 			
 					 WHEN Reg_load1 =>
-						 Mdatain_tb <= x"00000012";
-						 read_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 register_in_MDR_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 MDRout_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 register_in1_tb <= ‘0’, '1' after 10 ns;
+						 Mdatain_tb <= x"00000012";			 
+						 read_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 MDRout_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 register_in1_tb <= '0', '1' after 10 ns, '0' after 10 ns;
 						 
 					 WHEN Reg_load2 =>
 						 Mdatain_tb <= x"00000014";
-						 read_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 register_in_MDR_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 MDRout_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 register_in2_tb <= ‘0’, '1' after 10 ns;
+						 read_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 MDRout_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 register_in2_tb <= '0', '1' after 10 ns, '0' after 10 ns;
 						 
 					 WHEN Reg_load3 =>
 						 Mdatain_tb <= x"00000016";
-						 read_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 register_in_MDR_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 MDRout_tb <= ‘0’, '1' after 10 ns, ‘0’ after 10 ns;
-						 register_in3_tb <= ‘0’, '1' after 10 ns;
+						 read_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 MDRout_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 register_in3_tb <= '0', '1' after 10 ns, '0' after 10 ns;
 
 					 WHEN T0 => --Need to figure out how IncPC is supposed to work
-						PCout_tb <= ‘1’; 
+						--PCout_tb <= '1'; 
 						
-						MARin_tb <= ‘1’; 
+						--MARin_tb <= '1'; 
 						
-						register_in_Z_tb <= ‘1’;
-						register_in_Zhigh_tb <= '1';
-						register_in_Zlow_tb <= '1';
+						--register_in_Z_tb <= '1';
+						--register_in_Zhigh_tb <= '1';
+						--register_in_Zlow_tb <= '1';
 					 
 					 WHEN T1 =>
-						 Zlowout_tb <= ‘1’; 
-						 register_in_PC_tb <= ‘1’; 
-						 read_tb <= ‘1’; 
-						 register_in_MDR_tb <= ‘1’;
-						 Mdatain_tb[31..0] <= x”294c0000”; -- opcode for add R1, R2, R3
-					
+						 --Zlowout_tb <= '1'; 
+						 --register_in_PC_tb <= '1'; 
+						 read_tb <= '1';
+						 register_in_MDR_tb <= '1';
+						 Mdatain_tb <= x"294c0000";
+	
 					WHEN T2 =>
-						MDRout_tb <= ‘1’; register_in_IR_tb <= ‘1’
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
 						
 					 WHEN T3 =>
-						R2out_tb <= ‘1’; register_in_Y_tb <= ‘1’;
+						R2out_tb <= '1'; register_in_Y_tb <= '1';
 						
 					 WHEN T4 =>
-						R3out_tb <= ‘1’; 
+						R3out_tb <= '1'; 
 						ALU_cs_tb <= b"0000";
-						register_in_Z_tb <= ‘1’;
+						register_in_Z_tb <= '1';
 						register_in_Zhigh_tb <= '1';
 						register_in_Zlow_tb <= '1';
 					 WHEN T5 =>
-						Zlowout_tb <= ‘1’; register_in1_tb <= ‘1’;
+						Zlowout_tb <= '1'; register_in1_tb <= '1';
 					WHEN OTHERS =>
 			END CASE;
 		END PROCESS;

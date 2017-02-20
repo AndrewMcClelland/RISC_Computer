@@ -1,16 +1,16 @@
-Fitter Status : Failed - Mon Feb 13 09:38:46 2017
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Fitter Status : Failed - Mon Feb 20 17:25:40 2017
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : finalProject
-Top-level Entity Name : bus_mux_32_to_1
+Top-level Entity Name : phase1
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 513 / 15,408 ( 3 % )
-    Total combinational functions : 513 / 15,408 ( 3 % )
-    Dedicated logic registers : 0 / 15,408 ( 0 % )
-Total registers : 0
-Total pins : 805 / 347 ( 232 % )
+Total logic elements : 4,031 / 15,408 ( 26 % )
+    Total combinational functions : 3,423 / 15,408 ( 22 % )
+    Dedicated logic registers : 864 / 15,408 ( 6 % )
+Total registers : 864
+Total pins : 1,120 / 347 ( 323 % )
 Total virtual pins : 0
 Total memory bits : 0 / 516,096 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Embedded Multiplier 9-bit elements : 8 / 112 ( 7 % )
 Total PLLs : 0 / 4 ( 0 % )
