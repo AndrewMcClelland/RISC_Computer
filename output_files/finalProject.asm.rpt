@@ -1,5 +1,5 @@
 Assembler report for finalProject
-Sun Feb 12 20:12:32 2017
+Sun Feb 26 13:33:37 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/output_files/finalProject.sof
+  5. Assembler Device Options: C:/Users/lukea/Documents/ELEC374_RISC_Computer/output_files/finalProject.sof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Feb 12 20:12:32 2017 ;
+; Assembler Status      ; Successful - Sun Feb 26 13:33:37 2017 ;
 ; Revision Name         ; finalProject                          ;
-; Top-level Entity Name ; encoder_32_to_5                       ;
+; Top-level Entity Name ; MDMUX                                 ;
 ; Family                ; Cyclone III                           ;
 ; Device                ; EP3C16F484C6                          ;
 +-----------------------+---------------------------------------+
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                  ;
-+------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                  ;
-+------------------------------------------------------------------------------------------------------------+
-; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/output_files/finalProject.sof ;
-+------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Assembler Generated Files                                                    ;
++------------------------------------------------------------------------------+
+; File Name                                                                    ;
++------------------------------------------------------------------------------+
+; C:/Users/lukea/Documents/ELEC374_RISC_Computer/output_files/finalProject.sof ;
++------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/output_files/finalProject.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                             ;
-+----------------+---------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                                                                        ;
-; JTAG usercode  ; 0x000D4CE7                                                                                                          ;
-; Checksum       ; 0x000D4CE7                                                                                                          ;
-+----------------+---------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/lukea/Documents/ELEC374_RISC_Computer/output_files/finalProject.sof ;
++----------------+---------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                                                          ;
+; JTAG usercode  ; 0x000D0040                                                                            ;
+; Checksum       ; 0x000D0040                                                                            ;
++----------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Feb 12 20:12:28 2017
+    Info: Processing started: Sun Feb 26 13:33:35 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off finalProject -c finalProject
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 429 megabytes
-    Info: Processing ended: Sun Feb 12 20:12:32 2017
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 430 megabytes
+    Info: Processing ended: Sun Feb 26 13:33:37 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

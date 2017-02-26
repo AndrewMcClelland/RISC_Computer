@@ -1,5 +1,5 @@
 Fitter report for finalProject
-Mon Feb 20 17:25:40 2017
+Sun Feb 26 14:03:48 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Failed - Mon Feb 20 17:25:40 2017               ;
+; Fitter Status                      ; Failed - Sun Feb 26 14:03:47 2017               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
 ; Top-level Entity Name              ; phase1                                          ;
@@ -5344,9 +5344,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; register_32:b2v_R7|output[16]~0   ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; register_32:b2v_R8|output[5]~0    ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; register_32:b2v_R9|output[31]~0   ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; register_32:b2v_Y|output[27]~0    ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_32:b2v_Y|output[25]~0    ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; register_32:b2v_Zhigh|output[6]~1 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; register_32:b2v_Zlow|output[21]~1 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; register_32:b2v_Zlow|output[17]~1 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; register_64:b2v_Z|output[28]~1    ; Unassigned ; 64      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -5379,18 +5379,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:b2v_inst3|Mux63~8                                                                                                                          ; 64      ;
 ; encoder_32_to_5:b2v_inst|S~75                                                                                                                  ; 64      ;
 ; register_32:b2v_Y|output[31]                                                                                                                   ; 61      ;
-; ALU:b2v_inst3|C[14]~15                                                                                                                         ; 55      ;
+; ALU:b2v_inst3|C[1]~15                                                                                                                          ; 55      ;
 ; cs[3]~input                                                                                                                                    ; 51      ;
-; ALU:b2v_inst3|C[55]~36                                                                                                                         ; 35      ;
+; ALU:b2v_inst3|C[56]~36                                                                                                                         ; 35      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|diff_signs                                                 ; 35      ;
-; ALU:b2v_inst3|C[55]~37                                                                                                                         ; 34      ;
+; ALU:b2v_inst3|C[56]~37                                                                                                                         ; 34      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den|cs1a[30]~10                         ; 34      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|quotient[31]~28                                            ; 33      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den|cs1a[1]~35                          ; 33      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|sel[924]                             ; 33      ;
 ; ALU:b2v_inst3|C[31]~0                                                                                                                          ; 33      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_30_result_int[31]~62         ; 33      ;
-; register_32:b2v_Y|output[27]~0                                                                                                                 ; 32      ;
+; register_32:b2v_Y|output[25]~0                                                                                                                 ; 32      ;
 ; register_32:b2v_R15|output[14]~0                                                                                                               ; 32      ;
 ; register_32:b2v_R3|output[0]~0                                                                                                                 ; 32      ;
 ; register_32:b2v_R11|output[28]~0                                                                                                               ; 32      ;
@@ -5410,14 +5410,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; register_32:b2v_Zhigh|output[6]~1                                                                                                              ; 32      ;
 ; register_32:b2v_HI|output[20]~1                                                                                                                ; 32      ;
 ; register_32:b2v_LO|output[29]~0                                                                                                                ; 32      ;
-; register_32:b2v_Zlow|output[21]~1                                                                                                              ; 32      ;
+; register_32:b2v_Zlow|output[17]~1                                                                                                              ; 32      ;
 ; register_32:b2v_MDR|output[28]~1                                                                                                               ; 32      ;
 ; register_32:b2v_PC|output[19]~0                                                                                                                ; 32      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|sel[957]                             ; 32      ;
 ; bus_mux_32_to_1:b2v_inst1|Mux27~15                                                                                                             ; 32      ;
 ; bus_mux_32_to_1:b2v_inst1|Mux31~0                                                                                                              ; 32      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_29_result_int[30]~60         ; 32      ;
-; ALU:b2v_inst3|C[14]~16                                                                                                                         ; 31      ;
+; ALU:b2v_inst3|C[1]~16                                                                                                                          ; 31      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den|cs1a[2]~34                          ; 31      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den|cs1a[3]~33                          ; 31      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|sel[825]                             ; 31      ;
@@ -5449,20 +5449,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|sel[528]                             ; 23      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_20_result_int[21]~42         ; 23      ;
 ; ALU:b2v_inst3|Add2~8                                                                                                                           ; 23      ;
-; ALU:b2v_inst3|C[29]~30                                                                                                                         ; 22      ;
-; ALU:b2v_inst3|C[29]~27                                                                                                                         ; 22      ;
-; ALU:b2v_inst3|C[29]~24                                                                                                                         ; 22      ;
-; ALU:b2v_inst3|C[14]~14                                                                                                                         ; 22      ;
-; ALU:b2v_inst3|C[14]~10                                                                                                                         ; 22      ;
-; ALU:b2v_inst3|C[14]~9                                                                                                                          ; 22      ;
+; ALU:b2v_inst3|C[17]~30                                                                                                                         ; 22      ;
+; ALU:b2v_inst3|C[17]~27                                                                                                                         ; 22      ;
+; ALU:b2v_inst3|C[17]~24                                                                                                                         ; 22      ;
+; ALU:b2v_inst3|C[1]~14                                                                                                                          ; 22      ;
+; ALU:b2v_inst3|C[1]~10                                                                                                                          ; 22      ;
+; ALU:b2v_inst3|C[1]~9                                                                                                                           ; 22      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_19_result_int[20]~40         ; 22      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|sel[594]                             ; 21      ;
-; ALU:b2v_inst3|C[29]~25                                                                                                                         ; 21      ;
-; ALU:b2v_inst3|C[29]~23                                                                                                                         ; 21      ;
-; ALU:b2v_inst3|C[14]~8                                                                                                                          ; 21      ;
-; ALU:b2v_inst3|C[14]~7                                                                                                                          ; 21      ;
-; ALU:b2v_inst3|C[14]~6                                                                                                                          ; 21      ;
-; ALU:b2v_inst3|C[14]~5                                                                                                                          ; 21      ;
+; ALU:b2v_inst3|C[17]~25                                                                                                                         ; 21      ;
+; ALU:b2v_inst3|C[17]~23                                                                                                                         ; 21      ;
+; ALU:b2v_inst3|C[1]~8                                                                                                                           ; 21      ;
+; ALU:b2v_inst3|C[1]~7                                                                                                                           ; 21      ;
+; ALU:b2v_inst3|C[1]~6                                                                                                                           ; 21      ;
+; ALU:b2v_inst3|C[1]~5                                                                                                                           ; 21      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den|cs1a[12]~38                         ; 21      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den|cs1a[11]~36                         ; 21      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_18_result_int[19]~38         ; 21      ;
@@ -5520,8 +5520,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_13_result_int[14]~28         ; 16      ;
 ; cs[2]~input                                                                                                                                    ; 15      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|sel[396]                             ; 15      ;
-; ALU:b2v_inst3|C[29]~32                                                                                                                         ; 15      ;
-; ALU:b2v_inst3|C[14]~20                                                                                                                         ; 15      ;
+; ALU:b2v_inst3|C[17]~32                                                                                                                         ; 15      ;
+; ALU:b2v_inst3|C[1]~20                                                                                                                          ; 15      ;
 ; register_32:b2v_Y|output[27]                                                                                                                   ; 15      ;
 ; register_32:b2v_Y|output[29]                                                                                                                   ; 15      ;
 ; ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_12_result_int[13]~26         ; 15      ;
@@ -5800,7 +5800,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:b2v_inst3|ShiftRight1~36                                                                                                                   ; 3       ;
 ; ALU:b2v_inst3|RotateLeft1~62                                                                                                                   ; 3       ;
 ; ALU:b2v_inst3|RotateRight0~50                                                                                                                  ; 3       ;
-; ALU:b2v_inst3|C[14]~12                                                                                                                         ; 3       ;
+; ALU:b2v_inst3|C[1]~12                                                                                                                          ; 3       ;
 ; ALU:b2v_inst3|RotateLeft0~30                                                                                                                   ; 3       ;
 ; ALU:b2v_inst3|RotateLeft0~27                                                                                                                   ; 3       ;
 ; ALU:b2v_inst3|ShiftRight1~17                                                                                                                   ; 3       ;
@@ -6245,7 +6245,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ALU:b2v_inst3|ShiftRight0~38                                                                                                                   ; 2       ;
 ; ALU:b2v_inst3|ShiftRight0~37                                                                                                                   ; 2       ;
 ; ALU:b2v_inst3|ShiftRight0~36                                                                                                                   ; 2       ;
-; ALU:b2v_inst3|C[14]~19                                                                                                                         ; 2       ;
+; ALU:b2v_inst3|C[1]~19                                                                                                                          ; 2       ;
 ; ALU:b2v_inst3|Mux62~7                                                                                                                          ; 2       ;
 ; ALU:b2v_inst3|ShiftRight1~24                                                                                                                   ; 2       ;
 ; ALU:b2v_inst3|ShiftRight1~23                                                                                                                   ; 2       ;
@@ -9856,9 +9856,9 @@ Warning (169069): Following 64 pins have nothing, GND, or VCC driving datain por
     Info (169070): Pin In_port_out[30] has GND driving its datain port
     Info (169070): Pin In_port_out[31] has GND driving its datain port
 Error: Quartus II 64-Bit Fitter was unsuccessful. 3 errors, 6 warnings
-    Error: Peak virtual memory: 662 megabytes
-    Error: Processing ended: Mon Feb 20 17:25:40 2017
-    Error: Elapsed time: 00:00:06
+    Error: Peak virtual memory: 661 megabytes
+    Error: Processing ended: Sun Feb 26 14:03:48 2017
+    Error: Elapsed time: 00:00:07
     Error: Total CPU time (on all processors): 00:00:06
 
 

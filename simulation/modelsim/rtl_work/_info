@@ -2,74 +2,321 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\Project\simulation\modelsim
-Ebus_mux_32_to_1
-Z1 w1486943588
-Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\Project\simulation\modelsim
-Z5 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd
-Z6 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd
+Z0 dC:\Users\lukea\Documents\ELEC374_RISC_Computer\simulation\modelsim
+Ealu
+Z1 w1488136622
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\lukea\Documents\ELEC374_RISC_Computer\simulation\modelsim
+Z6 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/ALU.vhd
+Z7 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/ALU.vhd
 l0
-L4
-Vz`o=DUccM68Z=oC3<0OGF1
-Z7 OV;C;10.1d;51
+L5
+V<CJNH]JIQHi9Y;ld9[c4`0
+Z8 OV;C;10.1d;51
 31
-Z8 !s108 1486949372.478000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd|
-Z10 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd|
-Z11 o-93 -work work -O0
-Z12 tExplicit 1
-!s100 lgHJnAoi:N_hmJfRCESfh1
+Z9 !s108 1488142003.127000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/ALU.vhd|
+Z11 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/ALU.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 =14^QeX1fI<R<OTo`iYH`2
 !i10b 1
 Abehavioral
 R2
 R3
-DEx4 work 15 bus_mux_32_to_1 0 22 z`o=DUccM68Z=oC3<0OGF1
-l36
-L35
-VS2?Tn@LCVN35^M`GPH0hb3
-R7
-31
+R4
+DEx4 work 3 alu 0 22 <CJNH]JIQHi9Y;ld9[c4`0
+l15
+L14
+V:kEcQ7:?L0]gSl]ISzZ<O1
 R8
+31
 R9
 R10
 R11
 R12
-!s100 0=l;8O@Q@::JjB_F0O9;^2
+R13
+!s100 1E[@=WT=@XUIUbT4Zhhm]0
 !i10b 1
-Ebus_mux_32_to_1_tb
-Z13 w1486949348
-R2
+Ebus_mux_32_to_1
+Z14 w1487439870
 R3
 R4
-Z14 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd
-Z15 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd
+R5
+Z15 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd
+Z16 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd
 l0
 L4
-V>UhhbCVMGQzo16U;XHN?B1
-!s100 iV7`BAeZXFn8CQjIR0AJk0
-R7
+VZLo]dH0PdAZ>MEm0>cc]e1
+R8
 31
-!i10b 1
-Z16 !s108 1486949373.291000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd|
-Z18 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1_tb.vhd|
-R11
+Z17 !s108 1488142003.022000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd|
+Z19 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd|
 R12
-Abus_mux_32_to_1_tb_arch
-R2
-R3
-DEx4 work 18 bus_mux_32_to_1_tb 0 22 >UhhbCVMGQzo16U;XHN?B1
-l67
-L8
-V`BDZoklM=Nm0Bjge>cJf]3
-!s100 iiAcc1k710aR32R6US]dk0
-R7
-31
+R13
+!s100 DR5i<a@P8U`<fEES7438f2
 !i10b 1
-R16
+Abehavioral
+R3
+R4
+DEx4 work 15 bus_mux_32_to_1 0 22 ZLo]dH0PdAZ>MEm0>cc]e1
+l36
+L35
+Vea0z>Ao9J0[JSOPOdCZbM3
+R8
+31
 R17
 R18
-R11
+R19
 R12
+R13
+!s100 IOaBamS73@jQaVAOA4h7A2
+!i10b 1
+Eencoder_32_to_5
+R14
+R3
+R4
+R5
+Z20 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd
+Z21 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd
+l0
+L4
+V8dQ9?da=ME;Xc`1[>L3Uh1
+R8
+31
+Z22 !s108 1488142002.903000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd|
+Z24 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd|
+R12
+R13
+!s100 g0<mjHZ^FJD]abD`f@jS53
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 15 encoder_32_to_5 0 22 8dQ9?da=ME;Xc`1[>L3Uh1
+l36
+L35
+V4Td1Xj]^NVVPQ<>lYag]B3
+R8
+31
+R22
+R23
+R24
+R12
+R13
+!s100 jUU]OITXDMICd>=9mQ5NX3
+!i10b 1
+Emdmux
+Z25 w1488133960
+R3
+R4
+R5
+Z26 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/MDMux.vhd
+Z27 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/MDMux.vhd
+l0
+L4
+VaFT338<nemh=`>F=6M=n=1
+R8
+31
+Z28 !s108 1488142002.797000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/MDMux.vhd|
+Z30 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/MDMux.vhd|
+R12
+R13
+!s100 emQXkAn1QMWmPYl6g05@e2
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 5 mdmux 0 22 aFT338<nemh=`>F=6M=n=1
+l14
+L13
+VAalGRDccboBDD=jgi3R:i1
+R8
+31
+R28
+R29
+R30
+R12
+R13
+!s100 ]]Dd>OHkQb<<4OH7^LkZ;2
+!i10b 1
+Ephase1
+Z31 w1487529853
+R3
+R4
+R5
+Z32 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1.vhd
+Z33 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1.vhd
+l0
+L24
+V<7Z^F5B<95k9S]Y`mWXnL0
+R8
+31
+Z34 !s108 1488142002.342000
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1.vhd|
+Z36 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1.vhd|
+R12
+R13
+!s100 mbMU:0nV8@PMi]6G4n`dQ1
+!i10b 1
+Abdf_type
+R3
+R4
+DEx4 work 6 phase1 0 22 <7Z^F5B<95k9S]Y`mWXnL0
+l226
+L118
+VIbl[:aD7DLC_><]hb[zgD2
+R8
+31
+R34
+R35
+R36
+R12
+R13
+!s100 eT[]z54_7zimI7N<L2Mzd1
+!i10b 1
+Ephase1_tb
+Z37 w1488141812
+R3
+R4
+R5
+Z38 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1_tb.vhd
+Z39 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1_tb.vhd
+l0
+L6
+V]z5Azb>6DfGhA`6]HA3mC1
+!s100 ZB3HPiHMjiTaVCMPVa2aj1
+R8
+31
+!i10b 1
+Z40 !s108 1488142003.230000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1_tb.vhd|
+Z42 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1_tb.vhd|
+R12
+R13
+Aphase1_tb_arch
+R3
+R4
+DEx4 work 9 phase1_tb 0 22 ]z5Azb>6DfGhA`6]HA3mC1
+l103
+L10
+VN6n5SK_C5Xa=@T@f>NSKJ3
+!s100 gilIiPah>QP8M[>Yz>h2e0
+R8
+31
+!i10b 1
+R40
+R41
+R42
+R12
+R13
+Eregister_32
+R14
+R3
+R4
+R5
+Z43 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_32.vhd
+Z44 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/register_32.vhd
+l0
+L4
+VF7302UC=h:F1NIz2N9zJA2
+R8
+31
+Z45 !s108 1488142002.675000
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_32.vhd|
+Z47 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_32.vhd|
+R12
+R13
+!s100 kkbH[5zbPYzF`R0T5E44R0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 register_32 0 22 F7302UC=h:F1NIz2N9zJA2
+l13
+L12
+V@bbk4OcJ1zAj_zHIk0Bec2
+R8
+31
+R45
+R46
+R47
+R12
+R13
+!s100 kVSMGd[52>[1079Q<k0W03
+!i10b 1
+Eregister_64
+R14
+R3
+R4
+R5
+Z48 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_64.vhd
+Z49 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/register_64.vhd
+l0
+L4
+VL7G>@SzFg[`QoDfMEc3[n2
+R8
+31
+Z50 !s108 1488142002.573000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_64.vhd|
+Z52 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_64.vhd|
+R12
+R13
+!s100 YeK8Vhg]5z53@9f26KdcW0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 register_64 0 22 L7G>@SzFg[`QoDfMEc3[n2
+l13
+L12
+Vj^=TOP23W8RC89K_cn6hd2
+R8
+31
+R50
+R51
+R52
+R12
+R13
+!s100 c8`[YJGZN^bmB8N<2Czlf1
+!i10b 1
+Ez_split
+R14
+R3
+R4
+R5
+Z53 8C:/Users/lukea/Documents/ELEC374_RISC_Computer/Z_split.vhd
+Z54 FC:/Users/lukea/Documents/ELEC374_RISC_Computer/Z_split.vhd
+l0
+L4
+VgHZnAYQBhKIT?fTC>W:QS0
+R8
+31
+Z55 !s108 1488142002.468000
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/Z_split.vhd|
+Z57 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/Z_split.vhd|
+R12
+R13
+!s100 ;Rh;Ieb[dO>l>VQAITI?23
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 7 z_split 0 22 gHZnAYQBhKIT?fTC>W:QS0
+l13
+L12
+V1XS]dGFIUlO8:6=[f3ETk1
+R8
+31
+R55
+R56
+R57
+R12
+R13
+!s100 AP24QQF_SYA70P]k8;iF=1
+!i10b 1

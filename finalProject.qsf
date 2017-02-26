@@ -69,18 +69,32 @@ set_global_assignment -name EDA_TEST_BENCH_NAME bus_mux_32_to_1_tb -section_id e
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id bus_mux_32_to_1_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id bus_mux_32_to_1_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME bus_mux_32_to_1_tb -section_id bus_mux_32_to_1_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE phase1.vhd
-set_global_assignment -name VHDL_FILE phase1_tb.vhd
-set_global_assignment -name EDA_TEST_BENCH_FILE reg_64_tb.vhd -section_id register_64_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE booth_32_algorithm_tb.vhd -section_id booth_32_algorithm_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE encoder_32_to_5_tb.vhd -section_id encoder_32_to_5_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE bus_mux_32_to_1_tb.vhd -section_id bus_mux_32_to_1_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME phase1_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id phase1_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id phase1_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME phase1_tb -section_id phase1_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME MDMux_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id MDMux_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME MDMux_tb -section_id MDMux_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "300 ns" -section_id MDMux_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE reg_64_tb.vhd -section_id register_64_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE booth_32_algorithm_tb.vhd -section_id booth_32_algorithm_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE encoder_32_to_5_tb.vhd -section_id encoder_32_to_5_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE bus_mux_32_to_1_tb.vhd -section_id bus_mux_32_to_1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb.vhd -section_id phase1_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE MDMux_tb.vhd -section_id MDMux_tb
+set_global_assignment -name VHDL_FILE phase1.vhd
+set_global_assignment -name VHDL_FILE Z_split.vhd
+set_global_assignment -name VHDL_FILE register_64.vhd
+set_global_assignment -name VHDL_FILE register_32.vhd
+set_global_assignment -name VHDL_FILE MDMux.vhd
+set_global_assignment -name VHDL_FILE encoder_32_to_5.vhd
+set_global_assignment -name VHDL_FILE CLA.vhd
+set_global_assignment -name VHDL_FILE bus_mux_32_to_1.vhd
+set_global_assignment -name VHDL_FILE booth_32_algorithm.vhd
+set_global_assignment -name VHDL_FILE ALU.vhd
+set_global_assignment -name VHDL_FILE phase1_tb.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

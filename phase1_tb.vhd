@@ -1,13 +1,13 @@
--- adder_datapath_tb.vhd file: <This is the filename>
+	-- adder_datapath_tb.vhd file: <This is the filename>
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 -- entity declaration only; no definition here
-ENTITY datapath_tb IS
+ENTITY phase1_tb IS
 END;
 
 -- Architecture of the testbench with the signal names
-ARCHITECTURE datapath_tb_arch OF datapath_tb IS
+ARCHITECTURE phase1_tb_arch OF phase1_tb IS
   SIGNAL clear_tb, clk_tb : std_logic;
   SIGNAL register_in0_tb, register_in1_tb, register_in2_tb, register_in3_tb, register_in4_tb, register_in5_tb, register_in6_tb, register_in7_tb : std_logic; --enable singals for registers
   SIGNAL register_in8_tb, register_in9_tb, register_in10_tb, register_in11_tb, register_in12_tb, register_in13_tb, register_in14_tb, register_in15_tb : std_logic; --enable singals for registers
@@ -31,13 +31,13 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
   SIGNAL Present_state: State := default;
  
  -- component instantiation of the datapath
- COMPONENT datapath
+ COMPONENT phase1
 	PORT (
-			R0_out, R1_out, R2_out, R3_out, R4_out, R5_out, R6_out, R7_out, R8_out, R9_out, R10_out, R11_out, R12_out, R13_out, R14_out, R15_out : out std_logic_vector(31 downto 0);
-			BusMuxOut, HI_out, LO_out, Zhigh_out, Zlow_out : out std_logic_vector (31 downto 0);
-			PC_out, MDR_out, in_port_out, C_sign_out, Zhigh_in, Zlow_in, MDR_in : out std_logic_vector (31 downto 0);
-			Z_in, ALU_out : out std_logic_vector (63 downto 0);
-			S_out : out std_logic_vector (4 downto 0);
+			R0_out, R1_out, R2_out, R3_out, R4_out, R5_out, R6_out, R7_out, R8_out, R9_out, R10_out, R11_out, R12_out, R13_out, R14_out, R15_out : inout std_logic_vector(31 downto 0);
+			BusMuxOut, HI_out, LO_out, Zhigh_out, Zlow_out : inout std_logic_vector (31 downto 0);
+			PC_out, MDR_out, in_port_out, C_sign_out, Zhigh_in, Zlow_in, MDR_in : inout std_logic_vector (31 downto 0);
+			Z_in, ALU_out : inout std_logic_vector (63 downto 0);
+			S_out : inout std_logic_vector (4 downto 0);
 			
 			clear, clk : in std_logic;
 			Mdatain : in std_logic_vector(31 downto 0);
@@ -98,10 +98,10 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 			register_in_IR :  in  STD_LOGIC;
 			register_in_MAR :  in  STD_LOGIC
 				);
- END COMPONENT datapath;
+ END COMPONENT phase1;
 
  BEGIN
- DUT : datapath
+ DUT : phase1
 --port mapping: between the dut and the testbench signals
   PORT MAP (
 			R0_out => R0_out_tb,
@@ -233,7 +233,7 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 			END PROCESS;
 			
 			PROCESS (Present_state) -- do the required job in each state
-			BEGin
+			BEGIN
 				CASE Present_state IS -- assert the required signals in each clock cycle
 					 WHEN Default =>
 							R0out_tb <= '0';
@@ -261,6 +261,7 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 							In_portout_tb <= '0';
 							Cout_tb <= '0';
 							
+							clear_tb <= '0';
 							read_tb <= '0';
 						
 							register_in0_tb <= '0';
@@ -294,24 +295,20 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 			
 					 WHEN Reg_load1 =>
 						 Mdatain_tb <= x"00000012";			 
-						 read_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 MDRout_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 register_in1_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 read_tb <= '1';
+						 register_in_MDR_tb <= '1', '0' after 30 ns;
+						 MDRout_tb <= '1';
+						 register_in1_tb <= '1';
 						 
 					 WHEN Reg_load2 =>
-						 Mdatain_tb <= x"00000014";
-						 read_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 MDRout_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 register_in2_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 Mdatain_tb <= x"00000014" after 10 ns;
+						 register_in_MDR_tb <= '1' after 10 ns, '0' after 30 ns;
+						 register_in2_tb <= '0', '1' after 10 ns;
 						 
 					 WHEN Reg_load3 =>
-						 Mdatain_tb <= x"00000016";
-						 read_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 MDRout_tb <= '0', '1' after 10 ns, '0' after 10 ns;
-						 register_in3_tb <= '0', '1' after 10 ns, '0' after 10 ns;
+						 Mdatain_tb <= x"00000016" after 10 ns;
+						 register_in_MDR_tb <= '1' after 10 ns, '0' after 30 ns;
+						 register_in3_tb <= '0', '1' after 10 ns;
 
 					 WHEN T0 => --Need to figure out how IncPC is supposed to work
 						--PCout_tb <= '1'; 
@@ -347,4 +344,4 @@ ARCHITECTURE datapath_tb_arch OF datapath_tb IS
 					WHEN OTHERS =>
 			END CASE;
 		END PROCESS;
-END ARCHITECTURE datapath_tb_arch;
+END ARCHITECTURE phase1_tb_arch;
