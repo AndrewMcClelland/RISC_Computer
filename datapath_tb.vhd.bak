@@ -1,0 +1,9 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity datapath_tb is
+end;
+
+architecture datapath_tb_arch of datapath_tb is
+
+	signal PCout_tb, Zlowout_tb, MDRout
