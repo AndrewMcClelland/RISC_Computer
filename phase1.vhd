@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sun Feb 19 13:44:13 2017"
+-- CREATED		"Sun Feb 26 19:58:55 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -85,7 +85,9 @@ ENTITY phase1 IS
 		cs :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		HI_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		In_port_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		IR_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		LO_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		MAR_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		Mdatain :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		MDR_in :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		MDR_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -333,7 +335,8 @@ b2v_IR : register_32
 PORT MAP(clear => clear,
 		 clk => clk,
 		 register_in => register_in_IR,
-		 q => BusMuxOut);
+		 q => BusMuxOut,
+		 output => IR_out);
 
 
 b2v_LO : register_32
@@ -348,7 +351,8 @@ b2v_MAR : register_32
 PORT MAP(clear => clear,
 		 clk => clk,
 		 register_in => register_in_MAR,
-		 q => BusMuxOut);
+		 q => BusMuxOut,
+		 output => MAR_out);
 
 
 b2v_MDR : register_32

@@ -16,7 +16,7 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb IS
   
   SIGNAL R0_out_tb, R1_out_tb, R2_out_tb, R3_out_tb, R4_out_tb, R5_out_tb, R6_out_tb, R7_out_tb : std_logic_vector(31 downto 0); --bidirectional pins for registers
   SIGNAL R8_out_tb, R9_out_tb, R10_out_tb, R11_out_tb, R12_out_tb, R13_out_tb, R14_out_tb, R15_out_tb : std_logic_vector(31 downto 0); --bidirectional pins for registers
-  SIGNAL BusMuxOut_tb, HI_out_tb, LO_out_tb, Zhigh_out_tb, Zlow_out_tb, PC_out_tb, MDR_out_tb, Zhigh_in_tb, Zlow_in_tb, MDR_in_tb, In_port_out_tb, C_sign_out_tb : std_logic_vector (31 downto 0); --bidirectional pins for registers
+  SIGNAL BusMuxOut_tb, HI_out_tb, LO_out_tb, Zhigh_out_tb, Zlow_out_tb, PC_out_tb, MDR_out_tb, Zhigh_in_tb, Zlow_in_tb, MDR_in_tb, In_port_out_tb, C_sign_out_tb, IR_out_tb, MAR_out_tb : std_logic_vector (31 downto 0); --bidirectional pins for registers
   SIGNAL Z_in_tb, ALU_out_tb : std_logic_vector (63 downto 0); --bidirectional pins for registers
   SIGNAL S_out_tb : std_logic_vector (4 downto 0); --bidirectional pins for registers
   
@@ -35,7 +35,7 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb IS
 	PORT (
 			R0_out, R1_out, R2_out, R3_out, R4_out, R5_out, R6_out, R7_out, R8_out, R9_out, R10_out, R11_out, R12_out, R13_out, R14_out, R15_out : inout std_logic_vector(31 downto 0);
 			BusMuxOut, HI_out, LO_out, Zhigh_out, Zlow_out : inout std_logic_vector (31 downto 0);
-			PC_out, MDR_out, in_port_out, C_sign_out, Zhigh_in, Zlow_in, MDR_in : inout std_logic_vector (31 downto 0);
+			PC_out, MDR_out, in_port_out, C_sign_out, Zhigh_in, Zlow_in, MDR_in, IR_out, MAR_out : inout std_logic_vector (31 downto 0);
 			Z_in, ALU_out : inout std_logic_vector (63 downto 0);
 			S_out : inout std_logic_vector (4 downto 0);
 			
@@ -135,6 +135,8 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb IS
 			Z_in => Z_in_tb,
 			ALU_out => ALU_out_tb,
 			S_out => S_out_tb,
+			IR_out => IR_out_tb,
+			MAR_out => MAR_out_tb,
 			
 			clear => clear_tb,
 			clk => clk_tb,
@@ -295,19 +297,23 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb IS
 			
 					 WHEN Reg_load1 =>
 						 Mdatain_tb <= x"00000012";			 
-						 read_tb <= '1';
-						 register_in_MDR_tb <= '1', '0' after 30 ns;
-						 MDRout_tb <= '1';
-						 register_in1_tb <= '1';
+						 read_tb <= '0', '1' after 10 ns, '0' after 20 ns;
+						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 20 ns;
+						 MDRout_tb <= '0', '1' after 10 ns, '0' after 20 ns;
+						 register_in1_tb <= '0', '1' after 10 ns;
 						 
 					 WHEN Reg_load2 =>
 						 Mdatain_tb <= x"00000014" after 10 ns;
-						 register_in_MDR_tb <= '1' after 10 ns, '0' after 30 ns;
+						 read_tb <= '0', '1' after 10 ns, '0' after 20 ns;
+						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 20 ns;
+						 MDRout_tb <= '0', '1' after 10 ns, '0' after 20 ns;
 						 register_in2_tb <= '0', '1' after 10 ns;
 						 
 					 WHEN Reg_load3 =>
 						 Mdatain_tb <= x"00000016" after 10 ns;
-						 register_in_MDR_tb <= '1' after 10 ns, '0' after 30 ns;
+						 read_tb <= '0', '1' after 10 ns, '0' after 20 ns;
+						 register_in_MDR_tb <= '0', '1' after 10 ns, '0' after 20 ns;
+						 MDRout_tb <= '0', '1' after 10 ns, '0' after 20 ns;
 						 register_in3_tb <= '0', '1' after 10 ns;
 
 					 WHEN T0 => --Need to figure out how IncPC is supposed to work
