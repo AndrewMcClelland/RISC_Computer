@@ -3,11 +3,11 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 -- entity declaration only; no definition here
-ENTITY phase1_tb IS
+ENTITY phase1_tb_sub IS
 END;
 
 -- Architecture of the testbench with the signal names
-ARCHITECTURE phase1_tb_arch OF phase1_tb IS
+ARCHITECTURE phase1_tb_arch OF phase1_tb_sub IS
   SIGNAL clear_tb, clk_tb : std_logic;
   SIGNAL register_in0_tb, register_in1_tb, register_in2_tb, register_in3_tb, register_in4_tb, register_in5_tb, register_in6_tb, register_in7_tb : std_logic; --enable singals for registers
   SIGNAL register_in8_tb, register_in9_tb, register_in10_tb, register_in11_tb, register_in12_tb, register_in13_tb, register_in14_tb, register_in15_tb : std_logic; --enable singals for registers
@@ -297,22 +297,22 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb IS
 							register_in_MAR_tb <= '0';
 			
 					 WHEN Reg_load1 =>
-						 Mdatain_tb <= b"0000_0000_0000_0000_0000_0000_0000_0001";			 
+						 Mdatain_tb <= b"0000_0000_0000_0000_0000_0000_0000_0100";			 
 						 read_tb <= '1';
 						 register_in_MDR_tb <= '1';
 						 MDRout_tb <= '1';
-						 register_in2_tb <= '1';
+						 register_in4_tb <= '1';
 						 
 					 WHEN Reg_load2 =>
-						 Mdatain_tb <= b"0000_0000_0000_0000_0000_0000_0000_0011" after 10 ns;
-						 register_in3_tb <= '0', '1' after 40 ns;
+						 Mdatain_tb <= b"0000_0000_0000_0000_0000_0000_0000_0001" after 10 ns;
+						 register_in5_tb <= '0', '1' after 40 ns;
 						 
 					 WHEN Reg_load3 =>
-						 register_in2_tb <= '0';
+						 register_in4_tb <= '0';
 				
 
 					 WHEN T0 => --Need to figure out how IncPC is supposed to work
-						register_in3_tb <= '0';
+						register_in5_tb <= '0';
 						read_tb <= '0';
 						MDRout_tb <= '0';
 						
@@ -329,7 +329,7 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb IS
 						 --register_in_PC_tb <= '1'; 
 						 read_tb <= '1';
 						 register_in_MDR_tb <= '1';
-						 Mdatain_tb <= x"294c0000";
+						 Mdatain_tb <= x"314c0000";
 	
 					WHEN T2 =>
 						
@@ -339,22 +339,22 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb IS
 					 WHEN T3 =>
 						register_in_IR_tb <= '0';
 						MDRout_tb <= '0';
-						R2out_tb <= '1'; 
+						R4out_tb <= '1'; 
 						register_in_Y_tb <= '1';
 						
 					 WHEN T4 =>
-						R2out_tb <= '0';
+						R4out_tb <= '0';
 					   register_in_Y_tb <= '0';
-						R3out_tb <= '1'; 
-						ALU_cs_tb <= b"0000";
+						R5out_tb <= '1'; 
+						ALU_cs_tb <= b"0001";
 						register_in_Z_tb <= '1';
 						register_in_Zhigh_tb <= '1';
 						register_in_Zlow_tb <= '1';
 					 WHEN T5 =>
-						R3out_tb <= '0'; 
+						R5out_tb <= '0'; 
 						Zlowout_tb <= '1'; 
 						
-						register_in1_tb <= '1';
+						register_in0_tb <= '1';
 					WHEN OTHERS =>
 			END CASE;
 		END PROCESS;

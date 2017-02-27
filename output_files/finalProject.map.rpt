@@ -1,5 +1,5 @@
 Analysis & Elaboration report for finalProject
-Sun Feb 26 20:00:39 2017
+Mon Feb 27 00:12:13 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sun Feb 26 20:00:39 2017           ;
+; Analysis & Elaboration Status      ; Successful - Mon Feb 27 00:12:13 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
 ; Top-level Entity Name              ; phase1                                          ;
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Feb 26 20:00:37 2017
+    Info: Processing started: Mon Feb 27 00:12:10 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalProject -c finalProject --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file phase1.vhd
@@ -193,9 +193,21 @@ Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb.vhd
     Info (12022): Found design unit 1: phase1_tb-phase1_tb_arch
     Info (12023): Found entity 1: phase1_tb
+Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_sub.vhd
+    Info (12022): Found design unit 1: phase1_tb_sub-phase1_tb_arch
+    Info (12023): Found entity 1: phase1_tb_sub
+Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_add.vhd
+    Info (12022): Found design unit 1: phase1_tb_add-phase1_tb_arch
+    Info (12023): Found entity 1: phase1_tb_add
+Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_mul.vhd
+    Info (12022): Found design unit 1: phase1_tb_mul-phase1_tb_arch
+    Info (12023): Found entity 1: phase1_tb_mul
+Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_div.vhd
+    Info (12022): Found design unit 1: phase1_tb_div-phase1_tb_arch
+    Info (12023): Found entity 1: phase1_tb_div
 Info (12127): Elaborating entity "phase1" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at phase1.vhd(223): used implicit default value for signal "C_sign_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at phase1.vhd(224): used implicit default value for signal "In_port_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at phase1.vhd(224): used implicit default value for signal "C_sign_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at phase1.vhd(225): used implicit default value for signal "In_port_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "register_32" for hierarchy "register_32:b2v_C_sign_extended"
 Info (12128): Elaborating entity "encoder_32_to_5" for hierarchy "encoder_32_to_5:b2v_inst"
 Info (12128): Elaborating entity "bus_mux_32_to_1" for hierarchy "bus_mux_32_to_1:b2v_inst1"
@@ -206,9 +218,9 @@ Info (12128): Elaborating entity "Z_split" for hierarchy "Z_split:b2v_inst4"
 Info (12128): Elaborating entity "MDMUX" for hierarchy "MDMUX:b2v_inst6"
 Info (12128): Elaborating entity "register_64" for hierarchy "register_64:b2v_Z"
 Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 518 megabytes
-    Info: Processing ended: Sun Feb 26 20:00:39 2017
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 521 megabytes
+    Info: Processing ended: Mon Feb 27 00:12:13 2017
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

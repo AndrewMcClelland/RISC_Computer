@@ -68,20 +68,20 @@
 # -- Compiling entity ALU
 # -- Compiling architecture behavioral of ALU
 # 
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1_tb.vhd}
+# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1_tb_and.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity phase1_tb
-# -- Compiling architecture phase1_tb_arch of phase1_tb
+# -- Compiling entity phase1_tb_and
+# -- Compiling architecture phase1_tb_arch of phase1_tb_and
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase1_tb
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps phase1_tb 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase1_tb_and
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps phase1_tb_and 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.phase1_tb(phase1_tb_arch)
+# Loading work.phase1_tb_and(phase1_tb_arch)
 # Loading work.phase1(bdf_type)
 # Loading work.register_32(behavioral)
 # Loading work.encoder_32_to_5(behavioral)
@@ -97,4 +97,4 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ns
+# run 250 ns

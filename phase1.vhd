@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sun Feb 26 19:58:55 2017"
+-- CREATED		"Sun Feb 26 21:54:37 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -109,6 +109,7 @@ ENTITY phase1 IS
 		R8_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		R9_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		S_out :  INOUT  STD_LOGIC_VECTOR(4 DOWNTO 0);
+		Y_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		Z_in :  INOUT  STD_LOGIC_VECTOR(63 DOWNTO 0);
 		Zhigh_in :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		Zhigh_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -222,7 +223,6 @@ END COMPONENT;
 
 SIGNAL	C_sign_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	In_port_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 
 BEGIN 
@@ -312,7 +312,7 @@ PORT MAP(BusMuxIn_HI => HI_out,
 
 b2v_inst3 : alu
 PORT MAP(clk => clk,
-		 A => SYNTHESIZED_WIRE_0,
+		 A => Y_out,
 		 B => BusMuxOut,
 		 cs => cs,
 		 C => ALU_out);
@@ -504,7 +504,7 @@ PORT MAP(clk => clk,
 		 clear => clear,
 		 register_in => register_in_Y,
 		 q => BusMuxOut,
-		 output => SYNTHESIZED_WIRE_0);
+		 output => Y_out);
 
 
 b2v_Z : register_64

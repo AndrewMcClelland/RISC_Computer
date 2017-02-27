@@ -13,7 +13,7 @@ architecture behavioral of register_32 is
 begin
 	process(clk,clear)
 		begin
-		if (rising_edge(clk) AND clk = '1') then
+		if (rising_edge(clk)) then
 			if (clear = '1') then
 				output <= "00000000000000000000000000000000";
 			elsif (register_in = '1') then

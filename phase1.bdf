@@ -1492,6 +1492,23 @@ applicable agreement for further details.
 	)
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
 )
+(pin
+	(bidir)
+	(rect 1464 792 1640 808)
+	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "Y_out[31..0]" (rect 90 0 151 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 56 4)(pt 78 4))
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 56 12)(pt 78 12))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 78 12)(pt 82 8))
+		(line (pt 56 4)(pt 52 8))
+		(line (pt 52 8)(pt 56 12))
+	)
+	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
+)
 (symbol
 	(rect 896 496 1064 928)
 	(text "encoder_32_to_5" (rect 5 0 88 12)(font "Arial" ))
@@ -3681,11 +3698,6 @@ applicable agreement for further details.
 	(pt 1760 -456)
 )
 (connector
-	(pt 1184 -336)
-	(pt 1400 -336)
-	(bus)
-)
-(connector
 	(pt 1392 -416)
 	(pt 1392 -304)
 )
@@ -4300,6 +4312,12 @@ applicable agreement for further details.
 	(text "MAR_out[31..0]" (rect 1184 -96 1260 -84)(font "Arial" ))
 	(pt 1184 -80)
 	(pt 1192 -80)
+	(bus)
+)
+(connector
+	(text "Y_out[31..0]" (rect 1194 -352 1255 -340)(font "Arial" ))
+	(pt 1184 -336)
+	(pt 1400 -336)
 	(bus)
 )
 (junction (pt -104 552))
