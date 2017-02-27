@@ -1,5 +1,5 @@
 Analysis & Elaboration report for finalProject
-Mon Feb 27 00:12:13 2017
+Mon Feb 27 01:11:21 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Feb 27 00:12:13 2017           ;
+; Analysis & Elaboration Status      ; Successful - Mon Feb 27 01:11:21 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
 ; Top-level Entity Name              ; phase1                                          ;
@@ -59,7 +59,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 27 00:12:10 2017
+    Info: Processing started: Mon Feb 27 01:11:19 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalProject -c finalProject --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file phase1.vhd
@@ -205,6 +205,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file phase1_
 Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_div.vhd
     Info (12022): Found design unit 1: phase1_tb_div-phase1_tb_arch
     Info (12023): Found entity 1: phase1_tb_div
+Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_and.vhd
+    Info (12022): Found design unit 1: phase1_tb_and-phase1_tb_arch
+    Info (12023): Found entity 1: phase1_tb_and
+Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_ror.vhd
+    Info (12022): Found design unit 1: phase1_tb_ror-phase1_tb_arch
+    Info (12023): Found entity 1: phase1_tb_ror
+Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_rol.vhd
+    Info (12022): Found design unit 1: phase1_tb_rol-phase1_tb_arch
+    Info (12023): Found entity 1: phase1_tb_rol
 Info (12127): Elaborating entity "phase1" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at phase1.vhd(224): used implicit default value for signal "C_sign_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at phase1.vhd(225): used implicit default value for signal "In_port_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
@@ -219,8 +228,8 @@ Info (12128): Elaborating entity "MDMUX" for hierarchy "MDMUX:b2v_inst6"
 Info (12128): Elaborating entity "register_64" for hierarchy "register_64:b2v_Z"
 Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 521 megabytes
-    Info: Processing ended: Mon Feb 27 00:12:13 2017
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Mon Feb 27 01:11:21 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

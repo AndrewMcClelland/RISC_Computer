@@ -10,56 +10,56 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/phase1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity phase1
 # -- Compiling architecture bdf_type of phase1
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/Z_split.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/Z_split.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Z_split
 # -- Compiling architecture behavioral of Z_split
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_64.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/register_64.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_64
 # -- Compiling architecture behavioral of register_64
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_32.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/register_32.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_32
 # -- Compiling architecture behavioral of register_32
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/MDMux.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/MDMux.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MDMUX
 # -- Compiling architecture behavioral of MDMUX
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/encoder_32_to_5.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity encoder_32_to_5
 # -- Compiling architecture behavioral of encoder_32_to_5
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/bus_mux_32_to_1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bus_mux_32_to_1
 # -- Compiling architecture behavioral of bus_mux_32_to_1
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/ALU.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/ALU.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -68,20 +68,20 @@
 # -- Compiling entity ALU
 # -- Compiling architecture behavioral of ALU
 # 
-# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase1_tb_and.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Project/phase1_tb_rol.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity phase1_tb_and
-# -- Compiling architecture phase1_tb_arch of phase1_tb_and
+# -- Compiling entity phase1_tb_rol
+# -- Compiling architecture phase1_tb_arch of phase1_tb_rol
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase1_tb_and
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps phase1_tb_and 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase1_tb_rol
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps phase1_tb_rol 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.phase1_tb_and(phase1_tb_arch)
+# Loading work.phase1_tb_rol(phase1_tb_arch)
 # Loading work.phase1(bdf_type)
 # Loading work.register_32(behavioral)
 # Loading work.encoder_32_to_5(behavioral)
@@ -98,3 +98,7 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 250 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 180 ns  Iteration: 1  Instance: /phase1_tb_rol/DUT/b2v_inst3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ns  Iteration: 1  Instance: /phase1_tb_rol/DUT/b2v_inst3
