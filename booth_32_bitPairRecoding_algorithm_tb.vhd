@@ -10,12 +10,18 @@ ARCHITECTURE booth_32_bitPairRecoding_algorithm_tb_arch of booth_32_bitPairRecod
 	SIGNAL multiplier_tb : signed(31 downto 0);
 	SIGNAL multiplicand_tb : signed(31 downto 0);
 	SIGNAL out_product_tb : signed(63 downto 0);
+	SIGNAL multiplicand_dec_tb : integer;
+	SIGNAL multiplier_dec_tb : integer;
+	SIGNAL out_product_dec_tb : integer;
 	
 	COMPONENT booth_32_bitPairRecoding_algorithm 
 		PORT  (
 			multiplier : IN signed(31 downto 0);
 			multiplicand : IN signed(31 downto 0);
-			out_product : OUT signed(63 downto 0)
+			out_product : OUT signed(63 downto 0);
+			multiplicand_dec : OUT integer;
+			multiplier_dec : OUT integer;
+			out_product_dec : OUT integer
 			);
 	END COMPONENT booth_32_bitPairRecoding_algorithm;
 	
@@ -26,7 +32,11 @@ ARCHITECTURE booth_32_bitPairRecoding_algorithm_tb_arch of booth_32_bitPairRecod
 	PORT MAP (
 		multiplier => multiplier_tb,
 		multiplicand => multiplicand_tb,
-		out_product => out_product_tb);
+		out_product => out_product_tb,
+		multiplicand_dec => multiplicand_dec_tb,
+		multiplier_dec => multiplier_dec_tb,
+		out_product_dec => out_product_dec_tb
+		);
 		
 	sim_process: process
 	
