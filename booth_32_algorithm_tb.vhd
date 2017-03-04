@@ -10,14 +10,13 @@ ARCHITECTURE booth_32_algorithm_tb_arch of booth_32_algorithm_tb IS
 	SIGNAL multiplier_tb : signed(31 downto 0);
 	SIGNAL multiplicand_tb : signed(31 downto 0);
 	SIGNAL out_product_tb : signed(63 downto 0);
-	SIGNAL out_low_bits_tb : signed(1 downto 0);
 	
 	COMPONENT booth_32_algorithm 
 		PORT  (
 			multiplier : IN signed(31 downto 0);
 			multiplicand : IN signed(31 downto 0);
-			out_product : OUT signed(63 downto 0);
-			out_low_bits : OUT signed(1 downto 0)
+			out_product : OUT signed(63 downto 0)
+
 			);
 	END COMPONENT booth_32_algorithm;
 	
@@ -28,8 +27,7 @@ ARCHITECTURE booth_32_algorithm_tb_arch of booth_32_algorithm_tb IS
 	PORT MAP (
 		multiplier => multiplier_tb,
 		multiplicand => multiplicand_tb,
-		out_product => out_product_tb,
-		out_low_bits => out_low_bits_tb);
+		out_product => out_product_tb);
 		
 	sim_process: process
 	
