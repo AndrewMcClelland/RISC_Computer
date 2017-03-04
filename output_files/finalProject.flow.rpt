@@ -1,5 +1,5 @@
 Flow report for finalProject
-Sat Mar 04 11:32:33 2017
+Sat Mar 04 12:16:00 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 04 11:32:33 2017           ;
+; Flow Status                        ; Successful - Sat Mar 04 12:16:00 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
 ; Top-level Entity Name              ; booth_32_bitPairRecoding_algorithm              ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2017 11:32:31 ;
+; Start date & time ; 03/04/2017 12:15:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; finalProject        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+-------------------------------------------+---------------+------------------------------------+---------------------------------------+
 ; Assignment Name                      ; Value                                     ; Default Value ; Entity Name                        ; Section Id                            ;
 +--------------------------------------+-------------------------------------------+---------------+------------------------------------+---------------------------------------+
-; COMPILER_SIGNATURE_ID                ; 57277340392087.148864515110556            ; --            ; --                                 ; --                                    ;
+; COMPILER_SIGNATURE_ID                ; 57277340392087.148864775705128            ; --            ; --                                 ; --                                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                                 ; register_64_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                                 ; booth_32_algorithm_tb                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                                 ; encoder_32_to_5_tb                    ;
@@ -193,8 +193,8 @@ applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:03     ; 1.0                     ; 516 MB              ; 00:00:02                           ;
-; Total                  ; 00:00:03     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Elaboration ; 00:00:02     ; 1.0                     ; 516 MB              ; 00:00:03                           ;
+; Total                  ; 00:00:02     ; --                      ; --                  ; 00:00:03                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
