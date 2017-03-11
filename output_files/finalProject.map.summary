@@ -1,5 +1,5 @@
-Analysis & Elaboration Status : Successful - Sun Mar 05 20:53:33 2017
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Elaboration Status : Failed - Mon Mar 06 11:19:13 2017
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : finalProject
 Top-level Entity Name : array_multiplier
 Family : Cyclone III

@@ -1,0 +1,48 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+
+entity select_encode_logic is 
+	port(IR_in : in std_logic_vector(31 downto 0);
+		Gra, Grb, Grc, Rin, Rout, BAout : in std_logic;
+		C_sign_extended : out std_logic_vector(31 downto 0);
+		Reg_in, Reg_out : out std_logic_vector(15 downto 0)	
+	);
+end select_encode_logic;
+
+architecture behavioral of select_encode_logic is 
+signal RA : std_logic_vector(3 downto 0);
+signal RB : std_logic_vector(3 downto 0);
+signal RC : std_logic_vector(3 downto 0);
+signal In_decoder : std_logic_vector(3 downto 0);
+signal Out_decoder : std_logic_vector(15 downto 0);
+begin 
+	RA <= IR_in(26 downto 23);
+	RB <= IR_in(22 downto 19);
+	RC <= IR_in(18 downto 15);
+	
+	In_decoder <= (RA and Gra) or (RB and Grb) or (RC and Grc);
+	
+	Out_decoder <= "0000_0000_0000_0001" when (In_decoder = "0000") else
+						"0000_0000_0000_0010" when (In_decoder = "0001") else
+						"0000_0000_0000_0100" when (In_decoder = "0010") else
+						"0000_0000_0000_1000" when (In_decoder = "0011") else
+						"0000_0000_0001_0000" when (In_decoder = "0100") else
+						"0000_0000_0010_0000" when (In_decoder = "0101") else
+						"0000_0000_0100_0000" when (In_decoder = "0110") else
+						"0000_0000_1000_0000" when (In_decoder = "0111") else
+						"0000_0001_0000_0000" when (In_decoder = "1000") else
+						"0000_0010_0000_0000" when (In_decoder = "1001") else
+						"0000_0100_0000_0000" when (In_decoder = "1010") else
+						"0000_1000_0000_0000" when (In_decoder = "1011") else
+						"0001_0000_0000_0000" when (In_decoder = "1100") else
+						"0010_0000_0000_0000" when (In_decoder = "1101") else
+						"0100_0000_0000_0000" when (In_decoder = "1110") else
+						"1000_0000_0000_0000" when (In_decoder = "1111") else
+	
+	
+
+
+
+
+
+end behavioral;
