@@ -1,0 +1,13 @@
+use ieee.std_logic_1164.all;
+
+entity con_ff_logic is 
+	port(IR_low_bits : in std_logic_vector(1 downto 0);
+			register_in : in std_logic_vector(31 downto 0);
+			Con_in : in std_logic;
+			con_out : out std_logic
+	);
+end con_ff_logic;
+
+architecture behavioral of con_ff_logic is
+begin
+	process(IR_low_bits, register_in, con_in) is

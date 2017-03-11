@@ -3,32 +3,32 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
-Eselect_encode_logic_sel
-Z1 w1489263066
+Econ_ff_logic
+Z1 w1489266291
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
-Z5 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd
-Z6 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd
+Z5 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd
+Z6 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd
 l0
 L4
-V[Mg7_@KkA@aJW>PaaWMEJ1
+V;M=YdSFfIQTYTL?]CgG:00
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1489263094.861000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd|
-Z10 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd|
+Z8 !s108 1489267185.598000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd|
+Z10 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd|
 Z11 o-93 -work work -O0
 Z12 tExplicit 1
-!s100 IfBQ7h`[ckFXh2K`J3OZa1
+!s100 >oY0OIZ``X4Yc1NlcP@>@2
 !i10b 1
 Abehavioral
 R2
 R3
-DEx4 work 23 select_encode_logic_sel 0 22 [Mg7_@KkA@aJW>PaaWMEJ1
-l13
+DEx4 work 12 con_ff_logic 0 22 ;M=YdSFfIQTYTL?]CgG:00
+l22
 L12
-VNbfUfa@c?UQ?i19=N=V9F2
+VCC7PQT6>g1^FF_S=FP4fb0
 R7
 31
 R8
@@ -36,35 +36,35 @@ R9
 R10
 R11
 R12
-!s100 D>da0JVVmlke6G5]Bg5120
+!s100 =R4QeRgI]dL[d7QGnJ3cU1
 !i10b 1
-Eselect_encode_logic_sel_tb
-Z13 w1489263078
+Econ_ff_logic_tb
+Z13 w1489267162
 R2
 R3
 R4
-Z14 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd
-Z15 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd
+Z14 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd
+Z15 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd
 l0
 L4
-V<OAdY4eeS7G83oBd5Zez<2
-!s100 EAm;UEg7>=nT47d`3P64o2
+VAaWzGW6IS:0GOjeoJ4E8P2
+!s100 oCRmiVhh[WmVo4kXJ3TEf1
 R7
 31
 !i10b 1
-Z16 !s108 1489263095.256000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd|
-Z18 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd|
+Z16 !s108 1489267186.406000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd|
+Z18 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd|
 R11
 R12
-Aselect_encode_logic_sel_tb_arch
+Acon_ff_logic_tb_arch
 R2
 R3
-DEx4 work 26 select_encode_logic_sel_tb 0 22 <OAdY4eeS7G83oBd5Zez<2
+DEx4 work 15 con_ff_logic_tb 0 22 AaWzGW6IS:0GOjeoJ4E8P2
 l23
 L7
-VA^@J[QIGf^R5;4QQf_QPK2
-!s100 gV3f3i;OP`ob<HOj8=nRZ3
+VbK2O>5D@jJfI>dXMEeOJ>2
+!s100 nQ_YQY:zRQV8e[kEZklbl2
 R7
 31
 !i10b 1
@@ -73,3 +73,38 @@ R17
 R18
 R11
 R12
+Ed_flipflop
+Z19 w1489266304
+R2
+R3
+R4
+Z20 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd
+Z21 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd
+l0
+L4
+V?^LloSkPn18QmnWSF9mJ]3
+R7
+31
+Z22 !s108 1489267186.032000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd|
+Z24 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd|
+R11
+R12
+!s100 ;EK=l?0LZ9BnH8IW`Y6^S2
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 10 d_flipflop 0 22 ?^LloSkPn18QmnWSF9mJ]3
+l11
+L10
+VJcOWfWCiH^_=^VfJXEO4G3
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 K_lLCSUi67E8HBSWKPOlT3
+!i10b 1
