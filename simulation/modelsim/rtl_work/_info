@@ -2,78 +2,74 @@ m255
 K3
 13
 cModel Technology
-Z0 dZ:\ELEC 374\ELEC374_RISC_Computer-master\ELEC374_RISC_Computer-master\simulation\modelsim
-Earray_multiplier
-Z1 w1488765466
-Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dZ:\ELEC 374\ELEC374_RISC_Computer-master\ELEC374_RISC_Computer-master\simulation\modelsim
-Z6 8Z:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier.vhd
-Z7 FZ:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier.vhd
+Z0 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
+Eselect_encode_logic_sel
+Z1 w1489263066
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
+Z5 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd
+Z6 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd
 l0
-L6
-VC;AfP6N7kb@;aIG6E9h^b0
-Z8 OV;C;10.1d;51
+L4
+V[Mg7_@KkA@aJW>PaaWMEJ1
+Z7 OV;C;10.1d;51
 31
-Z9 !s108 1488809422.737000
-Z10 !s90 -reportprogress|300|-93|-work|work|Z:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier.vhd|
-Z11 !s107 Z:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier.vhd|
-Z12 o-93 -work work -O0
-Z13 tExplicit 1
-!s100 B>9cLE_I;Jg]IMhgcNRX<0
+Z8 !s108 1489263094.861000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd|
+Z10 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 IfBQ7h`[ckFXh2K`J3OZa1
 !i10b 1
 Abehavioral
 R2
 R3
-R4
-DEx4 work 16 array_multiplier 0 22 C;AfP6N7kb@;aIG6E9h^b0
+DEx4 work 23 select_encode_logic_sel 0 22 [Mg7_@KkA@aJW>PaaWMEJ1
 l13
 L12
-Vh48OOKfM8fg1eQLL^^n7f0
-R8
+VNbfUfa@c?UQ?i19=N=V9F2
+R7
 31
+R8
 R9
 R10
 R11
 R12
-R13
-!s100 BN9a>B_8`kBf;lZTj9zVP2
+!s100 D>da0JVVmlke6G5]Bg5120
 !i10b 1
-Earray_multiplier_tb
-R1
+Eselect_encode_logic_sel_tb
+Z13 w1489263078
 R2
 R3
 R4
-R5
-Z14 8Z:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier_tb.vhd
-Z15 FZ:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier_tb.vhd
+Z14 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd
+Z15 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd
 l0
-L5
-VU>VIokA60DIGl46KWSDfW0
-!s100 D=8mf[0d]7hSSF5K`gAdf2
-R8
+L4
+V<OAdY4eeS7G83oBd5Zez<2
+!s100 EAm;UEg7>=nT47d`3P64o2
+R7
 31
 !i10b 1
-Z16 !s108 1488809423.569000
-Z17 !s90 -reportprogress|300|-93|-work|work|Z:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier_tb.vhd|
-Z18 !s107 Z:/ELEC 374/ELEC374_RISC_Computer-master/ELEC374_RISC_Computer-master/array_multiplier_tb.vhd|
+Z16 !s108 1489263095.256000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd|
+Z18 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel_tb.vhd|
+R11
 R12
-R13
-Aarray_multiplier_tb_arch
+Aselect_encode_logic_sel_tb_arch
 R2
 R3
-R4
-DEx4 work 19 array_multiplier_tb 0 22 U>VIokA60DIGl46KWSDfW0
+DEx4 work 26 select_encode_logic_sel_tb 0 22 <OAdY4eeS7G83oBd5Zez<2
 l23
-L8
-V<Uoi4=0GLK1i<?DTGGE0Q3
-!s100 R85NKY?5kj`mT<zZ]cc722
-R8
+L7
+VA^@J[QIGf^R5;4QQf_QPK2
+!s100 gV3f3i;OP`ob<HOj8=nRZ3
+R7
 31
 !i10b 1
 R16
 R17
 R18
+R11
 R12
-R13

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Failed - Mon Mar 06 11:19:13 2017
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Analysis & Elaboration Status : Successful - Sat Mar 11 15:11:22 2017
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : finalProject
-Top-level Entity Name : array_multiplier
+Top-level Entity Name : select_encode_logic_sel
 Family : Cyclone III
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge
