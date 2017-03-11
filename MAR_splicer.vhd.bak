@@ -1,0 +1,11 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+
+entity MAR_splicer is 
+	port(MAR_input : in std_logic_vector(31 downto 0);
+			address_out : out std_logic_vector(8 downto 0)
+	);
+end select_encode_logic_sel;
+
+architecture behavioral of select_encode_logic_sel is
+begin
