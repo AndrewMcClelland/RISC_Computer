@@ -3,108 +3,77 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
-Econ_ff_logic
-Z1 w1489266291
-Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
-Z5 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd
-Z6 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd
+Ebooth_32_algorithm
+Z1 w1488829098
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
+Z6 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm.vhd
+Z7 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm.vhd
 l0
-L4
-V;M=YdSFfIQTYTL?]CgG:00
-Z7 OV;C;10.1d;51
+L6
+VcI<DSh6`ca6SV;_R[5O7j0
+Z8 OV;C;10.1d;51
 31
-Z8 !s108 1489267185.598000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd|
-Z10 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd|
-Z11 o-93 -work work -O0
-Z12 tExplicit 1
-!s100 >oY0OIZ``X4Yc1NlcP@>@2
+Z9 !s108 1489272530.730000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm.vhd|
+Z11 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 CI^Lh;JB4;?R7YXQcLmQk2
 !i10b 1
 Abehavioral
 R2
 R3
-DEx4 work 12 con_ff_logic 0 22 ;M=YdSFfIQTYTL?]CgG:00
-l22
+R4
+DEx4 work 18 booth_32_algorithm 0 22 cI<DSh6`ca6SV;_R[5O7j0
+l13
 L12
-VCC7PQT6>g1^FF_S=FP4fb0
-R7
-31
+Vo821SSF<JO6`eRPn9DJEK2
 R8
+31
 R9
 R10
 R11
 R12
-!s100 =R4QeRgI]dL[d7QGnJ3cU1
+R13
+!s100 ieDbWN]jP@YGgeO7]@gD30
 !i10b 1
-Econ_ff_logic_tb
-Z13 w1489267162
+Ebooth_32_algorithm_tb
+R1
 R2
 R3
 R4
-Z14 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd
-Z15 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd
+R5
+Z14 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm_tb.vhd
+Z15 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm_tb.vhd
 l0
-L4
-VAaWzGW6IS:0GOjeoJ4E8P2
-!s100 oCRmiVhh[WmVo4kXJ3TEf1
-R7
+L5
+V;4Jj=V37`^WfG[6MbKDX90
+!s100 8E7HmnAofX:`aEzDSDbnX1
+R8
 31
 !i10b 1
-Z16 !s108 1489267186.406000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd|
-Z18 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic_tb.vhd|
-R11
+Z16 !s108 1489272532.265000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm_tb.vhd|
+Z18 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/booth_32_algorithm_tb.vhd|
 R12
-Acon_ff_logic_tb_arch
+R13
+Abooth_32_algorithm_tb_arch
 R2
 R3
-DEx4 work 15 con_ff_logic_tb 0 22 AaWzGW6IS:0GOjeoJ4E8P2
+R4
+DEx4 work 21 booth_32_algorithm_tb 0 22 ;4Jj=V37`^WfG[6MbKDX90
 l23
-L7
-VbK2O>5D@jJfI>dXMEeOJ>2
-!s100 nQ_YQY:zRQV8e[kEZklbl2
-R7
+L8
+VIHh;S@L?WP1Wd2n>c:8b]2
+!s100 Xo[OX4i9Sc<H6NKzQB8Sl0
+R8
 31
 !i10b 1
 R16
 R17
 R18
-R11
 R12
-Ed_flipflop
-Z19 w1489266304
-R2
-R3
-R4
-Z20 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd
-Z21 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd
-l0
-L4
-V?^LloSkPn18QmnWSF9mJ]3
-R7
-31
-Z22 !s108 1489267186.032000
-Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd|
-Z24 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd|
-R11
-R12
-!s100 ;EK=l?0LZ9BnH8IW`Y6^S2
-!i10b 1
-Abehavioral
-R2
-R3
-DEx4 work 10 d_flipflop 0 22 ?^LloSkPn18QmnWSF9mJ]3
-l11
-L10
-VJcOWfWCiH^_=^VfJXEO4G3
-R7
-31
-R22
-R23
-R24
-R11
-R12
-!s100 K_lLCSUi67E8HBSWKPOlT3
-!i10b 1
+R13

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for finalProject
-Sat Mar 11 16:19:26 2017
+Sat Mar 11 17:48:20 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,10 +36,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Mar 11 16:19:26 2017           ;
+; Analysis & Elaboration Status      ; Successful - Sat Mar 11 17:48:20 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
-; Top-level Entity Name              ; con_ff_logic                                    ;
+; Top-level Entity Name              ; booth_32_algorithm                              ;
 ; Family                             ; Cyclone III                                     ;
 ; Total logic elements               ; N/A until Partition Merge                       ;
 ;     Total combinational functions  ; N/A until Partition Merge                       ;
@@ -70,7 +70,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; con_ff_logic       ; finalProject       ;
+; Top-level entity name                                                      ; booth_32_algorithm ; finalProject       ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,7 +157,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 11 16:19:25 2017
+    Info: Processing started: Sat Mar 11 17:48:18 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalProject -c finalProject --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file select_encode_logic_sel_tb.vhd
@@ -265,13 +265,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file d_flipf
 Info (12021): Found 2 design units, including 1 entities, in source file con_ff_logic_tb.vhd
     Info (12022): Found design unit 1: con_ff_logic_tb-con_ff_logic_tb_arch
     Info (12023): Found entity 1: con_ff_logic_tb
-Info (12127): Elaborating entity "con_ff_logic" for the top level hierarchy
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "d_flipflop:d_ff_con"
-Warning (10492): VHDL Process Statement warning at D_flipflop.vhd(14): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 501 megabytes
-    Info: Processing ended: Sat Mar 11 16:19:26 2017
-    Info: Elapsed time: 00:00:01
+Info (12021): Found 2 design units, including 1 entities, in source file mar_splicer.vhd
+    Info (12022): Found design unit 1: MAR_splicer-behavioral
+    Info (12023): Found entity 1: MAR_splicer
+Info (12127): Elaborating entity "booth_32_algorithm" for the top level hierarchy
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Sat Mar 11 17:48:20 2017
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
