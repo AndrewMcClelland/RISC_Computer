@@ -3762,7 +3762,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 8 -392 200 -248)
+	(rect 8 -384 200 -240)
 	(text "register_R0" (rect 5 0 61 12)(font "Arial" ))
 	(text "inst16" (rect 8 128 37 140)(font "Arial" ))
 	(port
@@ -3926,6 +3926,40 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 168 128))
 	)
 )
+(symbol
+	(rect 840 992 1000 1088)
+	(text "lpm_add_sub0" (rect 39 0 138 16)(font "Arial" (font_size 10)))
+	(text "inst11" (rect 8 80 37 92)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "dataa[31..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "dataa[31..0]" (rect 4 26 71 40)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 64 40)(line_width 3))
+	)
+	(port
+		(pt 160 56)
+		(output)
+		(text "result[31..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "result[31..0]" (rect 100 42 167 56)(font "Arial" (font_size 8)))
+		(line (pt 160 56)(pt 96 56)(line_width 3))
+	)
+	(drawing
+		(text "A+B" (rect 75 51 99 65)(font "Arial" (font_size 8)))
+		(text "1" (rect 8 59 15 73)(font "Arial" (font_size 8)))
+		(text "A" (rect 64 35 73 49)(font "Arial" (font_size 8)))
+		(text "B" (rect 65 67 73 81)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 64 80))
+		(line (pt 64 32)(pt 96 40))
+		(line (pt 64 80)(pt 96 72))
+		(line (pt 96 40)(pt 96 72))
+		(line (pt 8 72)(pt 64 72)(line_width 3))
+		(line (pt 0 0)(pt 162 0))
+		(line (pt 162 0)(pt 162 98))
+		(line (pt 0 98)(pt 162 98))
+		(line (pt 0 0)(pt 0 98))
+	)
+)
 (connector
 	(text "R2_out[31..0]" (rect 200 -120 267 -108)(font "Arial" ))
 	(pt 200 -104)
@@ -4069,19 +4103,7 @@ applicable agreement for further details.
 	(pt -104 1064)
 )
 (connector
-	(pt -104 -344)
-	(pt 8 -344)
-)
-(connector
-	(pt -104 -416)
-	(pt -104 -344)
-)
-(connector
 	(pt 8 -216)
-	(pt -104 -216)
-)
-(connector
-	(pt -104 -344)
 	(pt -104 -216)
 )
 (connector
@@ -4378,10 +4400,6 @@ applicable agreement for further details.
 	(pt -112 -200)
 )
 (connector
-	(pt 8 -328)
-	(pt -112 -328)
-)
-(connector
 	(pt 992 -304)
 	(pt 976 -304)
 )
@@ -4454,14 +4472,6 @@ applicable agreement for further details.
 	(pt 304 952)
 )
 (connector
-	(pt -112 -456)
-	(pt -112 -328)
-)
-(connector
-	(pt -112 -328)
-	(pt -112 -200)
-)
-(connector
 	(pt -112 -200)
 	(pt -112 -72)
 )
@@ -4517,12 +4527,6 @@ applicable agreement for further details.
 	(text "BusMuxOut[31..0]" (rect 1392 -184 1480 -172)(font "Arial" ))
 	(pt 1448 -168)
 	(pt 1392 -168)
-	(bus)
-)
-(connector
-	(text "BusMuxOut[31..0]" (rect -40 -376 48 -364)(font "Arial" ))
-	(pt 8 -360)
-	(pt -40 -360)
 	(bus)
 )
 (connector
@@ -4691,12 +4695,6 @@ applicable agreement for further details.
 	(text "S_out[4..0]" (rect 1098 512 1152 524)(font "Arial" ))
 	(pt 1088 528)
 	(pt 1064 528)
-	(bus)
-)
-(connector
-	(text "R0_out[31..0]" (rect 200 -376 267 -364)(font "Arial" ))
-	(pt 200 -360)
-	(pt 208 -360)
 	(bus)
 )
 (connector
@@ -5303,11 +5301,6 @@ applicable agreement for further details.
 	(pt 816 768)
 )
 (connector
-	(text "R0in" (rect -38 -328 -16 -316)(font "Arial" ))
-	(pt -40 -312)
-	(pt 8 -312)
-)
-(connector
 	(text "R1in" (rect -38 -200 -16 -188)(font "Arial" ))
 	(pt -40 -184)
 	(pt 8 -184)
@@ -5394,12 +5387,7 @@ applicable agreement for further details.
 	(pt 1896 208)
 )
 (connector
-	(text "BAout" (rect -38 -312 -9 -300)(font "Arial" ))
-	(pt 8 -296)
-	(pt -40 -296)
-)
-(connector
-	(text "IR_out[31..0]" (rect 1704 768 1768 780)(font "Arial" ))
+	(text "IR_out[31..0]" (rect 1656 760 1720 772)(font "Arial" ))
 	(pt 1720 784)
 	(pt 1704 784)
 	(bus)
@@ -5485,10 +5473,55 @@ applicable agreement for further details.
 	(pt 2208 -136)
 	(bus)
 )
+(connector
+	(pt -104 -336)
+	(pt 8 -336)
+)
+(connector
+	(pt -112 -320)
+	(pt 8 -320)
+)
+(connector
+	(text "BusMuxOut[31..0]" (rect -40 -368 48 -356)(font "Arial" ))
+	(pt 8 -352)
+	(pt -40 -352)
+	(bus)
+)
+(connector
+	(text "R0_out[31..0]" (rect 200 -368 267 -356)(font "Arial" ))
+	(pt 200 -352)
+	(pt 208 -352)
+	(bus)
+)
+(connector
+	(text "R0in" (rect -38 -320 -16 -308)(font "Arial" ))
+	(pt -40 -304)
+	(pt 8 -304)
+)
+(connector
+	(text "BAout" (rect -38 -304 -9 -292)(font "Arial" ))
+	(pt 8 -288)
+	(pt -40 -288)
+)
+(connector
+	(pt -104 -416)
+	(pt -104 -336)
+)
+(connector
+	(pt -104 -336)
+	(pt -104 -216)
+)
+(connector
+	(pt -112 -456)
+	(pt -112 -320)
+)
+(connector
+	(pt -112 -320)
+	(pt -112 -200)
+)
 (junction (pt -104 552))
 (junction (pt -104 808))
 (junction (pt -104 936))
-(junction (pt -104 -344))
 (junction (pt -104 -416))
 (junction (pt -104 -216))
 (junction (pt -104 40))
@@ -5529,7 +5562,6 @@ applicable agreement for further details.
 (junction (pt -112 -72))
 (junction (pt -104 -88))
 (junction (pt -112 -200))
-(junction (pt -112 -328))
 (junction (pt 976 -456))
 (junction (pt -112 696))
 (junction (pt -112 440))
@@ -5544,3 +5576,5 @@ applicable agreement for further details.
 (junction (pt 1768 -416))
 (junction (pt 304 1080))
 (junction (pt 312 1064))
+(junction (pt -104 -336))
+(junction (pt -112 -320))
