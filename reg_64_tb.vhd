@@ -37,22 +37,23 @@ ARCHITECTURE register_64_tb_arch of register_64_tb IS
 	
 	begin
 	wait for 0 ns;
-	clear_tb <= '0';
-	register_in_tb <= '1';
-	q_tb <= b"0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0001";
-	clk_tb <= '1';
+	clear_tb <= '1';
+	
+	clk_tb <= '0';
 	
 	wait for 20 ns;
 	
-	clear_tb <= '0';
-	register_in_tb <= '1';
-	q_tb <= b"0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000";
-	clk_tb <= '0';
+
+	clk_tb <= '1';
 	
-	wait for 30 ns;
+	wait for 20 ns;
+
+	clk_tb <= '0';
 	clear_tb <= '0';
-	register_in_tb <= '1';
-	q_tb <= b"0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0000_0001";
+	
+	
+	wait for 20 ns;
+	
 	clk_tb <= '1';
 	wait;
 	

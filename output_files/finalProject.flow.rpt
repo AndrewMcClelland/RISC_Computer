@@ -1,5 +1,5 @@
 Flow report for finalProject
-Sat Mar 11 17:48:20 2017
+Sat Mar 18 19:04:51 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,10 +40,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 11 17:48:20 2017           ;
+; Flow Status                        ; Successful - Sat Mar 18 19:04:51 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
-; Top-level Entity Name              ; booth_32_algorithm                              ;
+; Top-level Entity Name              ; phase2                                          ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
@@ -64,147 +64,157 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/11/2017 17:48:19 ;
+; Start date & time ; 03/18/2017 19:04:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; finalProject        ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                              ;
-+--------------------------------------+-------------------------------------------+---------------+--------------------+---------------------------------------+
-; Assignment Name                      ; Value                                     ; Default Value ; Entity Name        ; Section Id                            ;
-+--------------------------------------+-------------------------------------------+---------------+--------------------+---------------------------------------+
-; COMPILER_SIGNATURE_ID                ; 57277340392087.148927249911184            ; --            ; --                 ; --                                    ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; register_64_tb                        ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; booth_32_algorithm_tb                 ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; encoder_32_to_5_tb                    ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; bus_mux_32_to_1_tb                    ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; MDMux_tb                              ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_add                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_sub                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_mul                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_div                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_and                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_or                          ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_srl                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_sll                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_neg                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_not                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; CLA_tb                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_ror                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; phase1_tb_rol                         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; booth_32_bitPairRecoding_algorithm_tb ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; array_multiplier_tb                   ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; select_encode_logic_sel_tb            ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --                 ; con_ff_logic_tb                       ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; booth_32_algorithm_tb                     ; --            ; --                 ; eda_simulation                        ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                      ; --            ; --                 ; eda_simulation                        ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                    ; <None>        ; --                 ; --                                    ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                           ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_FILE                  ; reg_64_tb.vhd                             ; --            ; --                 ; register_64_tb                        ;
-; EDA_TEST_BENCH_FILE                  ; booth_32_algorithm_tb.vhd                 ; --            ; --                 ; booth_32_algorithm_tb                 ;
-; EDA_TEST_BENCH_FILE                  ; encoder_32_to_5_tb.vhd                    ; --            ; --                 ; encoder_32_to_5_tb                    ;
-; EDA_TEST_BENCH_FILE                  ; bus_mux_32_to_1_tb.vhd                    ; --            ; --                 ; bus_mux_32_to_1_tb                    ;
-; EDA_TEST_BENCH_FILE                  ; MDMux_tb.vhd                              ; --            ; --                 ; MDMux_tb                              ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_add.vhd                         ; --            ; --                 ; phase1_tb_add                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_sub.vhd                         ; --            ; --                 ; phase1_tb_sub                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_mul.vhd                         ; --            ; --                 ; phase1_tb_mul                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_div.vhd                         ; --            ; --                 ; phase1_tb_div                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_and.vhd                         ; --            ; --                 ; phase1_tb_and                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_or.vhd                          ; --            ; --                 ; phase1_tb_or                          ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_srl.vhd                         ; --            ; --                 ; phase1_tb_srl                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_sll.vhd                         ; --            ; --                 ; phase1_tb_sll                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_neg.vhd                         ; --            ; --                 ; phase1_tb_neg                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_not.vhd                         ; --            ; --                 ; phase1_tb_not                         ;
-; EDA_TEST_BENCH_FILE                  ; CLA_tb.vhd                                ; --            ; --                 ; CLA_tb                                ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_ror.vhd                         ; --            ; --                 ; phase1_tb_ror                         ;
-; EDA_TEST_BENCH_FILE                  ; phase1_tb_rol.vhd                         ; --            ; --                 ; phase1_tb_rol                         ;
-; EDA_TEST_BENCH_FILE                  ; booth_32_bitPairRecoding_algorithm_tb.vhd ; --            ; --                 ; booth_32_bitPairRecoding_algorithm_tb ;
-; EDA_TEST_BENCH_FILE                  ; array_multiplier_tb.vhd                   ; --            ; --                 ; array_multiplier_tb                   ;
-; EDA_TEST_BENCH_FILE                  ; select_encode_logic_sel_tb.vhd            ; --            ; --                 ; select_encode_logic_sel_tb            ;
-; EDA_TEST_BENCH_FILE                  ; con_ff_logic_tb.vhd                       ; --            ; --                 ; con_ff_logic_tb                       ;
-; EDA_TEST_BENCH_MODULE_NAME           ; register_64_tb                            ; --            ; --                 ; register_64_tb                        ;
-; EDA_TEST_BENCH_MODULE_NAME           ; booth_32_algorithm_tb                     ; --            ; --                 ; booth_32_algorithm_tb                 ;
-; EDA_TEST_BENCH_MODULE_NAME           ; encoder_32_to_5_tb                        ; --            ; --                 ; encoder_32_to_5_tb                    ;
-; EDA_TEST_BENCH_MODULE_NAME           ; bus_mux_32_to_1_tb                        ; --            ; --                 ; bus_mux_32_to_1_tb                    ;
-; EDA_TEST_BENCH_MODULE_NAME           ; MDMux_tb                                  ; --            ; --                 ; MDMux_tb                              ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_add                             ; --            ; --                 ; phase1_tb_add                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_sub                             ; --            ; --                 ; phase1_tb_sub                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_mul                             ; --            ; --                 ; phase1_tb_mul                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_div                             ; --            ; --                 ; phase1_tb_div                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_and                             ; --            ; --                 ; phase1_tb_and                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_or                              ; --            ; --                 ; phase1_tb_or                          ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_srl                             ; --            ; --                 ; phase1_tb_srl                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_sll                             ; --            ; --                 ; phase1_tb_sll                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_neg                             ; --            ; --                 ; phase1_tb_neg                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_not                             ; --            ; --                 ; phase1_tb_not                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; CLA_tb                                    ; --            ; --                 ; CLA_tb                                ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_ror                             ; --            ; --                 ; phase1_tb_ror                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_rol                             ; --            ; --                 ; phase1_tb_rol                         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; booth_32_bitPairRecoding_algorithm_tb     ; --            ; --                 ; booth_32_bitPairRecoding_algorithm_tb ;
-; EDA_TEST_BENCH_MODULE_NAME           ; array_multiplier_tb                       ; --            ; --                 ; array_multiplier_tb                   ;
-; EDA_TEST_BENCH_MODULE_NAME           ; select_encode_logic_sel_tb                ; --            ; --                 ; select_encode_logic_sel_tb            ;
-; EDA_TEST_BENCH_MODULE_NAME           ; con_ff_logic_tb                           ; --            ; --                 ; con_ff_logic_tb                       ;
-; EDA_TEST_BENCH_NAME                  ; register_64_tb                            ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; booth_32_algorithm_tb                     ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; encoder_32_to_5_tb                        ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; bus_mux_32_to_1_tb                        ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; MDMux_tb                                  ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_add                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_sub                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_mul                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_div                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_and                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_or                              ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_srl                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_sll                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_neg                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_not                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; CLA_tb                                    ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_ror                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; phase1_tb_rol                             ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; booth_32_bitPairRecoding_algorithm_tb     ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; array_multiplier_tb                       ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; select_encode_logic_sel_tb                ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_NAME                  ; con_ff_logic_tb                           ; --            ; --                 ; eda_simulation                        ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                    ; --            ; --                 ; register_64_tb                        ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --                 ; booth_32_algorithm_tb                 ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --                 ; encoder_32_to_5_tb                    ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --                 ; bus_mux_32_to_1_tb                    ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                    ; --            ; --                 ; MDMux_tb                              ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_add                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_sub                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 260 ns                                    ; --            ; --                 ; phase1_tb_mul                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                    ; --            ; --                 ; phase1_tb_div                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_and                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_or                          ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_srl                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_sll                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_neg                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_not                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --                 ; CLA_tb                                ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_ror                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --                 ; phase1_tb_rol                         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                    ; --            ; --                 ; booth_32_bitPairRecoding_algorithm_tb ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --                 ; array_multiplier_tb                   ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --                 ; select_encode_logic_sel_tb            ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --                 ; con_ff_logic_tb                       ;
-; IP_TOOL_NAME                         ; RAM: 1-PORT                               ; --            ; --                 ; --                                    ;
-; IP_TOOL_VERSION                      ; 13.0                                      ; --            ; --                 ; --                                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                        ; --            ; --                 ; --                                    ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                         ; --            ; --                 ; --                                    ;
-; MISC_FILE                            ; RAM.bsf                                   ; --            ; --                 ; --                                    ;
-; MISC_FILE                            ; RAM.cmp                                   ; --            ; --                 ; --                                    ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                      ; --            ; --                 ; --                                    ;
-; PARTITION_COLOR                      ; 16764057                                  ; --            ; booth_32_algorithm ; Top                                   ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                     ; --            ; booth_32_algorithm ; Top                                   ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                    ; --            ; booth_32_algorithm ; Top                                   ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                       ; --            ; --                 ; --                                    ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW     ; --            ; --                 ; --                                    ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                              ; --            ; --                 ; --                                    ;
-; TOP_LEVEL_ENTITY                     ; booth_32_algorithm                        ; finalProject  ; --                 ; --                                    ;
-+--------------------------------------+-------------------------------------------+---------------+--------------------+---------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++--------------------------------------+-------------------------------------------+---------------+-------------+---------------------------------------+
+; Assignment Name                      ; Value                                     ; Default Value ; Entity Name ; Section Id                            ;
++--------------------------------------+-------------------------------------------+---------------+-------------+---------------------------------------+
+; COMPILER_SIGNATURE_ID                ; 233916158293824.148987828901804           ; --            ; --          ; --                                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; register_64_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; booth_32_algorithm_tb                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; encoder_32_to_5_tb                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; bus_mux_32_to_1_tb                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; MDMux_tb                              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_add                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_sub                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_mul                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_div                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_and                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_or                          ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_srl                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_sll                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_neg                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_not                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; CLA_tb                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_ror                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase1_tb_rol                         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; booth_32_bitPairRecoding_algorithm_tb ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; array_multiplier_tb                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; select_encode_logic_sel_tb            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; con_ff_logic_tb                       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                        ; --            ; --          ; phase2_tb_ld                          ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; phase2_tb_ld                              ; --            ; --          ; eda_simulation                        ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                      ; --            ; --          ; eda_simulation                        ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                    ; <None>        ; --          ; --                                    ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                           ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_FILE                  ; reg_64_tb.vhd                             ; --            ; --          ; register_64_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; booth_32_algorithm_tb.vhd                 ; --            ; --          ; booth_32_algorithm_tb                 ;
+; EDA_TEST_BENCH_FILE                  ; encoder_32_to_5_tb.vhd                    ; --            ; --          ; encoder_32_to_5_tb                    ;
+; EDA_TEST_BENCH_FILE                  ; bus_mux_32_to_1_tb.vhd                    ; --            ; --          ; bus_mux_32_to_1_tb                    ;
+; EDA_TEST_BENCH_FILE                  ; MDMux_tb.vhd                              ; --            ; --          ; MDMux_tb                              ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_add.vhd                         ; --            ; --          ; phase1_tb_add                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_sub.vhd                         ; --            ; --          ; phase1_tb_sub                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_mul.vhd                         ; --            ; --          ; phase1_tb_mul                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_div.vhd                         ; --            ; --          ; phase1_tb_div                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_and.vhd                         ; --            ; --          ; phase1_tb_and                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_or.vhd                          ; --            ; --          ; phase1_tb_or                          ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_srl.vhd                         ; --            ; --          ; phase1_tb_srl                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_sll.vhd                         ; --            ; --          ; phase1_tb_sll                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_neg.vhd                         ; --            ; --          ; phase1_tb_neg                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_not.vhd                         ; --            ; --          ; phase1_tb_not                         ;
+; EDA_TEST_BENCH_FILE                  ; CLA_tb.vhd                                ; --            ; --          ; CLA_tb                                ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_ror.vhd                         ; --            ; --          ; phase1_tb_ror                         ;
+; EDA_TEST_BENCH_FILE                  ; phase1_tb_rol.vhd                         ; --            ; --          ; phase1_tb_rol                         ;
+; EDA_TEST_BENCH_FILE                  ; booth_32_bitPairRecoding_algorithm_tb.vhd ; --            ; --          ; booth_32_bitPairRecoding_algorithm_tb ;
+; EDA_TEST_BENCH_FILE                  ; array_multiplier_tb.vhd                   ; --            ; --          ; array_multiplier_tb                   ;
+; EDA_TEST_BENCH_FILE                  ; select_encode_logic_sel_tb.vhd            ; --            ; --          ; select_encode_logic_sel_tb            ;
+; EDA_TEST_BENCH_FILE                  ; con_ff_logic_tb.vhd                       ; --            ; --          ; con_ff_logic_tb                       ;
+; EDA_TEST_BENCH_FILE                  ; phase2_tb_ld.vhd                          ; --            ; --          ; phase2_tb_ld                          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; register_64_tb                            ; --            ; --          ; register_64_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; booth_32_algorithm_tb                     ; --            ; --          ; booth_32_algorithm_tb                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; encoder_32_to_5_tb                        ; --            ; --          ; encoder_32_to_5_tb                    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; bus_mux_32_to_1_tb                        ; --            ; --          ; bus_mux_32_to_1_tb                    ;
+; EDA_TEST_BENCH_MODULE_NAME           ; MDMux_tb                                  ; --            ; --          ; MDMux_tb                              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_add                             ; --            ; --          ; phase1_tb_add                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_sub                             ; --            ; --          ; phase1_tb_sub                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_mul                             ; --            ; --          ; phase1_tb_mul                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_div                             ; --            ; --          ; phase1_tb_div                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_and                             ; --            ; --          ; phase1_tb_and                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_or                              ; --            ; --          ; phase1_tb_or                          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_srl                             ; --            ; --          ; phase1_tb_srl                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_sll                             ; --            ; --          ; phase1_tb_sll                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_neg                             ; --            ; --          ; phase1_tb_neg                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_not                             ; --            ; --          ; phase1_tb_not                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; CLA_tb                                    ; --            ; --          ; CLA_tb                                ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_ror                             ; --            ; --          ; phase1_tb_ror                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase1_tb_rol                             ; --            ; --          ; phase1_tb_rol                         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; booth_32_bitPairRecoding_algorithm_tb     ; --            ; --          ; booth_32_bitPairRecoding_algorithm_tb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; array_multiplier_tb                       ; --            ; --          ; array_multiplier_tb                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; select_encode_logic_sel_tb                ; --            ; --          ; select_encode_logic_sel_tb            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; con_ff_logic_tb                           ; --            ; --          ; con_ff_logic_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; phase2_tb_ld                              ; --            ; --          ; phase2_tb_ld                          ;
+; EDA_TEST_BENCH_NAME                  ; register_64_tb                            ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; booth_32_algorithm_tb                     ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; encoder_32_to_5_tb                        ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; bus_mux_32_to_1_tb                        ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; MDMux_tb                                  ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_add                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_sub                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_mul                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_div                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_and                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_or                              ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_srl                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_sll                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_neg                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_not                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; CLA_tb                                    ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_ror                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase1_tb_rol                             ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; booth_32_bitPairRecoding_algorithm_tb     ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; array_multiplier_tb                       ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; select_encode_logic_sel_tb                ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; con_ff_logic_tb                           ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_NAME                  ; phase2_tb_ld                              ; --            ; --          ; eda_simulation                        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                    ; --            ; --          ; register_64_tb                        ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --          ; booth_32_algorithm_tb                 ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --          ; encoder_32_to_5_tb                    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --          ; bus_mux_32_to_1_tb                    ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                    ; --            ; --          ; MDMux_tb                              ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_add                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_sub                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 260 ns                                    ; --            ; --          ; phase1_tb_mul                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 300 ns                                    ; --            ; --          ; phase1_tb_div                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_and                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_or                          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_srl                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_sll                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_neg                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_not                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --          ; CLA_tb                                ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_ror                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 240 ns                                    ; --            ; --          ; phase1_tb_rol                         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 200 ns                                    ; --            ; --          ; booth_32_bitPairRecoding_algorithm_tb ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --          ; array_multiplier_tb                   ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --          ; select_encode_logic_sel_tb            ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                    ; --            ; --          ; con_ff_logic_tb                       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 900 ns                                    ; --            ; --          ; phase2_tb_ld                          ;
+; IP_TOOL_NAME                         ; RAM: 1-PORT                               ; --            ; --          ; --                                    ;
+; IP_TOOL_NAME                         ; LPM_ADD_SUB                               ; --            ; --          ; --                                    ;
+; IP_TOOL_VERSION                      ; 13.0                                      ; --            ; --          ; --                                    ;
+; IP_TOOL_VERSION                      ; 13.0                                      ; --            ; --          ; --                                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                        ; --            ; --          ; --                                    ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                         ; --            ; --          ; --                                    ;
+; MISC_FILE                            ; ram_TA_inst.vhd                           ; --            ; --          ; --                                    ;
+; MISC_FILE                            ; ram_TA.cmp                                ; --            ; --          ; --                                    ;
+; MISC_FILE                            ; lpm_add_sub0.bsf                          ; --            ; --          ; --                                    ;
+; MISC_FILE                            ; lpm_add_sub0_inst.vhd                     ; --            ; --          ; --                                    ;
+; MISC_FILE                            ; lpm_add_sub0.cmp                          ; --            ; --          ; --                                    ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                      ; --            ; --          ; --                                    ;
+; PARTITION_COLOR                      ; 16764057                                  ; --            ; phase2      ; Top                                   ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                     ; --            ; phase2      ; Top                                   ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                    ; --            ; phase2      ; Top                                   ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                       ; --            ; --          ; --                                    ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW     ; --            ; --          ; --                                    ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                              ; --            ; --          ; --                                    ;
+; TOP_LEVEL_ENTITY                     ; phase2                                    ; finalProject  ; --          ; --                                    ;
++--------------------------------------+-------------------------------------------+---------------+-------------+---------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -212,8 +222,8 @@ applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:02     ; 1.0                     ; 517 MB              ; 00:00:01                           ;
-; Total                  ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Elaboration ; 00:00:02     ; 1.0                     ; 541 MB              ; 00:00:02                           ;
+; Total                  ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -222,7 +232,7 @@ applicable agreement for further details.
 +------------------------+------------------+-----------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-KRL707O  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Elaboration ; DESKTOP-M653P5L  ; Windows 7 ; 6.2        ; x86_64         ;
 +------------------------+------------------+-----------+------------+----------------+
 
 

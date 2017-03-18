@@ -1,5 +1,5 @@
 Analysis & Elaboration report for finalProject
-Sat Mar 11 17:48:20 2017
+Sat Mar 18 19:04:51 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -9,8 +9,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Analysis & Elaboration IP Cores Summary
+  5. Source assignments for ram_TA:b2v_inst2|altsyncram:altsyncram_component|altsyncram_k7i1:auto_generated
+  6. Parameter Settings for User Entity Instance: ram_TA:b2v_inst2|altsyncram:altsyncram_component
+  7. altsyncram Parameter Settings by Entity Instance
+  8. Analysis & Elaboration Settings
+  9. Analysis & Elaboration Messages
 
 
 
@@ -36,10 +40,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Mar 11 17:48:20 2017           ;
+; Analysis & Elaboration Status      ; Successful - Sat Mar 18 19:04:51 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
-; Top-level Entity Name              ; booth_32_algorithm                              ;
+; Top-level Entity Name              ; phase2                                          ;
 ; Family                             ; Cyclone III                                     ;
 ; Total logic elements               ; N/A until Partition Merge                       ;
 ;     Total combinational functions  ; N/A until Partition Merge                       ;
@@ -59,9 +63,108 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                                              ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                           ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |phase2|ram_TA:b2v_inst2 ; C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for ram_TA:b2v_inst2|altsyncram:altsyncram_component|altsyncram_k7i1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram_TA:b2v_inst2|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------+
+; Parameter Name                     ; Value                ; Type                              ;
++------------------------------------+----------------------+-----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                           ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                           ;
+; WIDTH_A                            ; 32                   ; Signed Integer                    ;
+; WIDTHAD_A                          ; 9                    ; Signed Integer                    ;
+; NUMWORDS_A                         ; 512                  ; Signed Integer                    ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WIDTH_B                            ; 1                    ; Untyped                           ;
+; WIDTHAD_B                          ; 1                    ; Untyped                           ;
+; NUMWORDS_B                         ; 1                    ; Untyped                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; INIT_FILE                          ; ram_mif.mif          ; Untyped                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                           ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                           ;
+; CBXI_PARAMETER                     ; altsyncram_k7i1      ; Untyped                           ;
++------------------------------------+----------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                             ;
++-------------------------------------------+--------------------------------------------------+
+; Name                                      ; Value                                            ;
++-------------------------------------------+--------------------------------------------------+
+; Number of entity instances                ; 1                                                ;
+; Entity Instance                           ; ram_TA:b2v_inst2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                      ;
+;     -- WIDTH_A                            ; 32                                               ;
+;     -- NUMWORDS_A                         ; 512                                              ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                           ;
+;     -- WIDTH_B                            ; 1                                                ;
+;     -- NUMWORDS_B                         ; 1                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                        ;
++-------------------------------------------+--------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -70,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; booth_32_algorithm ; finalProject       ;
+; Top-level entity name                                                      ; phase2             ; finalProject       ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,30 +260,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 11 17:48:18 2017
+    Info: Processing started: Sat Mar 18 19:04:49 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalProject -c finalProject --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file reg_64_tb.vhd
+    Info (12022): Found design unit 1: register_64_tb-register_64_tb_arch
+    Info (12023): Found entity 1: register_64_tb
+Info (12021): Found 2 design units, including 1 entities, in source file phase2_tb_ld.vhd
+    Info (12022): Found design unit 1: phase2_tb_ld-phase2_tb_arch
+    Info (12023): Found entity 1: phase2_tb_ld
+Info (12021): Found 2 design units, including 1 entities, in source file phase2.vhd
+    Info (12022): Found design unit 1: phase2-bdf_type
+    Info (12023): Found entity 1: phase2
+Info (12021): Found 2 design units, including 1 entities, in source file register_r0.vhd
+    Info (12022): Found design unit 1: register_R0-behavioral
+    Info (12023): Found entity 1: register_R0
 Info (12021): Found 2 design units, including 1 entities, in source file select_encode_logic_sel_tb.vhd
     Info (12022): Found design unit 1: select_encode_logic_sel_tb-select_encode_logic_sel_tb_arch
     Info (12023): Found entity 1: select_encode_logic_sel_tb
 Info (12021): Found 2 design units, including 1 entities, in source file select_encode_logic_sel.vhd
     Info (12022): Found design unit 1: select_encode_logic_sel-behavioral
     Info (12023): Found entity 1: select_encode_logic_sel
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_ror.vhd
-    Info (12022): Found design unit 1: phase1_tb_ror-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_ror
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_rol.vhd
-    Info (12022): Found design unit 1: phase1_tb_rol-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_rol
-Info (12021): Found 2 design units, including 1 entities, in source file cla_tb.vhd
-    Info (12022): Found design unit 1: CLA_tb-CLA_tb_arch
-    Info (12023): Found entity 1: CLA_tb
-Info (12021): Found 2 design units, including 1 entities, in source file booth_32_algorithm_tb.vhd
-    Info (12022): Found design unit 1: booth_32_algorithm_tb-booth_32_algorithm_tb_arch
-    Info (12023): Found entity 1: booth_32_algorithm_tb
-Info (12021): Found 2 design units, including 1 entities, in source file phase1.vhd
-    Info (12022): Found design unit 1: phase1-bdf_type
-    Info (12023): Found entity 1: phase1
 Info (12021): Found 2 design units, including 1 entities, in source file z_split.vhd
     Info (12022): Found design unit 1: Z_split-behavioral
     Info (12023): Found entity 1: Z_split
@@ -188,8 +288,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
     Info (12022): Found design unit 1: register_64-behavioral
     Info (12023): Found entity 1: register_64
 Info (12021): Found 2 design units, including 1 entities, in source file register_32.vhd
-    Info (12022): Found design unit 1: register_R0-behavioral
-    Info (12023): Found entity 1: register_R0
+    Info (12022): Found design unit 1: register_32-behavioral
+    Info (12023): Found entity 1: register_32
 Info (12021): Found 2 design units, including 1 entities, in source file mdmux.vhd
     Info (12022): Found design unit 1: MDMUX-behavioral
     Info (12023): Found entity 1: MDMUX
@@ -199,63 +299,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file encoder
 Info (12021): Found 2 design units, including 1 entities, in source file bus_mux_32_to_1.vhd
     Info (12022): Found design unit 1: bus_mux_32_to_1-behavioral
     Info (12023): Found entity 1: bus_mux_32_to_1
-Info (12021): Found 2 design units, including 1 entities, in source file booth_32_algorithm.vhd
-    Info (12022): Found design unit 1: booth_32_algorithm-behavioral
-    Info (12023): Found entity 1: booth_32_algorithm
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: ALU-behavioral
     Info (12023): Found entity 1: ALU
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb.vhd
-    Info (12022): Found design unit 1: phase1_tb-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_sub.vhd
-    Info (12022): Found design unit 1: phase1_tb_sub-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_sub
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_add.vhd
-    Info (12022): Found design unit 1: phase1_tb_add-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_add
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_mul.vhd
-    Info (12022): Found design unit 1: phase1_tb_mul-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_mul
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_div.vhd
-    Info (12022): Found design unit 1: phase1_tb_div-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_div
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_and.vhd
-    Info (12022): Found design unit 1: phase1_tb_and-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_and
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_or.vhd
-    Info (12022): Found design unit 1: phase1_tb_or-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_or
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_srl.vhd
-    Info (12022): Found design unit 1: phase1_tb_srl-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_srl
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_sll.vhd
-    Info (12022): Found design unit 1: phase1_tb_sll-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_sll
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_neg.vhd
-    Info (12022): Found design unit 1: phase1_tb_neg-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_neg
-Info (12021): Found 2 design units, including 1 entities, in source file phase1_tb_not.vhd
-    Info (12022): Found design unit 1: phase1_tb_not-phase1_tb_arch
-    Info (12023): Found entity 1: phase1_tb_not
-Info (12021): Found 2 design units, including 1 entities, in source file carry_lookahead_adder.vhd
-    Info (12022): Found design unit 1: carry_lookahead_adder-behavioral
-    Info (12023): Found entity 1: carry_lookahead_adder
-Info (12021): Found 2 design units, including 1 entities, in source file booth_32_bitpairrecoding_algorithm.vhd
-    Info (12022): Found design unit 1: booth_32_bitPairRecoding_algorithm-behavioral
-    Info (12023): Found entity 1: booth_32_bitPairRecoding_algorithm
-Info (12021): Found 2 design units, including 1 entities, in source file booth_32_bitpairrecoding_algorithm_tb.vhd
-    Info (12022): Found design unit 1: booth_32_bitPairRecoding_algorithm_tb-booth_32_bitPairRecoding_algorithm_tb_arch
-    Info (12023): Found entity 1: booth_32_bitPairRecoding_algorithm_tb
-Info (12021): Found 2 design units, including 1 entities, in source file array_multiplier.vhd
-    Info (12022): Found design unit 1: array_multiplier-behavioral
-    Info (12023): Found entity 1: array_multiplier
-Info (12021): Found 2 design units, including 1 entities, in source file array_multiplier_tb.vhd
-    Info (12022): Found design unit 1: array_multiplier_tb-array_multiplier_tb_arch
-    Info (12023): Found entity 1: array_multiplier_tb
-Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-SYN
-    Info (12023): Found entity 1: RAM
 Info (12021): Found 2 design units, including 1 entities, in source file con_ff_logic.vhd
     Info (12022): Found design unit 1: con_ff_logic-behavioral
     Info (12023): Found entity 1: con_ff_logic
@@ -268,11 +314,63 @@ Info (12021): Found 2 design units, including 1 entities, in source file con_ff_
 Info (12021): Found 2 design units, including 1 entities, in source file mar_splicer.vhd
     Info (12022): Found design unit 1: MAR_splicer-behavioral
     Info (12023): Found entity 1: MAR_splicer
-Info (12127): Elaborating entity "booth_32_algorithm" for the top level hierarchy
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 517 megabytes
-    Info: Processing ended: Sat Mar 11 17:48:20 2017
+Info (12021): Found 2 design units, including 1 entities, in source file selecencodelogic_r_splitter.vhd
+    Info (12022): Found design unit 1: SelectEncodeLogic_R_splitter-behavioral
+    Info (12023): Found entity 1: SelectEncodeLogic_R_splitter
+Info (12021): Found 2 design units, including 1 entities, in source file ir_conff_split.vhd
+    Info (12022): Found design unit 1: IR_ConFF_Split-behavioral
+    Info (12023): Found entity 1: IR_ConFF_Split
+Info (12021): Found 2 design units, including 1 entities, in source file ram_ta.vhd
+    Info (12022): Found design unit 1: ram_ta-SYN
+    Info (12023): Found entity 1: ram_TA
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_add_sub0.vhd
+    Info (12022): Found design unit 1: lpm_add_sub0-SYN
+    Info (12023): Found entity 1: lpm_add_sub0
+Info (12127): Elaborating entity "phase2" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at phase2.vhd(313): used implicit default value for signal "In_port_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "register_32" for hierarchy "register_32:b2v_C_sign_extended"
+Info (12128): Elaborating entity "encoder_32_to_5" for hierarchy "encoder_32_to_5:b2v_inst"
+Info (12128): Elaborating entity "bus_mux_32_to_1" for hierarchy "bus_mux_32_to_1:b2v_inst1"
+Info (12128): Elaborating entity "register_R0" for hierarchy "register_R0:b2v_inst16"
+Info (12128): Elaborating entity "con_ff_logic" for hierarchy "con_ff_logic:b2v_inst17"
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "con_ff_logic:b2v_inst17|d_flipflop:d_ff_con"
+Warning (10492): VHDL Process Statement warning at D_flipflop.vhd(14): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "IR_ConFF_Split" for hierarchy "IR_ConFF_Split:b2v_inst18"
+Info (12128): Elaborating entity "ram_TA" for hierarchy "ram_TA:b2v_inst2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram_TA:b2v_inst2|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ram_TA:b2v_inst2|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ram_TA:b2v_inst2|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "ram_mif.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k7i1.tdf
+    Info (12023): Found entity 1: altsyncram_k7i1
+Info (12128): Elaborating entity "altsyncram_k7i1" for hierarchy "ram_TA:b2v_inst2|altsyncram:altsyncram_component|altsyncram_k7i1:auto_generated"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:b2v_inst3"
+Warning (10492): VHDL Process Statement warning at ALU.vhd(20): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ALU.vhd(21): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Z_split" for hierarchy "Z_split:b2v_inst4"
+Info (12128): Elaborating entity "select_encode_logic_sel" for hierarchy "select_encode_logic_sel:b2v_inst5"
+Info (12128): Elaborating entity "MDMUX" for hierarchy "MDMUX:b2v_inst6"
+Info (12128): Elaborating entity "MAR_splicer" for hierarchy "MAR_splicer:b2v_inst7"
+Info (12128): Elaborating entity "SelectEncodeLogic_R_splitter" for hierarchy "SelectEncodeLogic_R_splitter:b2v_inst8"
+Info (12128): Elaborating entity "register_64" for hierarchy "register_64:b2v_Z"
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 541 megabytes
+    Info: Processing ended: Sat Mar 18 19:04:51 2017
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

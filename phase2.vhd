@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Mon Mar 13 09:48:34 2017"
+-- CREATED		"Sat Mar 18 16:58:33 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -199,16 +199,6 @@ COMPONENT bus_mux_32_to_1
 	);
 END COMPONENT;
 
-COMPONENT ram_ta
-	PORT(clock : IN STD_LOGIC;
-		 rden : IN STD_LOGIC;
-		 wren : IN STD_LOGIC;
-		 address : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
-		 data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		 q : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
-	);
-END COMPONENT;
-
 COMPONENT register_r0
 	PORT(clk : IN STD_LOGIC;
 		 clear : IN STD_LOGIC;
@@ -231,6 +221,16 @@ END COMPONENT;
 COMPONENT ir_conff_split
 	PORT(IR : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		 IR_sliced : OUT STD_LOGIC_VECTOR(1 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT ram_ta
+	PORT(clock : IN STD_LOGIC;
+		 rden : IN STD_LOGIC;
+		 wren : IN STD_LOGIC;
+		 address : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+		 data : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 q : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 
@@ -401,14 +401,6 @@ PORT MAP(BusMuxIn_HI => HI_out,
 		 BusMuxOut => BusMuxOut);
 
 
-b2v_inst10 : ram_ta
-PORT MAP(clock => clk,
-		 rden => Read_input,
-		 wren => Write_Signal,
-		 address => address,
-		 data => MDR_out,
-		 q => Mdatain);
-
 
 b2v_inst16 : register_r0
 PORT MAP(clk => clk,
@@ -430,6 +422,15 @@ PORT MAP(Con_in => Con_in,
 b2v_inst18 : ir_conff_split
 PORT MAP(IR => IR_out,
 		 IR_sliced => SYNTHESIZED_WIRE_0);
+
+
+b2v_inst2 : ram_ta
+PORT MAP(clock => clk,
+		 rden => Read_input,
+		 wren => Write_Signal,
+		 address => address,
+		 data => MDR_out,
+		 q => Mdatain);
 
 
 b2v_inst3 : alu

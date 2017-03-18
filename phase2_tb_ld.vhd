@@ -6,7 +6,7 @@ ENTITY phase2_tb_ld IS
 END;
 
 -- Architecture of the testbench with the signal names
-ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
+ARCHITECTURE phase2_tb_arch OF phase2_tb_ld IS
   SIGNAL clear_tb, clk_tb : std_logic;
   SIGNAL register_in0_tb, register_in1_tb, register_in2_tb, register_in3_tb, register_in4_tb, register_in5_tb, register_in6_tb, register_in7_tb : std_logic; --enable singals for registers
   SIGNAL register_in8_tb, register_in9_tb, register_in10_tb, register_in11_tb, register_in12_tb, register_in13_tb, register_in14_tb, register_in15_tb : std_logic; --enable singals for registers
@@ -28,10 +28,13 @@ ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
   
   SIGNAL Gra_tb, Grb_tb, Grc_tb, Rin_tb, Rout_tb, BAout_tb,	Con_in_tb :  STD_LOGIC;
   
-  SIGNAL Con_out_tb :  STD_LOGIC
+  SIGNAL Con_out_tb :  STD_LOGIC;
   
-  TYPE State IS (default, T0, T1, T2, T3, T4, T5, T6, T7);
-  SIGNAL Present_state: State := default;
+  SIGNAL write_tb : std_logic;
+  SIGNAL register_in_out_port_tb : std_logic;
+  
+  TYPE State IS (defaultA, defaultB, T0A, T0B, T1A, T1B, T2A, T2B, T3A, T3B, T4A, T4B, T5A, T5B, T6A, T6B, T7A, T7B);
+  SIGNAL Present_state: State := defaultA;
  
  -- component instantiation of the datapath
  COMPONENT phase2
@@ -43,9 +46,12 @@ ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
 			S_out : inout std_logic_vector (4 downto 0);
 			
 			clear, clk : in std_logic;
-			Mdatain : in std_logic_vector(31 downto 0);
+			Mdatain : inout std_logic_vector(31 downto 0);
 			cs : in std_logic_vector (3 downto 0);
 			Read_input : in std_logic;
+			Write_signal : in std_logic;
+			
+			register_in_Out_port :  IN  STD_LOGIC;
 
 			R0in :  INOUT  STD_LOGIC;
 			R1in :  INOUT  STD_LOGIC;
@@ -156,9 +162,12 @@ ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
 			clear => clear_tb,
 			clk => clk_tb,
 			
-			Mdatain => Mdatain_tb,
 			cs => ALU_cs_tb,
 			Read_input => read_tb,
+			Write_signal => write_tb,
+			Mdatain => Mdatain_tb,
+			
+			register_in_out_port => register_in_out_port_tb,
 			
 			R0out => R0out_tb,
 			R1out => R1out_tb,
@@ -227,7 +236,7 @@ ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
 
 			Clock_process: PROCESS
 			BEGIN
-				clk_tb <= '1', '0' after 10 ns;
+				clk_tb <= '0', '1' after 10 ns;
 				wait for 20 ns;
 			END PROCESS Clock_process;
 			
@@ -235,22 +244,43 @@ ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
 			BEGIN
 				IF (clk_tb'EVENT AND clk_tb = '1') THEN
 					CASE Present_state IS
-						WHEN Default =>
-							Present_state <= T0;
-						WHEN T0 =>
-							Present_state <= T1;
-						WHEN T1 =>
-							Present_state <= T2;
-						WHEN T2 =>
-							Present_state <= T3;
-						WHEN T3 =>
-							Present_state <= T4;
-						WHEN T4 =>
-							Present_state <= T5;
-						WHEN T5 =>
-							Present_state <= T6;
-						WHEN T6 =>
-							Present_state <= T7;
+						WHEN DefaultA =>
+							Present_state <= DefaultB;
+						WHEN DefaultB =>
+							Present_state <= T0A;
+						WHEN T0A =>
+							Present_state <= T0B;
+						WHEN T0B =>
+							Present_state <= T1A;
+						WHEN T1A =>
+							Present_state <= T1B;
+						WHEN T1B =>
+							Present_state <= T2A;
+						WHEN T2A =>
+							Present_state <= T2B;
+						WHEN T2B =>
+							Present_state <= T3A;
+						
+						WHEN T3A =>
+							Present_state <= T3B;
+						WHEN T3B =>
+							Present_state <= T4A;
+						WHEN T4A =>
+							Present_state <= T4B;
+						WHEN T4B =>
+							Present_state <= T5A;
+						WHEN T5A =>
+							Present_state <= T5B;
+						WHEN T5B =>
+							Present_state <= T6A;
+						WHEN T6A =>
+							Present_state <= T6B;
+							
+						WHEN T6B =>
+							Present_state <= T7A;
+						WHEN T7A =>
+							Present_state <= T7B;
+							
 						WHEN OTHERS =>
 					END CASE;
 				END IF;
@@ -259,7 +289,7 @@ ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
 			PROCESS (Present_state) -- do the required job in each state
 			BEGIN
 				CASE Present_state IS -- assert the required signals in each clock cycle
-					 WHEN Default =>
+					 WHEN DefaultA =>
 							
 							HIout_tb <= '0';
 							LOout_tb <= '0';
@@ -294,47 +324,80 @@ ARCHITECTURE phase2_tb_ld OF phase2_tb_ld IS
 							register_in_Z_tb <= '0';
 							register_in_IR_tb <= '0';
 							register_in_MAR_tb <= '0';
-				
-					 WHEN T0 => 
-						PC_out_tb <= '1';
+						
+						
+					
+					 WHEN T0A => 
+						clear_tb <= '0';
+						read_tb <= '1';
+						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 						
 					 
-					 WHEN T1 =>					
-						 read_tb <= '1';
+					 WHEN T1A =>	
+
+						 PCout_tb <= '0';
+						 register_in_MAR_tb <= '0';
+						 
 						 register_in_MDR_tb <= '1';
-						 Mdatain_tb <= x"314c0000";
+						 
 	
-					WHEN T2 =>
+					WHEN T2A =>
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
 						MDRout_tb <= '1'; 
 						register_in_IR_tb <= '1';
 						
-					 WHEN T3 =>
+					WHEN T3A =>
 						register_in_IR_tb <= '0';
 						MDRout_tb <= '0';
-						R4out_tb <= '1'; 
-						register_in_Y_tb <= '1';
 						
-					 WHEN T4 =>
-						R4out_tb <= '0';
-					   register_in_Y_tb <= '0';
-						R5out_tb <= '1'; 
-						ALU_cs_tb <= b"0001";
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+						
+						
+					WHEN T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
 						register_in_Z_tb <= '1';
 						register_in_Zhigh_tb <= '1';
 						register_in_Zlow_tb <= '1';
-					 
-					 WHEN T5 =>
-						R5out_tb <= '0'; 
-						Zlowout_tb <= '1';
-						register_in0_tb <= '1';
 						
-					WHEN T6 =>
+					 
+					WHEN T5A =>
+--						Cout_tb <= '0';
+--						register_in_Z_tb <= '0';
+--						register_in_Zhigh_tb <= '0';
+--						register_in_Zlow_tb <= '0';
+--						
+--
+--						Zlowout_tb <= '1';
+--						register_in_MAR_tb <= '1';
+						
+					WHEN T6A =>
+--						Zlowout_tb <= '0';
+--						register_in_MAR_tb <= '0';
+--					
+--						read_tb <= '1';
+--						register_in_MDR_tb <= '1';
+		
 					
-					
-					WHEN T7 =>
+					WHEN T7A =>
+--						register_in_MDR_tb <= '0';
+--						read_tb <= '0';
+--						
+--						MDRout_tb <= '1';
+--						Gra_tb <= '1';
+--						Rin_tb <= '1';
 						
 					WHEN OTHERS =>
 			END CASE;
 		END PROCESS;
-END ARCHITECTURE phase1_tb_arch;
+END ARCHITECTURE phase2_tb_arch;
