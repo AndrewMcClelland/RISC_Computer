@@ -5,7 +5,6 @@ use ieee.numeric_std.all;
 entity ALU is 
 	PORT(
 	A,B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-	clk :IN STD_LOGIC;
 	C : OUT STD_LOGIC_VECTOR(63 DOWNTO 0);
 	cs : IN STD_LOGIC_VECTOR (3 DOWNTO 0)
 );
@@ -13,13 +12,12 @@ END ALU;
 
 architecture behavioral of ALU is 
 begin
-	process(clk)
+	process(A, B, cs) is
 	variable temp_A, temp_B : SIGNED (31 downto 0);
 	variable temp_C : SIGNED (63 downto 0);
 		begin
 			temp_A := signed(A);
 			temp_B := signed(B);
-		if (rising_edge(clk)) then
 			case cs is 
 				when "0000" => temp_C:= (temp_A + temp_B) + x"0000_0000_0000_0000"; 											--add
 				when "0001" => temp_C:= (temp_A - temp_B) + x"0000_0000_0000_0000";  											--sub
@@ -35,7 +33,6 @@ begin
 				when "1011" => temp_C:= (not temp_B) + x"0000_0000_0000_0000";											--not
 				when Others => NULL;					
 			end case;
-			C <= std_logic_vector(temp_C);
-		end if;	
+			C <= std_logic_vector(temp_C);	
 		end process;
 end behavioral; 
