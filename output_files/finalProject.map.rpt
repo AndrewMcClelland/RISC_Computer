@@ -1,5 +1,5 @@
 Analysis & Elaboration report for finalProject
-Sun Mar 19 20:06:41 2017
+Mon Mar 20 11:10:38 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -11,11 +11,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   3. Parallel Compilation
   4. Analysis & Elaboration IP Cores Summary
   5. Source assignments for ram_TA:b2v_inst2|altsyncram:altsyncram_component|altsyncram_k7i1:auto_generated
-  6. Parameter Settings for User Entity Instance: lpm_add_sub0:b2v_inst11|lpm_add_sub:LPM_ADD_SUB_component
-  7. Parameter Settings for User Entity Instance: ram_TA:b2v_inst2|altsyncram:altsyncram_component
-  8. altsyncram Parameter Settings by Entity Instance
-  9. Analysis & Elaboration Settings
- 10. Analysis & Elaboration Messages
+  6. Parameter Settings for User Entity Instance: ram_TA:b2v_inst2|altsyncram:altsyncram_component
+  7. altsyncram Parameter Settings by Entity Instance
+  8. Analysis & Elaboration Settings
+  9. Analysis & Elaboration Messages
 
 
 
@@ -41,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sun Mar 19 20:06:41 2017           ;
+; Analysis & Elaboration Status      ; Successful - Mon Mar 20 11:10:38 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
 ; Top-level Entity Name              ; phase2                                          ;
@@ -69,14 +68,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                                                                                           ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                 ; IP Include File                                                 ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------+
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |phase2|ram_TA:b2v_inst2        ; C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd       ;
-; Altera ; LPM_ADD_SUB  ; 13.0    ; N/A          ; N/A          ; |phase2|lpm_add_sub0:b2v_inst11 ; C:/Users/lukea/Documents/ELEC374_RISC_Computer/lpm_add_sub0.vhd ;
-+--------+--------------+---------+--------------+--------------+---------------------------------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration IP Cores Summary                                                                                                              ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                           ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |phase2|ram_TA:b2v_inst2 ; C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------+-----------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -86,34 +84,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+--------------------+------+------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
 +---------------------------------+--------------------+------+------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_add_sub0:b2v_inst11|lpm_add_sub:LPM_ADD_SUB_component ;
-+------------------------+-------------+-----------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                            ;
-+------------------------+-------------+-----------------------------------------------------------------+
-; LPM_WIDTH              ; 32          ; Signed Integer                                                  ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                         ;
-; LPM_DIRECTION          ; ADD         ; Untyped                                                         ;
-; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                         ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                         ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                         ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                         ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                         ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                         ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                         ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                              ;
-; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                         ;
-; USE_WYS                ; OFF         ; Untyped                                                         ;
-; STYLE                  ; FAST        ; Untyped                                                         ;
-; CBXI_PARAMETER         ; add_sub_msh ; Untyped                                                         ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                    ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                  ;
-+------------------------+-------------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -290,7 +260,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 19 20:06:39 2017
+    Info: Processing started: Mon Mar 20 11:10:36 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalProject -c finalProject --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file reg_64_tb.vhd
@@ -356,23 +326,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file ram_ta.
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_add_sub0.vhd
     Info (12022): Found design unit 1: lpm_add_sub0-SYN
     Info (12023): Found entity 1: lpm_add_sub0
+Info (12021): Found 2 design units, including 1 entities, in source file incpc.vhd
+    Info (12022): Found design unit 1: IncPC-behavioral
+    Info (12023): Found entity 1: IncPC
 Info (12127): Elaborating entity "phase2" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at phase2.vhd(318): used implicit default value for signal "In_port_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at phase2.vhd(320): used implicit default value for signal "In_port_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "register_32" for hierarchy "register_32:b2v_C_sign_extended"
 Info (12128): Elaborating entity "encoder_32_to_5" for hierarchy "encoder_32_to_5:b2v_inst"
 Info (12128): Elaborating entity "bus_mux_32_to_1" for hierarchy "bus_mux_32_to_1:b2v_inst1"
-Info (12128): Elaborating entity "lpm_add_sub0" for hierarchy "lpm_add_sub0:b2v_inst11"
-Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "lpm_add_sub0:b2v_inst11|lpm_add_sub:LPM_ADD_SUB_component"
-Info (12130): Elaborated megafunction instantiation "lpm_add_sub0:b2v_inst11|lpm_add_sub:LPM_ADD_SUB_component"
-Info (12133): Instantiated megafunction "lpm_add_sub0:b2v_inst11|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter:
-    Info (12134): Parameter "lpm_direction" = "ADD"
-    Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES,CIN_USED=NO"
-    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
-    Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
-    Info (12134): Parameter "lpm_width" = "32"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_msh.tdf
-    Info (12023): Found entity 1: add_sub_msh
-Info (12128): Elaborating entity "add_sub_msh" for hierarchy "lpm_add_sub0:b2v_inst11|lpm_add_sub:LPM_ADD_SUB_component|add_sub_msh:auto_generated"
+Info (12128): Elaborating entity "IncPC" for hierarchy "IncPC:b2v_inst10"
 Info (12128): Elaborating entity "register_R0" for hierarchy "register_R0:b2v_inst16"
 Warning (10492): VHDL Process Statement warning at register_R0.vhd(25): signal "BAout" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "con_ff_logic" for hierarchy "con_ff_logic:b2v_inst17"
@@ -411,7 +373,7 @@ Info (12128): Elaborating entity "SelectEncodeLogic_R_splitter" for hierarchy "S
 Info (12128): Elaborating entity "register_64" for hierarchy "register_64:b2v_Z"
 Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 542 megabytes
-    Info: Processing ended: Sun Mar 19 20:06:41 2017
+    Info: Processing ended: Mon Mar 20 11:10:38 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

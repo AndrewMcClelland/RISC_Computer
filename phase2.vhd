@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sun Mar 19 18:55:20 2017"
+-- CREATED		"Mon Mar 20 10:57:11 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -56,6 +56,7 @@ ENTITY phase2 IS
 		Rout :  IN  STD_LOGIC;
 		BAout :  IN  STD_LOGIC;
 		Con_in :  IN  STD_LOGIC;
+		IncPc_enable :  IN  STD_LOGIC;
 		R0in :  INOUT  STD_LOGIC;
 		R1in :  INOUT  STD_LOGIC;
 		R2in :  INOUT  STD_LOGIC;
@@ -199,9 +200,10 @@ COMPONENT bus_mux_32_to_1
 	);
 END COMPONENT;
 
-COMPONENT lpm_add_sub0
-	PORT(dataa : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		 result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+COMPONENT incpc
+	PORT(enable : IN STD_LOGIC;
+		 A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 
@@ -407,9 +409,10 @@ PORT MAP(BusMuxIn_HI => HI_out,
 		 BusMuxOut => BusMuxOut);
 
 
-b2v_inst11 : lpm_add_sub0
-PORT MAP(dataa => BusMuxOut,
-		 result => PC_in);
+b2v_inst10 : incpc
+PORT MAP(enable => IncPc_enable,
+		 A => BusMuxOut,
+		 B => PC_in);
 
 
 b2v_inst16 : register_r0

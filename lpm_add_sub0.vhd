@@ -43,6 +43,7 @@ ENTITY lpm_add_sub0 IS
 	PORT
 	(
 		dataa		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+		enable : IN STD_LOGIC;
 		result		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 END lpm_add_sub0;

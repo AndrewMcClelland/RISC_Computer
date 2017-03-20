@@ -21,7 +21,7 @@ vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/MAR_splicer.
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd}
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd}
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd}
-vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/lpm_add_sub0.vhd}
+vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/IncPC.vhd}
 
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb_ld.vhd}
 
@@ -30,4 +30,4 @@ vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii
 add wave *
 view structure
 view signals
-run 5000 ns
+run 10000 ns
