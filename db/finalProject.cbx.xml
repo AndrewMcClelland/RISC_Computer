@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="finalProject">
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase2|lpm_add_sub0:b2v_inst11|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_msh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|phase2|ram_TA:b2v_inst2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_k7i1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -33,7 +33,20 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb_ld IS
   SIGNAL write_tb : std_logic;
   SIGNAL register_in_out_port_tb : std_logic;
   
-  TYPE State IS (defaultA, defaultB, T0A, T0B, T1A, T1B, T2A, T2B, T3A, T3B, T4A, T4B, T5A, T5B, T6A, T6B, T7A, T7B);
+  TYPE State IS (defaultA, defaultB, load_case1_T0A, load_case1_T0B, load_case1_T1A, load_case1_T1B, load_case1_T2A, load_case1_T2B, load_case1_T3A, load_case1_T3B, load_case1_T4A, load_case1_T4B, load_case1_T5A, load_case1_T5B, load_case1_T6A, load_case1_T6B, load_case1_T7A, load_case1_T7B, 
+						load_case2_T0A, load_case2_T0B, load_case2_T1A, load_case2_T1B, load_case2_T2A, load_case2_T2B, load_case2_T3A, load_case2_T3B, load_case2_T4A, load_case2_T4B, load_case2_T5A, load_case2_T5B, load_case2_T6A, load_case2_T6B, load_case2_T7A, load_case2_T7B,
+						load_case3_T0A, load_case3_T0B, load_case3_T1A, load_case3_T1B, load_case3_T2A, load_case3_T2B, load_case3_T3A, load_case3_T3B, load_case3_T4A, load_case3_T4B, load_case3_T5A, load_case3_T5B, 
+						load_case4_T0A, load_case4_T0B, load_case4_T1A, load_case4_T1B, load_case4_T2A, load_case4_T2B, load_case4_T3A, load_case4_T3B, load_case4_T4A, load_case4_T4B, load_case4_T5A, load_case4_T5B, 
+						load_case5_T0A, load_case5_T0B, load_case5_T1A, load_case5_T1B, load_case5_T2A, load_case5_T2B, load_case5_T3A, load_case5_T3B, load_case5_T4A, load_case5_T4B, load_case5_T5A, load_case5_T5B, load_case5_T6A, load_case5_T6B,
+						
+						store_reg_init_T0A, store_reg_init_T0B, store_reg_init_T1A, store_reg_init_T1B, store_reg_init_T2A, store_reg_init_T2B, store_reg_init_T3A, store_reg_init_T3B, store_reg_init_T4A, store_reg_init_T4B, store_reg_init_T5A, store_reg_init_T5B,
+						store_case1_T0A, store_case1_T0B, store_case1_T1A, store_case1_T1B, store_case1_T2A, store_case1_T2B, store_case1_T3A, store_case1_T3B, store_case1_T4A, store_case1_T4B, store_case1_T5A, store_case1_T5B, store_case1_T6A, store_case1_T6B, store_case1_T7A, store_case1_T7B,
+						store_check1_T0A, store_check1_T0B, store_check1_T1A, store_check1_T1B, store_check1_T2A, store_check1_T2B, store_check1_T3A, store_check1_T3B, store_check1_T4A, store_check1_T4B, store_check1_T5A, store_check1_T5B, store_check1_T6A, store_check1_T6B, store_check1_T7A, store_check1_T7B,
+						store_case2_T0A, store_case2_T0B, store_case2_T1A, store_case2_T1B, store_case2_T2A, store_case2_T2B, store_case2_T3A, store_case2_T3B, store_case2_T4A, store_case2_T4B, store_case2_T5A, store_case2_T5B, store_case2_T6A, store_case2_T6B, store_case2_T7A, store_case2_T7B,
+						store_check2_T0A, store_check2_T0B, store_check2_T1A, store_check2_T1B, store_check2_T2A, store_check2_T2B, store_check2_T3A, store_check2_T3B, store_check2_T4A, store_check2_T4B, store_check2_T5A, store_check2_T5B, store_check2_T6A, store_check2_T6B, store_check2_T7A, store_check2_T7B,
+						store_case3_T0A, store_case3_T0B, store_case3_T1A, store_case3_T1B, store_case3_T2A, store_case3_T2B, store_case3_T3A, store_case3_T3B, store_case3_T4A, store_case3_T4B, store_case3_T5A, store_case3_T5B, store_case3_T6A, store_case3_T6B,
+						store_check3_T0A, store_check3_T0B, store_check3_T1A, store_check3_T1B, store_check3_T2A, store_check3_T2B, store_check3_T3A, store_check3_T3B, store_check3_T4A, store_check3_T4B, store_check3_T5A, store_check3_T5B, store_check3_T6A, store_check3_T6B, store_check3_T7A, store_check3_T7B
+						);
   SIGNAL Present_state: State := defaultA;
  
  -- component instantiation of the datapath
@@ -247,39 +260,371 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb_ld IS
 						WHEN DefaultA =>
 							Present_state <= DefaultB;
 						WHEN DefaultB =>
-							Present_state <= T0A;
-						WHEN T0A =>
-							Present_state <= T0B;
-						WHEN T0B =>
-							Present_state <= T1A;
-						WHEN T1A =>
-							Present_state <= T1B;
-						WHEN T1B =>
-							Present_state <= T2A;
-						WHEN T2A =>
-							Present_state <= T2B;
-						WHEN T2B =>
-							Present_state <= T3A;
-						
-						WHEN T3A =>
-							Present_state <= T3B;
-						WHEN T3B =>
-							Present_state <= T4A;
-						WHEN T4A =>
-							Present_state <= T4B;
-						WHEN T4B =>
-							Present_state <= T5A;
-						WHEN T5A =>
-							Present_state <= T5B;
-						WHEN T5B =>
-							Present_state <= T6A;
-						WHEN T6A =>
-							Present_state <= T6B;
+							Present_state <= load_case1_T0A;
+						WHEN load_case1_T0A =>
+							Present_state <= load_case1_T0B;
+						WHEN load_case1_T0B =>
+							Present_state <= load_case1_T1A;
+						WHEN load_case1_T1A =>
+							Present_state <= load_case1_T1B;
+						WHEN load_case1_T1B =>
+							Present_state <= load_case1_T2A;
+						WHEN load_case1_T2A =>
+							Present_state <= load_case1_T2B;
+						WHEN load_case1_T2B =>
+							Present_state <= load_case1_T3A;						
+						WHEN load_case1_T3A =>
+							Present_state <= load_case1_T3B;
+						WHEN load_case1_T3B =>
+							Present_state <= load_case1_T4A;
+						WHEN load_case1_T4A =>
+							Present_state <= load_case1_T4B;
+						WHEN load_case1_T4B =>
+							Present_state <= load_case1_T5A;
+						WHEN load_case1_T5A =>
+							Present_state <= load_case1_T5B;
+						WHEN load_case1_T5B =>
+							Present_state <= load_case1_T6A;
+						WHEN load_case1_T6A =>
+							Present_state <= load_case1_T6B;		
+						WHEN load_case1_T6B =>
+							Present_state <= load_case1_T7A;
+						WHEN load_case1_T7A =>
+							Present_state <= load_case1_T7B;
 							
-						WHEN T6B =>
-							Present_state <= T7A;
-						WHEN T7A =>
-							Present_state <= T7B;
+						WHEN load_case1_T7B =>
+							Present_state <= load_case2_T0A;
+						WHEN load_case2_T0A =>
+							Present_state <= load_case2_T0B;
+						WHEN load_case2_T0B =>
+							Present_state <= load_case2_T1A;
+						WHEN load_case2_T1A =>
+							Present_state <= load_case2_T1B;
+						WHEN load_case2_T1B =>
+							Present_state <= load_case2_T2A;
+						WHEN load_case2_T2A =>
+							Present_state <= load_case2_T2B;
+						WHEN load_case2_T2B =>
+							Present_state <= load_case2_T3A;						
+						WHEN load_case2_T3A =>
+							Present_state <= load_case2_T3B;
+						WHEN load_case2_T3B =>
+							Present_state <= load_case2_T4A;
+						WHEN load_case2_T4A =>
+							Present_state <= load_case2_T4B;
+						WHEN load_case2_T4B =>
+							Present_state <= load_case2_T5A;
+						WHEN load_case2_T5A =>
+							Present_state <= load_case2_T5B;
+						WHEN load_case2_T5B =>
+							Present_state <= load_case2_T6A;
+						WHEN load_case2_T6A =>
+							Present_state <= load_case2_T6B;		
+						WHEN load_case2_T6B =>
+							Present_state <= load_case2_T7A;
+						WHEN load_case2_T7A =>
+							Present_state <= load_case2_T7B;
+							
+							
+						WHEN load_case2_T7B =>
+							Present_state <= load_case3_T0A;
+						WHEN load_case3_T0A =>
+							Present_state <= load_case3_T0B;
+						WHEN load_case3_T0B =>
+							Present_state <= load_case3_T1A;
+						WHEN load_case3_T1A =>
+							Present_state <= load_case3_T1B;
+						WHEN load_case3_T1B =>
+							Present_state <= load_case3_T2A;
+						WHEN load_case3_T2A =>
+							Present_state <= load_case3_T2B;
+						WHEN load_case3_T2B =>
+							Present_state <= load_case3_T3A;						
+						WHEN load_case3_T3A =>
+							Present_state <= load_case3_T3B;
+						WHEN load_case3_T3B =>
+							Present_state <= load_case3_T4A;
+						WHEN load_case3_T4A =>
+							Present_state <= load_case3_T4B;
+						WHEN load_case3_T4B =>
+							Present_state <= load_case3_T5A;
+						WHEN load_case3_T5A =>
+							Present_state <= load_case3_T5B;
+						
+						WHEN load_case3_T5B =>
+							Present_state <= load_case4_T0A;
+						WHEN load_case4_T0A =>
+							Present_state <= load_case4_T0B;
+						WHEN load_case4_T0B =>
+							Present_state <= load_case4_T1A;
+						WHEN load_case4_T1A =>
+							Present_state <= load_case4_T1B;
+						WHEN load_case4_T1B =>
+							Present_state <= load_case4_T2A;
+						WHEN load_case4_T2A =>
+							Present_state <= load_case4_T2B;
+						WHEN load_case4_T2B =>
+							Present_state <= load_case4_T3A;						
+						WHEN load_case4_T3A =>
+							Present_state <= load_case4_T3B;
+						WHEN load_case4_T3B =>
+							Present_state <= load_case4_T4A;
+						WHEN load_case4_T4A =>
+							Present_state <= load_case4_T4B;
+						WHEN load_case4_T4B =>
+							Present_state <= load_case4_T5A;
+						WHEN load_case4_T5A =>
+							Present_state <= load_case4_T5B;
+							
+						WHEN load_case4_T5B =>
+							Present_state <= load_case5_T0A;
+						WHEN load_case5_T0A =>
+							Present_state <= load_case5_T0B;
+						WHEN load_case5_T0B =>
+							Present_state <= load_case5_T1A;
+						WHEN load_case5_T1A =>
+							Present_state <= load_case5_T1B;
+						WHEN load_case5_T1B =>
+							Present_state <= load_case5_T2A;
+						WHEN load_case5_T2A =>
+							Present_state <= load_case5_T2B;
+						WHEN load_case5_T2B =>
+							Present_state <= load_case5_T3A;						
+						WHEN load_case5_T3A =>
+							Present_state <= load_case5_T3B;
+						WHEN load_case5_T3B =>
+							Present_state <= load_case5_T4A;
+						WHEN load_case5_T4A =>
+							Present_state <= load_case5_T4B;
+						WHEN load_case5_T4B =>
+							Present_state <= load_case5_T5A;
+						WHEN load_case5_T5A =>
+							Present_state <= load_case5_T5B;
+						WHEN load_case5_T5B =>
+							Present_state <= load_case5_T6A;
+						WHEN load_case5_T6A =>
+							Present_state <= load_case5_T6B;
+							
+							
+						WHEN load_case5_T6B =>
+							Present_state <= store_reg_init_T0A;
+						WHEN store_reg_init_T0A =>
+							Present_state <= store_reg_init_T0B;
+						WHEN store_reg_init_T0B =>
+							Present_state <= store_reg_init_T1A;
+						WHEN store_reg_init_T1A =>
+							Present_state <= store_reg_init_T1B;
+						WHEN store_reg_init_T1B =>
+							Present_state <= store_reg_init_T2A;
+						WHEN store_reg_init_T2A =>
+							Present_state <= store_reg_init_T2B;
+						WHEN store_reg_init_T2B =>
+							Present_state <= store_reg_init_T3A;						
+						WHEN store_reg_init_T3A =>
+							Present_state <= store_reg_init_T3B;
+						WHEN store_reg_init_T3B =>
+							Present_state <= store_reg_init_T4A;
+						WHEN store_reg_init_T4A =>
+							Present_state <= store_reg_init_T4B;
+						WHEN store_reg_init_T4B =>
+							Present_state <= store_reg_init_T5A;
+						WHEN store_reg_init_T5A =>
+							Present_state <= store_reg_init_T5B;
+							
+						WHEN store_reg_init_T5B =>
+							Present_state <= store_case1_T0A;
+						WHEN store_case1_T0A =>
+							Present_state <= store_case1_T0B;
+						WHEN store_case1_T0B =>
+							Present_state <= store_case1_T1A;
+						WHEN store_case1_T1A =>
+							Present_state <= store_case1_T1B;
+						WHEN store_case1_T1B =>
+							Present_state <= store_case1_T2A;
+						WHEN store_case1_T2A =>
+							Present_state <= store_case1_T2B;
+						WHEN store_case1_T2B =>
+							Present_state <= store_case1_T3A;						
+						WHEN store_case1_T3A =>
+							Present_state <= store_case1_T3B;
+						WHEN store_case1_T3B =>
+							Present_state <= store_case1_T4A;
+						WHEN store_case1_T4A =>
+							Present_state <= store_case1_T4B;
+						WHEN store_case1_T4B =>
+							Present_state <= store_case1_T5A;
+						WHEN store_case1_T5A =>
+							Present_state <= store_case1_T5B;
+						WHEN store_case1_T5B =>
+							Present_state <= store_case1_T6A;
+						WHEN store_case1_T6A =>
+							Present_state <= store_case1_T6B;		
+						WHEN store_case1_T6B =>
+							Present_state <= store_case1_T7A;
+						WHEN store_case1_T7A =>
+							Present_state <= store_case1_T7B;	
+							
+						WHEN store_case1_T7B =>
+							Present_state <= store_check1_T0A;
+						WHEN store_check1_T0A =>
+							Present_state <= store_check1_T0B;
+						WHEN store_check1_T0B =>
+							Present_state <= store_check1_T1A;
+						WHEN store_check1_T1A =>
+							Present_state <= store_check1_T1B;
+						WHEN store_check1_T1B =>
+							Present_state <= store_check1_T2A;
+						WHEN store_check1_T2A =>
+							Present_state <= store_check1_T2B;
+						WHEN store_check1_T2B =>
+							Present_state <= store_check1_T3A;						
+						WHEN store_check1_T3A =>
+							Present_state <= store_check1_T3B;
+						WHEN store_check1_T3B =>
+							Present_state <= store_check1_T4A;
+						WHEN store_check1_T4A =>
+							Present_state <= store_check1_T4B;
+						WHEN store_check1_T4B =>
+							Present_state <= store_check1_T5A;
+						WHEN store_check1_T5A =>
+							Present_state <= store_check1_T5B;
+						WHEN store_check1_T5B =>
+							Present_state <= store_check1_T6A;
+						WHEN store_check1_T6A =>
+							Present_state <= store_check1_T6B;		
+						WHEN store_check1_T6B =>
+							Present_state <= store_check1_T7A;
+						WHEN store_check1_T7A =>
+							Present_state <= store_check1_T7B;
+							
+						WHEN store_check1_T7B =>
+							Present_state <= store_case2_T0A;
+						WHEN store_case2_T0A =>
+							Present_state <= store_case2_T0B;
+						WHEN store_case2_T0B =>
+							Present_state <= store_case2_T1A;
+						WHEN store_case2_T1A =>
+							Present_state <= store_case2_T1B;
+						WHEN store_case2_T1B =>
+							Present_state <= store_case2_T2A;
+						WHEN store_case2_T2A =>
+							Present_state <= store_case2_T2B;
+						WHEN store_case2_T2B =>
+							Present_state <= store_case2_T3A;						
+						WHEN store_case2_T3A =>
+							Present_state <= store_case2_T3B;
+						WHEN store_case2_T3B =>
+							Present_state <= store_case2_T4A;
+						WHEN store_case2_T4A =>
+							Present_state <= store_case2_T4B;
+						WHEN store_case2_T4B =>
+							Present_state <= store_case2_T5A;
+						WHEN store_case2_T5A =>
+							Present_state <= store_case2_T5B;
+						WHEN store_case2_T5B =>
+							Present_state <= store_case2_T6A;
+						WHEN store_case2_T6A =>
+							Present_state <= store_case2_T6B;		
+						WHEN store_case2_T6B =>
+							Present_state <= store_case2_T7A;
+						WHEN store_case2_T7A =>
+							Present_state <= store_case2_T7B;	
+							
+						WHEN store_case2_T7B =>
+							Present_state <= store_check2_T0A;
+						WHEN store_check2_T0A =>
+							Present_state <= store_check2_T0B;
+						WHEN store_check2_T0B =>
+							Present_state <= store_check2_T1A;
+						WHEN store_check2_T1A =>
+							Present_state <= store_check2_T1B;
+						WHEN store_check2_T1B =>
+							Present_state <= store_check2_T2A;
+						WHEN store_check2_T2A =>
+							Present_state <= store_check2_T2B;
+						WHEN store_check2_T2B =>
+							Present_state <= store_check2_T3A;						
+						WHEN store_check2_T3A =>
+							Present_state <= store_check2_T3B;
+						WHEN store_check2_T3B =>
+							Present_state <= store_check2_T4A;
+						WHEN store_check2_T4A =>
+							Present_state <= store_check2_T4B;
+						WHEN store_check2_T4B =>
+							Present_state <= store_check2_T5A;
+						WHEN store_check2_T5A =>
+							Present_state <= store_check2_T5B;
+						WHEN store_check2_T5B =>
+							Present_state <= store_check2_T6A;
+						WHEN store_check2_T6A =>
+							Present_state <= store_check2_T6B;		
+						WHEN store_check2_T6B =>
+							Present_state <= store_check2_T7A;
+						WHEN store_check2_T7A =>
+							Present_state <= store_check2_T7B;
+							
+							
+						WHEN store_check2_T7B =>
+							Present_state <= store_case3_T0A;
+						WHEN store_case3_T0A =>
+							Present_state <= store_case3_T0B;
+						WHEN store_case3_T0B =>
+							Present_state <= store_case3_T1A;
+						WHEN store_case3_T1A =>
+							Present_state <= store_case3_T1B;
+						WHEN store_case3_T1B =>
+							Present_state <= store_case3_T2A;
+						WHEN store_case3_T2A =>
+							Present_state <= store_case3_T2B;
+						WHEN store_case3_T2B =>
+							Present_state <= store_case3_T3A;						
+						WHEN store_case3_T3A =>
+							Present_state <= store_case3_T3B;
+						WHEN store_case3_T3B =>
+							Present_state <= store_case3_T4A;
+						WHEN store_case3_T4A =>
+							Present_state <= store_case3_T4B;
+						WHEN store_case3_T4B =>
+							Present_state <= store_case3_T5A;
+						WHEN store_case3_T5A =>
+							Present_state <= store_case3_T5B;
+						WHEN store_case3_T5B =>
+							Present_state <= store_case3_T6A;
+						WHEN store_case3_T6A =>
+							Present_state <= store_case3_T6B;
+							
+						WHEN store_case3_T6B =>
+							Present_state <= store_check3_T0A;
+						WHEN store_check3_T0A =>
+							Present_state <= store_check3_T0B;
+						WHEN store_check3_T0B =>
+							Present_state <= store_check3_T1A;
+						WHEN store_check3_T1A =>
+							Present_state <= store_check3_T1B;
+						WHEN store_check3_T1B =>
+							Present_state <= store_check3_T2A;
+						WHEN store_check3_T2A =>
+							Present_state <= store_check3_T2B;
+						WHEN store_check3_T2B =>
+							Present_state <= store_check3_T3A;						
+						WHEN store_check3_T3A =>
+							Present_state <= store_check3_T3B;
+						WHEN store_check3_T3B =>
+							Present_state <= store_check3_T4A;
+						WHEN store_check3_T4A =>
+							Present_state <= store_check3_T4B;
+						WHEN store_check3_T4B =>
+							Present_state <= store_check3_T5A;
+						WHEN store_check3_T5A =>
+							Present_state <= store_check3_T5B;
+						WHEN store_check3_T5B =>
+							Present_state <= store_check3_T6A;
+						WHEN store_check3_T6A =>
+							Present_state <= store_check3_T6B;		
+						WHEN store_check3_T6B =>
+							Present_state <= store_check3_T7A;
+						WHEN store_check3_T7A =>
+							Present_state <= store_check3_T7B;
 							
 						WHEN OTHERS =>
 					END CASE;
@@ -324,32 +669,34 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb_ld IS
 							register_in_Z_tb <= '0';
 							register_in_IR_tb <= '0';
 							register_in_MAR_tb <= '0';
-						
-						
-					
-					 WHEN T0A => 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--LOAD INSTRUCTIONS
+--ld R1, $65					
+					 WHEN load_case1_T0A => 
 						clear_tb <= '0';
 						read_tb <= '1';
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 						
-					 
-					 WHEN T1A =>	
-
-						 PCout_tb <= '0';
-						 register_in_MAR_tb <= '0';
-						 
+					 WHEN load_case1_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
 						 register_in_MDR_tb <= '1';
 						 
-	
-					WHEN T2A =>
+					WHEN load_case1_T1B => 
+						register_in_PC_tb <= '0';
+
+					WHEN load_case1_T2A =>
+						PCout_tb <= '0';
 						register_in_MDR_tb <= '0';
 						read_tb <= '0';
 						
 						MDRout_tb <= '1'; 
 						register_in_IR_tb <= '1';
 						
-					WHEN T3A =>
+					WHEN load_case1_T3A =>
 						register_in_IR_tb <= '0';
 						MDRout_tb <= '0';
 						
@@ -357,9 +704,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb_ld IS
 						BAout_tb <= '1';
 						register_in_Y_tb <= '1';
 						register_in_C_tb <= '1';
-						
-						
-					WHEN T4A =>
+
+					WHEN load_case1_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
 						register_in_Y_tb <= '0';					
@@ -369,33 +715,760 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb_ld IS
 						register_in_Z_tb <= '1';
 						register_in_Zhigh_tb <= '1';
 						register_in_Zlow_tb <= '1';
+
+					WHEN load_case1_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						read_tb <= '1';
 						
-					 
-					WHEN T5A =>
---						Cout_tb <= '0';
---						register_in_Z_tb <= '0';
---						register_in_Zhigh_tb <= '0';
---						register_in_Zlow_tb <= '0';
---						
---
---						Zlowout_tb <= '1';
---						register_in_MAR_tb <= '1';
+					WHEN load_case1_T6A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+
+						register_in_MDR_tb <= '1';
+
+					WHEN load_case1_T7A =>
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
 						
-					WHEN T6A =>
---						Zlowout_tb <= '0';
---						register_in_MAR_tb <= '0';
---					
---						read_tb <= '1';
---						register_in_MDR_tb <= '1';
-		
+						MDRout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+--------------------------------------------------------------------------
+--ld R0, $55(R1)						
+
+					 WHEN load_case2_T0A => 
+						MDRout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';
+
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+ 
+					 WHEN load_case2_T1A =>		 
+						 register_in_MAR_tb <= '0';
+						 register_in_PC_tb <= '1';	 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN load_case2_T1B => 
+						register_in_PC_tb <= '0';
+
+					WHEN load_case2_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN load_case2_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+
+					WHEN load_case2_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
 					
-					WHEN T7A =>
---						register_in_MDR_tb <= '0';
---						read_tb <= '0';
---						
---						MDRout_tb <= '1';
---						Gra_tb <= '1';
---						Rin_tb <= '1';
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+
+					WHEN load_case2_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						read_tb <= '1';
+						
+					WHEN load_case2_T6A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+
+						register_in_MDR_tb <= '1';
+					
+					WHEN load_case2_T7A =>
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+--------------------------------------------------------------------------
+--ldi R1, $65	
+					
+					WHEN load_case3_T0A => 
+						MDRout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';
+						
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+
+					WHEN load_case3_T1A =>							 
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';						 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN load_case3_T1B => 
+						register_in_PC_tb <= '0';						 
+	
+					WHEN load_case3_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN load_case3_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+												
+					WHEN load_case3_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';						
+					 
+					WHEN load_case3_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+						
+						Zlowout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+--------------------------------------------------------------------------
+--ldi R1, $55(R1)			
+				
+					WHEN load_case4_T0A => 					
+						Zlowout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';				 
+					 
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+					 
+					 WHEN load_case4_T1A =>							 
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';						 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN load_case4_T1B => 
+						register_in_PC_tb <= '0';
+						 
+					WHEN load_case4_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN load_case4_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';						
+						
+					WHEN load_case4_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';						
+					 
+					WHEN load_case4_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+						
+						Zlowout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+--------------------------------------------------------------------------
+--ldr R0, $65												
+					
+					 WHEN load_case5_T0A => 
+						Zlowout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';
+					 
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';					
+			
+					 WHEN load_case5_T1A =>	
+						 register_in_MAR_tb <= '0'; 
+						 register_in_PC_tb <= '1';	
+						 register_in_Y_tb <= '1';
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN load_case5_T1B => 
+						register_in_PC_tb <= '0';
+						register_in_Y_tb <= '0';
+						 
+					WHEN load_case5_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN load_case5_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+							
+					WHEN load_case5_T4A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';		
+						
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						read_tb <= '1';
+					
+					WHEN load_case5_T5A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+						
+						register_in_MDR_tb <= '1';
+			
+					WHEN load_case5_T6A =>						
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--STORE INSTRUCTIONS
+--register 4 init
+					
+					WHEN store_reg_init_T0A => 
+						MDRout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';
+	
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+
+					WHEN store_reg_init_T1A =>							 
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';						 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN store_reg_init_T1B => 
+						register_in_PC_tb <= '0';						 
+	
+					WHEN store_reg_init_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN store_reg_init_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+												
+					WHEN store_reg_init_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';						
+					 
+					WHEN store_reg_init_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+						
+						Zlowout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+--------------------------------------------------------------------------
+--st $90, R4
+	
+					WHEN store_case1_T0A => 
+						Zlowout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';
+					
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						
+					 WHEN store_case1_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN store_case1_T1B => 
+						register_in_PC_tb <= '0';
+
+					WHEN store_case1_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN store_case1_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+
+					WHEN store_case1_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+
+					WHEN store_case1_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+					
+						
+					WHEN store_case1_T6A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+						
+						Gra_tb <= '1';
+						Rout_tb <= '1';
+						register_in_MDR_tb <= '1';
+						write_tb <= '1';
+
+					WHEN store_case1_T7A =>
+						register_in_MDR_tb <= '0';
+						Gra_tb <= '0';
+						Rout_tb <= '0';
+						
+						MDRout_tb <= '1';
+--------------------------------------------------------------------------
+--ld R1, $90						
+							
+					WHEN store_check1_T0A => 
+						MDRout_tb <= '0';
+						write_tb <= '0';
+						
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						
+					 WHEN store_check1_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN store_check1_T1B => 
+						register_in_PC_tb <= '0';
+
+					WHEN store_check1_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN store_check1_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+
+					WHEN store_check1_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+
+					WHEN store_check1_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						read_tb <= '1';
+						
+					WHEN store_check1_T6A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+
+						register_in_MDR_tb <= '1';
+
+					WHEN store_check1_T7A =>
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+						
+--------------------------------------------------------------------------
+--st $90(R4), R4
+
+					WHEN store_case2_T0A => 
+						MDRout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';
+					
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						
+					 WHEN store_case2_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN store_case2_T1B => 
+						register_in_PC_tb <= '0';
+
+					WHEN store_case2_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN store_case2_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+
+					WHEN store_case2_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+
+					WHEN store_case2_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+					
+						
+					WHEN store_case2_T6A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+						
+						Gra_tb <= '1';
+						Rout_tb <= '1';
+						register_in_MDR_tb <= '1';
+						write_tb <= '1';
+
+					WHEN store_case2_T7A =>
+						register_in_MDR_tb <= '0';
+						Gra_tb <= '0';
+						Rout_tb <= '0';
+						
+						MDRout_tb <= '1';
+--------------------------------------------------------------------------
+--ld R1, $90						
+							
+					WHEN store_check2_T0A => 
+						MDRout_tb <= '0';
+						write_tb <= '0';
+						
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						
+					 WHEN store_check2_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN store_check2_T1B => 
+						register_in_PC_tb <= '0';
+
+					WHEN store_check2_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN store_check2_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+
+					WHEN store_check2_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+
+					WHEN store_check2_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						read_tb <= '1';
+						
+					WHEN store_check2_T6A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+
+						register_in_MDR_tb <= '1';
+
+					WHEN store_check2_T7A =>
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';
+--------------------------------------------------------------------------
+--str $90, R4
+					WHEN store_case3_T0A => 
+						MDRout_tb <= '0';
+						Gra_tb <= '0';
+						Rin_tb <= '0';
+					 
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';					
+			
+					 WHEN store_case3_T1A =>	
+						 register_in_MAR_tb <= '0'; 
+						 register_in_PC_tb <= '1';	
+						 register_in_Y_tb <= '1';
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN store_case3_T1B => 
+						register_in_PC_tb <= '0';
+						register_in_Y_tb <= '0';
+						 
+					WHEN store_case3_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN store_case3_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+							
+					WHEN store_case3_T4A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';		
+						
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+					
+					WHEN store_case3_T5A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+						
+						Gra_tb <= '1';
+						Rout_tb <= '1';
+						register_in_MDR_tb <= '1';
+						write_tb <= '1';
+			
+					WHEN store_case3_T6A =>						
+						register_in_MDR_tb <= '0';
+						Gra_tb <= '0';
+						Rout_tb <= '0';
+						
+						MDRout_tb <= '1';
+						
+--------------------------------------------------------------------------
+--ld R1, $90						
+							
+					WHEN store_check3_T0A => 
+						MDRout_tb <= '0';
+						write_tb <= '0';
+						
+						read_tb <= '1';
+						PCout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						
+					 WHEN store_check3_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
+						 
+					WHEN store_check3_T1B => 
+						register_in_PC_tb <= '0';
+
+					WHEN store_check3_T2A =>
+						PCout_tb <= '0';
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1'; 
+						register_in_IR_tb <= '1';
+						
+					WHEN store_check3_T3A =>
+						register_in_IR_tb <= '0';
+						MDRout_tb <= '0';
+						
+						Grb_tb <= '1';
+						BAout_tb <= '1';
+						register_in_Y_tb <= '1';
+						register_in_C_tb <= '1';
+
+					WHEN store_check3_T4A =>
+						Grb_tb <= '0';
+						BAout_tb <= '0';
+						register_in_Y_tb <= '0';					
+					
+						Cout_tb <= '1';
+						ALU_cs_tb <= b"0000";
+						register_in_Z_tb <= '1';
+						register_in_Zhigh_tb <= '1';
+						register_in_Zlow_tb <= '1';
+
+					WHEN store_check3_T5A =>
+						Cout_tb <= '0';
+						register_in_Z_tb <= '0';
+						register_in_Zhigh_tb <= '0';
+						register_in_Zlow_tb <= '0';
+
+						Zlowout_tb <= '1';
+						register_in_MAR_tb <= '1';
+						read_tb <= '1';
+						
+					WHEN store_check3_T6A =>
+						Zlowout_tb <= '0';
+						register_in_MAR_tb <= '0';
+
+						register_in_MDR_tb <= '1';
+
+					WHEN store_check3_T7A =>
+						register_in_MDR_tb <= '0';
+						read_tb <= '0';
+						
+						MDRout_tb <= '1';
+						Gra_tb <= '1';
+						Rin_tb <= '1';	
+
 						
 					WHEN OTHERS =>
 			END CASE;

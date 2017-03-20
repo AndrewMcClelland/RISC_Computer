@@ -12,17 +12,20 @@ END register_R0;
 architecture behavioral of register_R0 is 
 begin
 	process(clk,clear)
+	variable temp : std_logic_vector (31 downto 0);
 		begin
 		if (rising_edge(clk)) then
 			if (clear = '1') then
-				output <= "00000000000000000000000000000000";
+				temp := "00000000000000000000000000000000";
 			elsif (register_in = '1') then
-				if (not BAout = '1') then
-					output <= q and b"1111";
-				else
-					output <= q and b"0000";
-				end if;
+				temp := q;
 			end if;		
-		end if;			
+		end if;
+
+		if (not BAout = '1') then
+			output <= temp and b"11111111111111111111111111111111";
+		else
+			output <= temp and b"00000000000000000000000000000000";
+		end if;
 		end process;
 end behavioral; 

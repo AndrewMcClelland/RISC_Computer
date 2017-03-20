@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sat Mar 18 16:58:33 2017"
+-- CREATED		"Sun Mar 19 18:55:20 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -199,6 +199,12 @@ COMPONENT bus_mux_32_to_1
 	);
 END COMPONENT;
 
+COMPONENT lpm_add_sub0
+	PORT(dataa : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 result : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	);
+END COMPONENT;
+
 COMPONENT register_r0
 	PORT(clk : IN STD_LOGIC;
 		 clear : IN STD_LOGIC;
@@ -235,8 +241,7 @@ COMPONENT ram_ta
 END COMPONENT;
 
 COMPONENT alu
-	PORT(clk : IN STD_LOGIC;
-		 A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+	PORT(A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		 B : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		 cs : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		 C : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
@@ -311,6 +316,7 @@ END COMPONENT;
 SIGNAL	address :  STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL	C_sign_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	In_port_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL	PC_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	Reg_in :  STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL	Reg_out :  STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -401,6 +407,10 @@ PORT MAP(BusMuxIn_HI => HI_out,
 		 BusMuxOut => BusMuxOut);
 
 
+b2v_inst11 : lpm_add_sub0
+PORT MAP(dataa => BusMuxOut,
+		 result => PC_in);
+
 
 b2v_inst16 : register_r0
 PORT MAP(clk => clk,
@@ -429,13 +439,12 @@ PORT MAP(clock => clk,
 		 rden => Read_input,
 		 wren => Write_Signal,
 		 address => address,
-		 data => MDR_out,
+		 data => BusMuxOut,
 		 q => Mdatain);
 
 
 b2v_inst3 : alu
-PORT MAP(clk => clk,
-		 A => Y_out,
+PORT MAP(A => Y_out,
 		 B => BusMuxOut,
 		 cs => cs,
 		 C => ALU_out);
@@ -556,7 +565,7 @@ b2v_PC : register_32
 PORT MAP(clk => clk,
 		 clear => clear,
 		 register_in => register_in_PC,
-		 q => BusMuxOut,
+		 q => PC_in,
 		 output => PC_out);
 
 

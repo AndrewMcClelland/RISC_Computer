@@ -24,10 +24,6 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity register_R0
 # -- Compiling architecture behavioral of register_R0
-# ** Warning: C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_R0.vhd(21): (vcom-1275) Arguments of overloaded "and" operator are not the same length (32 vs. 4).
-# 
-# ** Warning: C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_R0.vhd(23): (vcom-1275) Arguments of overloaded "and" operator are not the same length (32 vs. 4).
-# 
 # vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -127,6 +123,13 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity ram_TA
 # -- Compiling architecture SYN of ram_ta
+# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/lpm_add_sub0.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity lpm_add_sub0
+# -- Compiling architecture SYN of lpm_add_sub0
 # 
 # vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb_ld.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -146,13 +149,18 @@
 # Loading work.register_32(behavioral)
 # Loading work.encoder_32_to_5(behavioral)
 # Loading work.bus_mux_32_to_1(behavioral)
+# Loading work.lpm_add_sub0(syn)
+# Loading lpm.lpm_components
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_add_sub(lpm_syn)
+# Loading lpm.lpm_add_sub_unsigned(lpm_syn)
 # Loading work.register_r0(behavioral)
 # Loading work.con_ff_logic(behavioral)
 # Loading work.d_flipflop(behavioral)
 # Loading work.ir_conff_split(behavioral)
 # Loading work.ram_ta(syn)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
 # Loading altera_mf.altera_common_conversion(body)
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.altsyncram(translated)
@@ -170,5 +178,16 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 900 ns
-# WARNING: No extended dataflow license exists
+# run 5000 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /phase2_tb_ld/DUT/b2v_inst11/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /phase2_tb_ld/DUT/b2v_inst11/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /phase2_tb_ld/DUT/b2v_inst11/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /phase2_tb_ld/DUT/b2v_inst11/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /phase2_tb_ld/DUT/b2v_inst11/LPM_ADD_SUB_component/L1/U
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /phase2_tb_ld/DUT/b2v_inst11/LPM_ADD_SUB_component/L1/U
