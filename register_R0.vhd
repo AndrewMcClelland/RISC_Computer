@@ -11,7 +11,7 @@ END register_R0;
 
 architecture behavioral of register_R0 is 
 begin
-	process(clk,clear)
+	process(clk,clear,BAout)
 	variable temp : std_logic_vector (31 downto 0);
 		begin
 		if (rising_edge(clk)) then

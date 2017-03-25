@@ -3255,9 +3255,9 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb_ld IS
 --INPORT / OUTPORT						
 --init In_port					
 					WHEN In_port_init_T0A => 
-						Zlowout_tb <= '0';
+						LOout_tb <= '0';
 						Gra_tb <= '0';
-						Rin_tb <= '0';	
+						Rin_tb <= '0';
 						
 						register_in_In_port_tb <= '1';
 						In_port_in_tb <= b"00000000000000000000000000011111";
