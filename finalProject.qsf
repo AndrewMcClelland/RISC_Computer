@@ -195,4 +195,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE select_encode_logic_sel_tb.vhd -
 set_global_assignment -name EDA_TEST_BENCH_FILE con_ff_logic_tb.vhd -section_id con_ff_logic_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE phase2_tb_ld.vhd -section_id phase2_tb_ld
 set_global_assignment -name VHDL_FILE IncPC.vhd
+set_global_assignment -name VHDL_FILE R14MUX.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

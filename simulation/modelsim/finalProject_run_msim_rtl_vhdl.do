@@ -22,6 +22,7 @@ vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/SelecEncodeL
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd}
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd}
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/IncPC.vhd}
+vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/R14MUX.vhd}
 
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb_ld.vhd}
 

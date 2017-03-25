@@ -554,7 +554,7 @@ applicable agreement for further details.
 	(input)
 	(rect 704 1056 872 1072)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "IncPc_enable" (rect 5 0 72 12)(font "Arial" ))
+	(text "IncPc_enable" (rect 5 0 71 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -567,10 +567,58 @@ applicable agreement for further details.
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect -624 -88 -448 -72)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "R14MUX_enable" (rect 5 0 85 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 248 912 424 928)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "In_port_in[31..0]" (rect 5 0 86 12)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12))
+		(line (pt 92 4)(pt 117 4))
+		(line (pt 121 8)(pt 176 8))
+		(line (pt 92 12)(pt 92 4))
+		(line (pt 117 4)(pt 121 8))
+		(line (pt 117 12)(pt 121 8))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 2328 776 2504 792)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Con_out" (rect 90 0 131 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 632 1160 838 1176)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "Out_port_output[31..0]" (rect 90 0 200 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -1148,23 +1196,6 @@ applicable agreement for further details.
 	(rect 1464 792 1640 808)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "Y_out[31..0]" (rect 90 0 151 12)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 56 4)(pt 78 4))
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 56 12)(pt 78 12))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 78 12)(pt 82 8))
-		(line (pt 56 4)(pt 52 8))
-		(line (pt 52 8)(pt 56 12))
-	)
-	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(bidir)
-	(rect 1464 816 1655 832)
-	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
-	(text "Out_port_out[31..0]" (rect 90 0 185 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 56 4)(pt 78 4))
@@ -3936,7 +3967,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 888 1016 1048 1096)
+	(rect 896 1016 1056 1096)
 	(text "IncPC" (rect 5 0 35 12)(font "Arial" ))
 	(text "inst10" (rect 8 64 37 76)(font "Arial" ))
 	(port
@@ -3962,6 +3993,35 @@ applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 144 64))
+	)
+)
+(symbol
+	(rect -448 -128 -200 -48)
+	(text "R14MUX" (rect 5 0 47 12)(font "Arial" ))
+	(text "inst12" (rect 8 64 37 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "select_encode_enable" (rect 0 0 108 12)(font "Arial" ))
+		(text "select_encode_enable" (rect 21 27 129 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "R14MUX_enable" (rect 0 0 80 12)(font "Arial" ))
+		(text "R14MUX_enable" (rect 21 43 101 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "R14MUX_out" (rect 0 0 63 12)(font "Arial" ))
+		(text "R14MUX_out" (rect 174 27 237 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 64))
 	)
 )
 (connector
@@ -4058,12 +4118,6 @@ applicable agreement for further details.
 	(text "R15_out[31..0]" (rect 616 8 689 20)(font "Arial" ))
 	(pt 616 24)
 	(pt 624 24)
-	(bus)
-)
-(connector
-	(text "R14_out[31..0]" (rect 616 -120 689 -108)(font "Arial" ))
-	(pt 616 -104)
-	(pt 624 -104)
 	(bus)
 )
 (connector
@@ -4171,19 +4225,7 @@ applicable agreement for further details.
 	(pt 312 -216)
 )
 (connector
-	(pt 424 -88)
-	(pt 312 -88)
-)
-(connector
-	(pt 312 -216)
-	(pt 312 -88)
-)
-(connector
 	(pt 424 40)
-	(pt 312 40)
-)
-(connector
-	(pt 312 -88)
 	(pt 312 40)
 )
 (connector
@@ -4308,14 +4350,6 @@ applicable agreement for further details.
 	(pt 304 184)
 )
 (connector
-	(pt 424 -72)
-	(pt 304 -72)
-)
-(connector
-	(pt 304 -72)
-	(pt 304 56)
-)
-(connector
 	(pt 304 -456)
 	(pt 304 -328)
 )
@@ -4434,10 +4468,6 @@ applicable agreement for further details.
 (connector
 	(pt 304 -328)
 	(pt 304 -200)
-)
-(connector
-	(pt 304 -200)
-	(pt 304 -72)
 )
 (connector
 	(pt 424 824)
@@ -4584,12 +4614,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "BusMuxOut[31..0]" (rect 376 -120 464 -108)(font "Arial" ))
-	(pt 424 -104)
-	(pt 376 -104)
-	(bus)
-)
-(connector
 	(text "BusMuxOut[31..0]" (rect 376 -248 464 -236)(font "Arial" ))
 	(pt 424 -232)
 	(pt 376 -232)
@@ -4635,12 +4659,6 @@ applicable agreement for further details.
 	(text "C_sign_in[31..0]" (rect 376 1032 456 1044)(font "Arial" ))
 	(pt 424 1048)
 	(pt 376 1048)
-	(bus)
-)
-(connector
-	(text "In_port_in[31..0]" (rect 376 904 456 916)(font "Arial" ))
-	(pt 424 920)
-	(pt 376 920)
 	(bus)
 )
 (connector
@@ -4968,12 +4986,6 @@ applicable agreement for further details.
 	(text "BusMuxOut[31..0]" (rect 376 1152 464 1164)(font "Arial" ))
 	(pt 424 1168)
 	(pt 376 1168)
-	(bus)
-)
-(connector
-	(text "Out_port_out[31..0]" (rect 616 1152 711 1164)(font "Arial" ))
-	(pt 616 1168)
-	(pt 624 1168)
 	(bus)
 )
 (connector
@@ -5319,11 +5331,6 @@ applicable agreement for further details.
 	(pt 424 -184)
 )
 (connector
-	(text "R14in" (rect 386 -72 414 -60)(font "Arial" ))
-	(pt 376 -56)
-	(pt 424 -56)
-)
-(connector
 	(text "R15in" (rect 386 56 414 68)(font "Arial" ))
 	(pt 376 72)
 	(pt 424 72)
@@ -5517,20 +5524,76 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "PC_in[31..0]" (rect 1048 1032 1109 1044)(font "Arial" ))
-	(pt 1048 1048)
-	(pt 1096 1048)
+	(text "PC_in[31..0]" (rect 1056 1032 1117 1044)(font "Arial" ))
+	(pt 1056 1048)
+	(pt 1104 1048)
 	(bus)
 )
 (connector
-	(text "BusMuxOut[31..0]" (rect 824 1032 912 1044)(font "Arial" ))
-	(pt 824 1048)
-	(pt 888 1048)
+	(text "BusMuxOut[31..0]" (rect 832 1032 920 1044)(font "Arial" ))
+	(pt 832 1048)
+	(pt 896 1048)
 	(bus)
 )
 (connector
-	(pt 888 1064)
 	(pt 872 1064)
+	(pt 896 1064)
+)
+(connector
+	(text "R14_out[31..0]" (rect 616 -120 689 -108)(font "Arial" ))
+	(pt 616 -104)
+	(pt 624 -104)
+	(bus)
+)
+(connector
+	(text "BusMuxOut[31..0]" (rect 376 -120 464 -108)(font "Arial" ))
+	(pt 424 -104)
+	(pt 376 -104)
+	(bus)
+)
+(connector
+	(pt 312 -88)
+	(pt 424 -88)
+)
+(connector
+	(pt 304 -72)
+	(pt 424 -72)
+)
+(connector
+	(pt 312 -216)
+	(pt 312 -88)
+)
+(connector
+	(pt 312 -88)
+	(pt 312 40)
+)
+(connector
+	(pt 304 -200)
+	(pt 304 -72)
+)
+(connector
+	(pt 304 -72)
+	(pt 304 56)
+)
+(connector
+	(text "R14in" (rect -494 -112 -466 -100)(font "Arial" ))
+	(pt -448 -96)
+	(pt -496 -96)
+)
+(connector
+	(text "R14_enable" (rect -200 -112 -143 -100)(font "Arial" ))
+	(pt -200 -96)
+	(pt -168 -96)
+)
+(connector
+	(text "R14_enable" (rect 376 -72 433 -60)(font "Arial" ))
+	(pt 424 -56)
+	(pt 376 -56)
+)
+(connector
+	(pt 616 1168)
+	(pt 632 1168)
+	(bus)
 )
 (junction (pt -104 552))
 (junction (pt -104 808))

@@ -131,6 +131,13 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IncPC
 # -- Compiling architecture behavioral of IncPC
+# vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/R14MUX.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity R14MUX
+# -- Compiling architecture behavioral of R14MUX
 # 
 # vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb_ld.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -152,6 +159,7 @@
 # Loading work.bus_mux_32_to_1(behavioral)
 # Loading ieee.numeric_std(body)
 # Loading work.incpc(behavioral)
+# Loading work.r14mux(behavioral)
 # Loading work.register_r0(behavioral)
 # Loading work.con_ff_logic(behavioral)
 # Loading work.d_flipflop(behavioral)

@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Mon Mar 20 10:57:11 2017"
+-- CREATED		"Fri Mar 24 19:56:39 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -57,6 +57,7 @@ ENTITY phase2 IS
 		BAout :  IN  STD_LOGIC;
 		Con_in :  IN  STD_LOGIC;
 		IncPc_enable :  IN  STD_LOGIC;
+		R14MUX_enable :  IN  STD_LOGIC;
 		R0in :  INOUT  STD_LOGIC;
 		R1in :  INOUT  STD_LOGIC;
 		R2in :  INOUT  STD_LOGIC;
@@ -94,6 +95,7 @@ ENTITY phase2 IS
 		C_sign_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		cs :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		HI_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		In_port_in :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		In_port_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		IR_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		LO_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -101,7 +103,6 @@ ENTITY phase2 IS
 		Mdatain :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		MDR_in :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		MDR_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		Out_port_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		PC_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		R0_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		R10_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -126,7 +127,8 @@ ENTITY phase2 IS
 		Zhigh_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		Zlow_in :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		Zlow_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		Con_out :  OUT  STD_LOGIC
+		Con_out :  OUT  STD_LOGIC;
+		Out_port_output :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END phase2;
 
@@ -204,6 +206,13 @@ COMPONENT incpc
 	PORT(enable : IN STD_LOGIC;
 		 A : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		 B : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT r14mux
+	PORT(select_encode_enable : IN STD_LOGIC;
+		 R14MUX_enable : IN STD_LOGIC;
+		 R14MUX_out : OUT STD_LOGIC
 	);
 END COMPONENT;
 
@@ -317,8 +326,8 @@ END COMPONENT;
 
 SIGNAL	address :  STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL	C_sign_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL	In_port_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	PC_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL	R14_enable :  STD_LOGIC;
 SIGNAL	Reg_in :  STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL	Reg_out :  STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -413,6 +422,12 @@ b2v_inst10 : incpc
 PORT MAP(enable => IncPc_enable,
 		 A => BusMuxOut,
 		 B => PC_in);
+
+
+b2v_inst12 : r14mux
+PORT MAP(select_encode_enable => R14in,
+		 R14MUX_enable => R14MUX_enable,
+		 R14MUX_out => R14_enable);
 
 
 b2v_inst16 : register_r0
@@ -561,7 +576,7 @@ PORT MAP(clk => clk,
 		 clear => clear,
 		 register_in => register_in_Out_port,
 		 q => BusMuxOut,
-		 output => Out_port_out);
+		 output => Out_port_output);
 
 
 b2v_PC : register_32
@@ -615,7 +630,7 @@ PORT MAP(clk => clk,
 b2v_R14 : register_32
 PORT MAP(clk => clk,
 		 clear => clear,
-		 register_in => R14in,
+		 register_in => R14_enable,
 		 q => BusMuxOut,
 		 output => R14_out);
 
