@@ -24,11 +24,11 @@ vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd}
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/IncPC.vhd}
 vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/R14MUX.vhd}
 
-vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb_ld.vhd}
+vcom -93 -work work {C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase2_tb_ld
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  phase2_tb
 
 add wave *
 view structure
 view signals
-run 10000 ns
+run 9000 ns
