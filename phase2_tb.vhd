@@ -1270,14 +1270,14 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN load_case1_T1A =>	
-						register_in_MAR_tb <= '0';
-						IncPC_enable_tb <= '1';
-						register_in_PC_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';
+						 IncPC_enable_tb <= '1';
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN load_case1_T1B => 
-						IncPC_enable_tb <= '0';
-						register_in_PC_tb <= '0';
+						 IncPC_enable_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN load_case1_T2A =>
 						PCout_tb <= '0';
@@ -1299,8 +1299,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN load_case1_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1333,6 +1332,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Rin_tb <= '1';
 --------------------------------------------------------------------------
 --ld R0, $55(R1)						
+
 					 WHEN load_case2_T0A => 
 						MDRout_tb <= '0';
 						Gra_tb <= '0';
@@ -1342,11 +1342,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
  
-					WHEN load_case2_T1A =>		 
-						register_in_MAR_tb <= '0';
-						register_in_PC_tb <= '1';
-						IncPC_enable_tb <= '1';	 
-						register_in_MDR_tb <= '1';
+					 WHEN load_case2_T1A =>		 
+						 register_in_MAR_tb <= '0';
+						 register_in_PC_tb <= '1';
+						 IncPC_enable_tb <= '1';	 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN load_case2_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1372,8 +1372,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN load_case2_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';	
-						register_in_C_tb <= '0';
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1405,7 +1404,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Gra_tb <= '1';
 						Rin_tb <= '1';
 --------------------------------------------------------------------------
---ldi R1, $65				
+--ldi R1, $65	
+					
 					WHEN load_case3_T0A => 
 						MDRout_tb <= '0';
 						Gra_tb <= '0';
@@ -1416,10 +1416,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN load_case3_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN load_case3_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1445,8 +1445,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN load_case3_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1464,7 +1463,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Gra_tb <= '1';
 						Rin_tb <= '1';
 --------------------------------------------------------------------------
---ldi R1, $55(R1)						
+--ldi R1, $55(R1)			
+				
 					WHEN load_case4_T0A => 					
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
@@ -1474,11 +1474,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 					 
-					WHEN load_case4_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+					 WHEN load_case4_T1A =>							 
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN load_case4_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1504,8 +1504,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN load_case4_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';	
-						register_in_C_tb <= '0';				
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1523,8 +1522,9 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Gra_tb <= '1';
 						Rin_tb <= '1';
 --------------------------------------------------------------------------
---ldr R0, $65																
-					WHEN load_case5_T0A => 
+--ldr R0, $65												
+					
+					 WHEN load_case5_T0A => 
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
 						Rin_tb <= '0';
@@ -1533,12 +1533,12 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';					
 			
-					WHEN load_case5_T1A =>	
-						register_in_MAR_tb <= '0'; 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';
-						register_in_Y_tb <= '1';
-						register_in_MDR_tb <= '1';
+					 WHEN load_case5_T1A =>	
+						 register_in_MAR_tb <= '0'; 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';
+						 register_in_Y_tb <= '1';
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN load_case5_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1590,7 +1590,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 --STORE INSTRUCTIONS
---ldi R4, $67			
+--register 4 init
+					
 					WHEN store_reg_init_T0A => 
 						MDRout_tb <= '0';
 						Gra_tb <= '0';
@@ -1601,10 +1602,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN store_reg_init_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';						 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';						 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN store_reg_init_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1630,8 +1631,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN store_reg_init_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1650,6 +1650,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Rin_tb <= '1';
 --------------------------------------------------------------------------
 --st $90, R4
+	
 					WHEN store_case1_T0A => 
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
@@ -1659,11 +1660,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 						
-					WHEN store_case1_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+					 WHEN store_case1_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN store_case1_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1689,8 +1690,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN store_case1_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1706,7 +1706,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 
 						Zlowout_tb <= '1';
 						register_in_MAR_tb <= '1';
-							
+					
+						
 					WHEN store_case1_T6A =>
 						Zlowout_tb <= '0';
 						register_in_MAR_tb <= '0';
@@ -1723,7 +1724,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						
 						MDRout_tb <= '1';
 --------------------------------------------------------------------------
---ld R1, $90												
+--ld R1, $90						
+							
 					WHEN store_check1_T0A => 
 						MDRout_tb <= '0';
 						write_tb <= '0';
@@ -1732,11 +1734,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 						
-					WHEN store_check1_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';				 
-						register_in_MDR_tb <= '1';
+					 WHEN store_check1_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';				 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN store_check1_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1762,8 +1764,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN store_check1_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1793,9 +1794,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						
 						MDRout_tb <= '1';
 						Gra_tb <= '1';
-						Rin_tb <= '1';					
+						Rin_tb <= '1';
+						
 --------------------------------------------------------------------------
 --st $90(R4), R4
+
 					WHEN store_case2_T0A => 
 						MDRout_tb <= '0';
 						Gra_tb <= '0';
@@ -1805,11 +1808,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 						
-					WHEN store_case2_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+					 WHEN store_case2_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN store_case2_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1835,8 +1838,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN store_case2_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1852,7 +1854,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 
 						Zlowout_tb <= '1';
 						register_in_MAR_tb <= '1';
-								
+					
+						
 					WHEN store_case2_T6A =>
 						Zlowout_tb <= '0';
 						register_in_MAR_tb <= '0';
@@ -1869,7 +1872,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						
 						MDRout_tb <= '1';
 --------------------------------------------------------------------------
---ld R1, $157						
+--ld R1, $90						
+							
 					WHEN store_check2_T0A => 
 						MDRout_tb <= '0';
 						write_tb <= '0';
@@ -1878,11 +1882,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 						
-					WHEN store_check2_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';				 
-						register_in_MDR_tb <= '1';
+					 WHEN store_check2_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';				 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN store_check2_T1B => 
 						IncPC_enable_tb <= '0';
@@ -1908,8 +1912,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN store_check2_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -1951,12 +1954,12 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';					
 			
-					WHEN store_case3_T1A =>	
-						register_in_MAR_tb <= '0'; 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';
-						register_in_Y_tb <= '1';
-						register_in_MDR_tb <= '1';
+					 WHEN store_case3_T1A =>	
+						 register_in_MAR_tb <= '0'; 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';
+						 register_in_Y_tb <= '1';
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN store_case3_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2004,9 +2007,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Gra_tb <= '0';
 						Rout_tb <= '0';
 						
-						MDRout_tb <= '1';				
+						MDRout_tb <= '1';
+						
 --------------------------------------------------------------------------
---ld R1, $100										
+--ld R1, $90						
+							
 					WHEN store_check3_T0A => 
 						MDRout_tb <= '0';
 						write_tb <= '0';
@@ -2015,11 +2020,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						PCout_tb <= '1';
 						register_in_MAR_tb <= '1';
 						
-					WHEN store_check3_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';		
-						IncPC_enable_tb <= '1';			 
-						register_in_MDR_tb <= '1';
+					 WHEN store_check3_T1A =>	
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';		
+						 IncPC_enable_tb <= '1';			 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN store_check3_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2045,8 +2050,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN store_check3_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2081,7 +2085,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 --ALU OPERATIONS
---addi R2, R3, $25												
+--addi R2, R3, $25									
+						
 					WHEN ALU_case1_T0A => 
 						MDRout_tb <= '0';
 						Gra_tb <= '0';
@@ -2092,14 +2097,14 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN ALU_case1_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';				 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';				 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN ALU_case1_T1B => 
-						IncPC_enable_tb <= '0';
-						register_in_PC_tb <= '0';
+						 IncPC_enable_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN ALU_case1_T2A =>
 						PCout_tb <= '0';
@@ -2121,8 +2126,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN ALU_case1_T4A =>
 						Grb_tb <= '0';
 						Rout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2141,6 +2145,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Rin_tb <= '1';
 --------------------------------------------------------------------------
 --andi R2, R3, $25
+
 					WHEN ALU_case2_T0A => 
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
@@ -2151,14 +2156,14 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN ALU_case2_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN ALU_case2_T1B => 
-						IncPC_enable_tb <= '0';
-						register_in_PC_tb <= '0';
+						 IncPC_enable_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN ALU_case2_T2A =>
 						PCout_tb <= '0';
@@ -2180,8 +2185,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN ALU_case2_T4A =>
 						Grb_tb <= '0';
 						Rout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0100";
@@ -2198,8 +2202,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Zlowout_tb <= '1';
 						Gra_tb <= '1';
 						Rin_tb <= '1';
+
 --------------------------------------------------------------------------
 --ori R2, R3, $25
+
 					WHEN ALU_case3_T0A => 
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
@@ -2210,14 +2216,14 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN ALU_case3_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';				 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';				 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN ALU_case3_T1B => 
-						IncPC_enable_tb <= '0';
-						register_in_PC_tb <= '0';
+						 IncPC_enable_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN ALU_case3_T2A =>
 						PCout_tb <= '0';
@@ -2239,8 +2245,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN ALU_case3_T4A =>
 						Grb_tb <= '0';
 						Rout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0101";
@@ -2262,6 +2267,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 --------------------------------------------------------------------------
 --BRANCH INSTRUCTIONS
 --ldi R5, $32
+	
 					WHEN branch_reg_init1_T0A => 
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
@@ -2272,10 +2278,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN branch_reg_init1_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_reg_init1_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2301,8 +2307,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN branch_reg_init1_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2322,6 +2327,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 
 --------------------------------------------------------------------------
 -- brzr R6, R5
+
 					WHEN branch_case1_T0A => 
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
@@ -2332,12 +2338,12 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN branch_case1_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_case1_T1B => 
-						register_in_PC_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN branch_case1_T2A =>
 						PCout_tb <= '0';
@@ -2362,9 +2368,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					
 						Grb_tb <= '1';
 						Rout_tb <= '1';
-						register_in_PC_tb <= '1';					
+						register_in_PC_tb <= '1';
+						
 --------------------------------------------------------------------------						
 --ldi R5, $40
+	
 					WHEN branch_reg_init2_T0A => 
 						Grb_tb <= '0';
 						Rout_tb <= '0';
@@ -2375,10 +2383,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN branch_reg_init2_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_reg_init2_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2404,8 +2412,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN branch_reg_init2_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';	
-						register_in_C_tb <= '0';				
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2434,10 +2441,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN branch_reg_init3_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_reg_init3_T1B =>
 						IncPC_enable_tb <= '0';	
@@ -2463,8 +2470,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN branch_reg_init3_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2493,12 +2499,12 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN branch_case2_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_case2_T1B => 
-						register_in_PC_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN branch_case2_T2A =>
 						PCout_tb <= '0';
@@ -2523,9 +2529,11 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					
 						Grb_tb <= '1';
 						Rout_tb <= '1';
-						register_in_PC_tb <= '1';					
+						register_in_PC_tb <= '1';
+						
 --------------------------------------------------------------------------						
 --ldi R5, $48
+	
 					WHEN branch_reg_init4_T0A => 
 						Grb_tb <= '0';
 						Rout_tb <= '0';
@@ -2536,10 +2544,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN branch_reg_init4_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';		
-						IncPC_enable_tb <= '1';				 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';		
+						 IncPC_enable_tb <= '1';				 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_reg_init4_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2565,8 +2573,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN branch_reg_init4_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2595,12 +2602,12 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN branch_case3_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_case3_T1B => 
-						register_in_PC_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN branch_case3_T2A =>
 						PCout_tb <= '0';
@@ -2628,6 +2635,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_PC_tb <= '1';
 --------------------------------------------------------------------------						
 --ldi R5, $72
+	
 					WHEN branch_reg_init5_T0A => 
 						Grb_tb <= '0';
 						Rout_tb <= '0';
@@ -2638,10 +2646,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN branch_reg_init5_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_reg_init5_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2667,8 +2675,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN branch_reg_init5_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2697,10 +2704,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN branch_reg_init6_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_reg_init6_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2726,8 +2733,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN branch_reg_init6_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2756,9 +2762,9 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN branch_case4_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN branch_case4_T1B => 
 						 register_in_PC_tb <= '0';
@@ -2786,12 +2792,14 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					
 						Grb_tb <= '1';
 						Rout_tb <= '1';
-						register_in_PC_tb <= '1';								
+						register_in_PC_tb <= '1';				
+					
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 --JUMP INSTRUCTIONS
 --ldi R2, $80
+	
 					WHEN jump_reg_init1_T0A => 
 						Grb_tb <= '0';
 						Rout_tb <= '0';
@@ -2802,10 +2810,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN jump_reg_init1_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN jump_reg_init1_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2831,8 +2839,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN jump_reg_init1_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2861,12 +2868,12 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN jump_case1_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN jump_case1_T1B => 
-						register_in_PC_tb <= '0';
+						 register_in_PC_tb <= '0';
 
 					WHEN jump_case1_T2A =>
 						PCout_tb <= '0';
@@ -2884,7 +2891,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Rout_tb <= '1';
 						register_in_PC_tb <= '1';
 --------------------------------------------------------------------------						
---ldi R2, $121					
+--ldi R2, $88
+						
 					WHEN jump_reg_init2_T0A => 
 						Gra_tb <= '0';
 						Rout_tb <= '0';
@@ -2895,10 +2903,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN jump_reg_init2_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN jump_reg_init2_T1B => 
 						IncPC_enable_tb <= '0';
@@ -2924,8 +2932,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN jump_reg_init2_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -2955,15 +2962,15 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 						
 					WHEN jump_case2_T1A =>	
-						register_in_MAR_tb <= '0';	 
-						register_in_PC_tb <= '1';	 
-						IncPC_enable_tb <= '1';						 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';	 
+						 register_in_PC_tb <= '1';	 
+						 IncPC_enable_tb <= '1';						 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN jump_case2_T1B => 
-						IncPC_enable_tb <= '0';
-						register_in_PC_tb <= '0';
-						R14MUX_enable_tb <= '1';
+						 IncPC_enable_tb <= '0';
+						 register_in_PC_tb <= '0';
+						 R14MUX_enable_tb <= '1';
 
 					WHEN jump_case2_T2A =>
 						R14MUX_enable_tb <= '0';
@@ -2985,7 +2992,8 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
 --MFHI MFLO INSTRUCTIONS
---ldi R1, $262143
+--ldi R1, $4294967295
+
 					WHEN move_reg_init1_T0A => 
 						Gra_tb <= '0';
 						Rout_tb <= '0';
@@ -2996,10 +3004,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN move_reg_init1_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN move_reg_init1_T1B => 
 						IncPC_enable_tb <= '0';
@@ -3025,8 +3033,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 					WHEN move_reg_init1_T4A =>
 						Grb_tb <= '0';
 						BAout_tb <= '0';
-						register_in_Y_tb <= '0';
-						register_in_C_tb <= '0';					
+						register_in_Y_tb <= '0';					
 					
 						Cout_tb <= '1';
 						ALU_cs_tb <= b"0000";
@@ -3044,7 +3051,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						Gra_tb <= '1';
 						Rin_tb <= '1';
 --------------------------------------------------------------------------
---ldi R2, $262143					
+--ldi R2, $2					
 					WHEN move_reg_init2_T0A => 
 						Zlowout_tb <= '0';
 						Gra_tb <= '0';
@@ -3117,7 +3124,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '0';						 
 						register_in_PC_tb <= '1';	
 						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN mul_T1B => 
 						IncPC_enable_tb <= '0';
@@ -3170,6 +3177,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_HI_tb <= '1';
 --------------------------------------------------------------------------
 --mfhi R4
+
 					WHEN mfhi_T0A => 
 						Zhighout_tb <= '0';
 						register_in_HI_tb <= '0';	
@@ -3182,7 +3190,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '0';						 
 						register_in_PC_tb <= '1';	
 						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN mfhi_T1B => 
 						IncPC_enable_tb <= '0';
@@ -3196,13 +3204,14 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						MDRout_tb <= '1'; 
 						register_in_IR_tb <= '1';
 					
-					WHEN mfhi_T3A =>
+					when mfhi_T3A =>
 						MDRout_tb <= '0'; 
 						register_in_IR_tb <= '0';
 						
 						HIout_tb <= '1';
 						Gra_tb <= '1';
-						Rin_tb <= '1';				
+						Rin_tb <= '1';
+					
 --------------------------------------------------------------------------
 --mflo R6
 					WHEN mflo_T0A => 
@@ -3215,10 +3224,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN mflo_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN mflo_T1B => 
 						IncPC_enable_tb <= '0';
@@ -3232,7 +3241,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						MDRout_tb <= '1'; 
 						register_in_IR_tb <= '1';
 					
-					WHEN mflo_T3A =>
+					when mflo_T3A =>
 						MDRout_tb <= '0'; 
 						register_in_IR_tb <= '0';
 						
@@ -3253,7 +3262,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						In_port_in_tb <= b"00000000000000000000000000011111";
 --------------------------------------------------------------------------
 --in R3
-					WHEN in_T0A => 
+				WHEN in_T0A => 
 						register_in_In_port_tb <= '0';
 						HIout_tb <= '0';
 						Gra_tb <= '0';
@@ -3264,10 +3273,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN in_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN in_T1B => 
 						IncPC_enable_tb <= '0';
@@ -3281,7 +3290,7 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						MDRout_tb <= '1'; 
 						register_in_IR_tb <= '1';
 					
-					WHEN in_T3A =>
+					when in_T3A =>
 						MDRout_tb <= '0'; 
 						register_in_IR_tb <= '0';
 						
@@ -3300,10 +3309,10 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						register_in_MAR_tb <= '1';
 
 					WHEN out_T1A =>							 
-						register_in_MAR_tb <= '0';						 
-						register_in_PC_tb <= '1';	
-						IncPC_enable_tb <= '1';					 
-						register_in_MDR_tb <= '1';
+						 register_in_MAR_tb <= '0';						 
+						 register_in_PC_tb <= '1';	
+						 IncPC_enable_tb <= '1';					 
+						 register_in_MDR_tb <= '1';
 						 
 					WHEN out_T1B => 
 						IncPC_enable_tb <= '0';
@@ -3317,13 +3326,15 @@ ARCHITECTURE phase2_tb_arch OF phase2_tb IS
 						MDRout_tb <= '1'; 
 						register_in_IR_tb <= '1';
 					
-					WHEN out_T3A =>
+					when out_T3A =>
 						MDRout_tb <= '0'; 
 						register_in_IR_tb <= '0';
 						
 						Gra_tb <= '1';
 						Rout_tb <= '1';
 						register_in_Out_port_tb <= '1';	
+						
+					
 							
 					WHEN OTHERS =>
 			END CASE;

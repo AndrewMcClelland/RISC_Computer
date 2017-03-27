@@ -1,5 +1,5 @@
 MIF/HEX Update report for finalProject
-Sat Mar 25 13:51:30 2017
+Mon Mar 27 10:13:00 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Sat Mar 25 13:51:30 2017 ;
+; MIF/HEX Update Status ; Successful - Mon Mar 27 10:13:00 2017 ;
 ; Revision Name         ; finalProject                          ;
 ; Top-level Entity Name ; phase2                                ;
 ; Family                ; Cyclone III                           ;
@@ -58,13 +58,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit MIF/HEX Update
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 25 13:51:29 2017
+    Info: Processing started: Mon Mar 27 10:12:59 2017
 Info: Command: quartus_cdb finalProject -c finalProject --update_mif
 Info (39024): Processed the following Memory Initialization File(s)
     Info (39025): Processed Memory Initialization File C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_mif.mif
 Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 487 megabytes
-    Info: Processing ended: Sat Mar 25 13:51:30 2017
+    Info: Processing ended: Mon Mar 27 10:13:00 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

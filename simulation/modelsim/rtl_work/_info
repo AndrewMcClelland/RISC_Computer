@@ -16,7 +16,7 @@ L5
 VAdhdAo00Ek5@50A1jV;z=1
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1490467308.163000
+Z9 !s108 1490634476.737000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/ALU.vhd|
 Z11 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/ALU.vhd|
 Z12 o-93 -work work -O0
@@ -52,7 +52,7 @@ L4
 VZLo]dH0PdAZ>MEm0>cc]e1
 R8
 31
-Z17 !s108 1490467308.070000
+Z17 !s108 1490634476.643000
 Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd|
 Z19 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd|
 R12
@@ -87,7 +87,7 @@ L4
 V;M=YdSFfIQTYTL?]CgG:00
 R8
 31
-Z23 !s108 1490467308.262000
+Z23 !s108 1490634476.841000
 Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd|
 Z25 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd|
 R12
@@ -122,7 +122,7 @@ L4
 V?^LloSkPn18QmnWSF9mJ]3
 R8
 31
-Z28 !s108 1490467308.358000
+Z28 !s108 1490634476.942000
 Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/D_flipflop.vhd|
 Z30 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/D_flipflop.vhd|
 R12
@@ -157,7 +157,7 @@ L4
 V8dQ9?da=ME;Xc`1[>L3Uh1
 R8
 31
-Z34 !s108 1490467307.971000
+Z34 !s108 1490634476.539000
 Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd|
 Z36 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd|
 R12
@@ -193,7 +193,7 @@ L5
 V8Q[<8`1Vc9Q<1GobkbkUa3
 R8
 31
-Z40 !s108 1490467308.848000
+Z40 !s108 1490634477.442000
 Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/IncPC.vhd|
 Z42 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/IncPC.vhd|
 R12
@@ -229,7 +229,7 @@ L4
 V2SGVVJMl2NjX]`<EB[4:42
 R8
 31
-Z45 !s108 1490467308.651000
+Z45 !s108 1490634477.231000
 Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd|
 Z47 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd|
 R12
@@ -264,7 +264,7 @@ L4
 VXzWi50MnUzDjeRN2a7Fn93
 R8
 31
-Z50 !s108 1490467308.458000
+Z50 !s108 1490634477.038000
 Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd|
 Z52 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd|
 R12
@@ -299,7 +299,7 @@ L4
 VaFT338<nemh=`>F=6M=n=1
 R8
 31
-Z55 !s108 1490467307.874000
+Z55 !s108 1490634476.437000
 Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/MDMux.vhd|
 Z57 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/MDMux.vhd|
 R12
@@ -334,7 +334,7 @@ L24
 V7MW2QR51RdPGDGLWfL9QW2
 R8
 31
-Z61 !s108 1490467307.271000
+Z61 !s108 1490634475.822000
 Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2.vhd|
 Z63 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2.vhd|
 R12
@@ -358,7 +358,7 @@ R13
 !s100 7V>9Q9jWOlQn<5^Th5GAS2
 !i10b 1
 Ephase2_tb
-Z64 w1490467213
+Z64 w1490634446
 R3
 R4
 R5
@@ -371,7 +371,7 @@ VDfJ_^MW4h<^6GC@>LzInc1
 R8
 31
 !i10b 1
-Z67 !s108 1490467309.039000
+Z67 !s108 1490634477.641000
 Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb.vhd|
 Z69 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/phase2_tb.vhd|
 R12
@@ -382,8 +382,8 @@ R4
 DEx4 work 9 phase2_tb 0 22 DfJ_^MW4h<^6GC@>LzInc1
 l174
 L9
-VYWeXGRhWBLRnLof2MFj=d3
-!s100 l3O1=Xjhc3DQ1Qi5SlUe^3
+Vj]kUSQh^6GHD^ZTfZ1F9a2
+!s100 OE[l7N^Zai?OjDUC1I5in2
 R8
 31
 !i10b 1
@@ -404,7 +404,7 @@ L4
 VG@lbkF4YGQlEKSjZ;:SlE2
 R8
 31
-Z73 !s108 1490467308.946000
+Z73 !s108 1490634477.544000
 Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/R14MUX.vhd|
 Z75 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/R14MUX.vhd|
 R12
@@ -439,7 +439,7 @@ L42
 VMB_EeONjXdIcHMh5ENzm<0
 R8
 31
-Z79 !s108 1490467308.747000
+Z79 !s108 1490634477.340000
 Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd|
 Z81 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/ram_TA.vhd|
 R12
@@ -474,7 +474,7 @@ L4
 VF7302UC=h:F1NIz2N9zJA2
 R8
 31
-Z85 !s108 1490467307.782000
+Z85 !s108 1490634476.339000
 Z86 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_32.vhd|
 Z87 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_32.vhd|
 R12
@@ -509,7 +509,7 @@ L4
 VL7G>@SzFg[`QoDfMEc3[n2
 R8
 31
-Z91 !s108 1490467307.686000
+Z91 !s108 1490634476.241000
 Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_64.vhd|
 Z93 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_64.vhd|
 R12
@@ -544,7 +544,7 @@ L4
 V7?lb?3^3hO=b@OZOMQ8n_0
 R8
 31
-Z97 !s108 1490467307.382000
+Z97 !s108 1490634475.946000
 Z98 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_R0.vhd|
 Z99 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/register_R0.vhd|
 R12
@@ -579,7 +579,7 @@ L4
 V[Mg7_@KkA@aJW>PaaWMEJ1
 R8
 31
-Z102 !s108 1490467307.477000
+Z102 !s108 1490634476.049000
 Z103 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd|
 Z104 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd|
 R12
@@ -614,7 +614,7 @@ L4
 VR:Fc7z0^_e0TNPFJh8lF:3
 R8
 31
-Z107 !s108 1490467308.553000
+Z107 !s108 1490634477.132000
 Z108 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd|
 Z109 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd|
 R12
@@ -649,7 +649,7 @@ L4
 VgHZnAYQBhKIT?fTC>W:QS0
 R8
 31
-Z112 !s108 1490467307.578000
+Z112 !s108 1490634476.148000
 Z113 !s90 -reportprogress|300|-93|-work|work|C:/Users/lukea/Documents/ELEC374_RISC_Computer/Z_split.vhd|
 Z114 !s107 C:/Users/lukea/Documents/ELEC374_RISC_Computer/Z_split.vhd|
 R12
