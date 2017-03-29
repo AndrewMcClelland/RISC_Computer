@@ -1,4 +1,4 @@
-library.ieee;
+library ieee;
 use ieee.std_logic_1164.all;
 
 entity control_unit is 
@@ -8,9 +8,9 @@ entity control_unit is
 		Gra, Grb, Grc, Rin, Rout : out std_logic;
 		PCout, MDRout, Zhighout, Zlowout, HIout, LOout, In_portout, Cout : out std_logic;
 		
-		HIin, LOin, Con_in, PCin, IRin, Yin, Zin, MARin, MDRin, Out_portin, BAout : out std_logic;
+		HIin, LOin, Con_in, PCin, IRin, Cin, Yin, Zin, Zhighin, ZLowin, MARin, MDRin, Out_portin, BAout : out std_logic;
 		
-		R14MUX_enable, IncPc_enable : out std_logic;
+		R14MUX_enable, IncPC_enable : out std_logic;
 		
 		run, clear, read_signal, write_signal : out std_logic;
 		
@@ -63,8 +63,7 @@ begin
 		elsif (clk'event and clk = '1') then
 			case present_state is
 ---------------------------------------------------------------
--- Instruction fetch states
-				
+-- Instruction fetch states	
 				when reset_statea =>
 					Present_state <= reset_stateb;
 				when reset_stateb =>
@@ -80,12 +79,9 @@ begin
 					Present_state <= fetch2a;
 				when fetch2a =>
 					Present_state <= fetch2b;
-				
-				-- WHERE DO WE DO SWITCH CASE FOR IR? FETCH2A OR FETCH2B
-				
+					
 				when fetch2b =>
-					case IR(31 downto 27) is
-						
+					case IR(31 downto 27) is	
 						when "00000" =>
 							Present_state <= ld3a;
 						when "00001" =>
@@ -126,8 +122,7 @@ begin
 							Present_state <= neg3a;
 						when "10011" =>
 							Present_state <= not3a;
-						when "10100" =>
-							
+						when "10100" =>				
 							case IR(1 downto 0) is
 								when "00" =>
 									Present_state <= brzr3a;
@@ -139,7 +134,6 @@ begin
 									Present_state <= brmi3a;
 								when others =>
 							end case;
-						
 						when "10101" =>
 							Present_state <= jr3a;
 						when "10110" =>
@@ -158,12 +152,9 @@ begin
 							Present_state <= halt;
 						
 						when others =>
-					end case;
-				
-					
+					end case;				
 ---------------------------------------------------------------
--- ld, ldi, ldr states
-					
+-- ld, ldi, ldr states					
 				when ld3a =>
 					Present_state <= ld3b;
 				when ld3b =>
@@ -214,10 +205,8 @@ begin
 					Present_state <= ldr6b;
 				when ldr6b =>
 					Present_state <= fetch0a;
-
 ---------------------------------------------------------------
 -- st, str, states
-
 				when st3a =>
 					Present_state <= st3b;
 				when st3b =>
@@ -257,7 +246,6 @@ begin
 					Present_state <= fetch0a;
 ---------------------------------------------------------------
 -- addi, add, sub, mul, div, neg, not, and, andi, or, ori, shr, shl, ror, rol states
-
 				when addi3a =>
 					Present_state <= addi3b;
 				when addi3b =>
@@ -454,7 +442,6 @@ begin
 					Present_state <= fetch0a;	
 ---------------------------------------------------------------
 -- brzr, brnz, brmi, brpl states
-
 				when brzr3a =>
 					Present_state <= brzr3b;
 				when brzr3b =>
@@ -492,7 +479,6 @@ begin
 					Present_state <= fetch0a;
 ---------------------------------------------------------------
 -- jr, jal states
-
 				when jr3a =>
 					Present_state <= jr3b;
 				when jr3b =>
@@ -502,10 +488,8 @@ begin
 					Present_state <= jal3b;
 				when jal3b =>
 					Present_state <= fetch0a;
-
 ---------------------------------------------------------------
 -- mfhi, mflo states
-
 				when mfhi3a =>
 					Present_state <= mfhi3b;
 				when mfhi3b =>
@@ -515,10 +499,8 @@ begin
 					Present_state <= mflo3b;
 				when mflo3b =>
 					Present_state <= fetch0a;
-
 ---------------------------------------------------------------
 -- in, out states
-
 				when in3a =>
 					Present_state <= in3b;
 				when in3b =>
@@ -530,7 +512,6 @@ begin
 					Present_state <= fetch0a;
 ---------------------------------------------------------------
 -- nop and halt states
-				
 				when nop =>
 					Present_state <= fetch0a;
 					
@@ -544,82 +525,64 @@ begin
 	
 	process( present_state ) 
 	begin
-		
-		clear <= '0';
-		
-		Gra <= '0';
-		Grb <= '0';
-		Grc <= '0';
-		Rin <= '0';
-		Rout <= '0';
-		PCout <= '0';
-		MDRout <= '0';
-		Zhighout <= '0';
-		Zlowout <= '0';
-		HIout <= '0';
-		LOout <= '0';
-		In_portout <= '0';
-		Cout <= '0';
-		HIin <= '0';
-		LOin <= '0';
-		Con_in <= '0';
-		PCin <= '0';
-		IRin <= '0';
-		Yin <= '0';
-		Zin <= '0';
-		MARin <= '0';
-		MDRin <= '0';
-		Out_portin <= '0';
-		BAout <= '0';
-		R14MUX_enable <= '0';
-		IncPc_enable <= '0';
---		read_signal <= '0';
---		write_signal <= '0';
-		
 		case present_state is 
 ---------------------------------------------------------------
 -- reset
-			
 			when reset_statea =>
 				clear <= '1';
 			when reset_stateb =>
 ---------------------------------------------------------------
 -- fetch
-			
 			when fetch0a =>
-				write_signal <= '0'
-				MDRout <= '0';
+				clear <= '0';
+			
 				Gra <= '0';
+				Grb <= '0';
+				Grc <= '0';
 				Rin <= '0';
+				Rout <= '0';
+				MDRout <= '0';
+				Zhighout <= '0';
+				Zlowout <= '0';
+				HIout <= '0';
+				LOout <= '0';
+				In_portout <= '0';
+				Cout <= '0';
+				HIin <= '0';
+				LOin <= '0';
+				Con_in <= '0';
+				PCin <= '0';
+				IRin <= '0';
+				Yin <= '0';
+				Zin <= '0';
+				MDRin <= '0';
+				Out_portin <= '0';
+				BAout <= '0';
+				R14MUX_enable <= '0';
+				IncPC_enable <= '0';
+				write_signal <= '0';
 
 				read_signal <= '1';
 				PCout <= '1';
 				MARin <= '1';
-			
 			when fetch0b =>
-			
 			when fetch1a =>
 				MARin <= '0';
 				PCin <= '1';
 				IncPC_enable <= '1';	 
 				MDRin <= '1';
-				 
 			when fetch1b =>
 				IncPC_enable <= '0';
 				PCin <= '0';
-				
 			when fetch2a =>
 				PCout <= '0';
 				MDRin <= '0';
 				read_signal <= '0';
-				
 				MDRout <= '1'; 
 				IRin <= '1';
-			
 			when fetch2b => 
 ---------------------------------------------------------------
--- ld
-			
+-- ld	
 			when ld3a =>
 				IRin <= '0';
 				MDRout <= '0';
@@ -627,10 +590,8 @@ begin
 				Grb <= '1';
 				BAout <= '1';
 				Yin <= '1';
-				register_in_C <= '1';
-						
+				Cin <= '1';		
 			when ld3b => 
-			
 			when ld4a =>
 				Grb <= '0';
 				BAout <= '0';
@@ -639,43 +600,35 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0000";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';
-				
-			when ld4b =>
-			
+				Zhighin <= '1';
+				Zlowin <= '1';	
+			when ld4b =>	
 			when ld5a =>
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
 
 				Zlowout <= '1';
 				MARin <= '1';
-				read_signal <= '1';
-				
+				read_signal <= '1';	
 			when ld5b =>
-			
 			when ld6a => 
 				Zlowout <= '0';
 				MARin <= '0';
 
-				MDRin <= '1';
-				
+				MDRin <= '1';		
 			when ld6b => 
-			
 			when ld7a => 
 				MDRin <= '0';
 				read_signal <= '0';
 				
 				MDRout <= '1';
 				Gra <= '1';
-				Rin <= '1';
-				
+				Rin <= '1';	
 			when ld7b => 
 ---------------------------------------------------------------
--- ldi
-			
+-- ldi		
 			when ldi3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -683,7 +636,7 @@ begin
 				Grb <= '1';
 				BAout <= '1';
 				Yin <= '1';
-				register_in_C <= '1';
+				Cin <= '1';
 			when ldi3b => 
 			when ldi4a => 
 				Grb <= '0';
@@ -693,22 +646,21 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0000";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';	
+				Zhighin <= '1';
+				Zlowin <= '1';	
 			when ldi4b => 
 			when ldi5a => 
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
 				
 				Zlowout <= '1';
 				Gra <= '1';
 				Rin <= '1';
 			when ldi5b =>
 ---------------------------------------------------------------
--- ldr
-			
+-- ldr	
 			when ldr3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -716,14 +668,14 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0000";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when ldr3b => 
 			when ldr4a => 
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';		
+				Zhighin <= '0';
+				Zlowin <= '0';		
 				
 				Zlowout <= '1';
 				MARin <= '1';
@@ -742,11 +694,9 @@ begin
 				MDRout <= '1';
 				Gra <= '1';
 				Rin <= '1';
-----------------------------------------
 			when ldr6b =>
 ---------------------------------------------------------------
--- st
-			
+-- st		
 			when st3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -754,7 +704,7 @@ begin
 				Grb <= '1';
 				BAout <= '1';
 				Yin <= '1';
-				register_in_C <= '1';
+				Cin <= '1';
 			when st3b => 
 			when st4a => 
 				Grb <= '0';
@@ -764,14 +714,14 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0000";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when st4b => 
 			when st5a => 
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
 
 				Zlowout <= '1';
 				MARin <= '1';
@@ -793,8 +743,7 @@ begin
 				MDRout <= '1';	
 			when st7b =>
 ---------------------------------------------------------------
--- str
-			
+-- str	
 			when str3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -802,14 +751,14 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0000";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when str3b => 
 			when str4a => 
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';		
+				Zhighin <= '0';
+				Zlowin <= '0';		
 				
 				Zlowout <= '1';
 				MARin <= '1';
@@ -840,7 +789,7 @@ begin
 				Grb <= '1';
 				Rout <= '1';
 				Yin <= '1';
-				register_in_C <= '1';
+				Cin <= '1';
 			when addi3b => 
 			when addi4a => 
 				Grb <= '0';
@@ -850,14 +799,14 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0000";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when addi4b => 
 			when addi5a => 
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
 
 				Zlowout <= '1';
 				Gra <= '1';
@@ -865,25 +814,68 @@ begin
 			when addi5b =>
 ---------------------------------------------------------------
 -- add
-			
 			when add3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when add3b => 
 			when add4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"0000";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';	
 			when add4b => 
 			when add5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when add5b =>
 ---------------------------------------------------------------
--- sub
-			
+-- sub	
 			when sub3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when sub3b => 
 			when sub4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"0001";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';	
 			when sub4b => 
 			when sub5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when sub5b => 
 ---------------------------------------------------------------
--- mul
-			
+-- mul			
 			when mul3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -902,15 +894,15 @@ begin
 					
 				ALU_cs <= b"0010";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when mul4b => 
 			when mul5a => 
 				Rout <= '0';
 				Gra <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
 
 				Zlowout <= '1';
 				LOin <= '1';
@@ -923,42 +915,129 @@ begin
 				HIin <= '1';
 			when mul6b =>
 ---------------------------------------------------------------
--- div
-			
+-- div		
 			when div3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				BAout <= '1';
+				Rout <='1';
+				Yin <= '1';
 			when div3b => 
 			when div4a => 
+				Grb <= '0';
+				BAout <= '0';
+				Yin <= '0';					
+				
+				Gra <= '1';
+					
+				ALU_cs <= b"0011";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when div4b => 
-			when div5a => 
+			when div5a =>
+				Rout <= '0';
+				Gra <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+
+				Zlowout <= '1';
+				LOin <= '1';
 			when div5b => 
 			when div6a => 
+				Zlowout <= '0';
+				LOin <= '0';
+				
+				Zhighout <= '1';
+				HIin <= '1';
 			when div6b =>
 ---------------------------------------------------------------
 -- neg
-			
 			when neg3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				
+				ALU_cs <= b"1010";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when neg3b => 
 			when neg4a => 
+				Grb <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
+				
 			when neg4b =>
 ---------------------------------------------------------------
--- not
-			
+-- not		
 			when not3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				
+				ALU_cs <= b"1011";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when not3b => 
 			when not4a => 
+				Grb <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when not4b =>
 ---------------------------------------------------------------
--- and
-			
+-- and	
 			when and3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when and3b => 
 			when and4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"0100";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';	
 			when and4b => 
 			when and5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when and5b =>
 ---------------------------------------------------------------
 -- andi
-			
 			when andi3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -966,7 +1045,7 @@ begin
 				Grb <= '1';
 				Rout <= '1';
 				Yin <= '1';
-				register_in_C <= '1';
+				Cin <= '1';
 			when andi3b => 
 			when andi4a =>
 				Grb <= '0';
@@ -976,31 +1055,52 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0100";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';	
+				Zhighin <= '1';
+				Zlowin <= '1';	
 			when andi4b => 
 			when andi5a => 
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
 
 				Zlowout <= '1';
 				Gra <= '1';
 				Rin <= '1';
 			when andi5b =>
 ---------------------------------------------------------------
--- or
-			
+-- or		
 			when or3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when or3b => 
 			when or4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"0101";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when or4b => 
 			when or5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when or5b =>
 ---------------------------------------------------------------
--- ori
-			
+-- ori	
 			when ori3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -1008,7 +1108,7 @@ begin
 				Grb <= '1';
 				Rout <= '1';
 				Yin <= '1';
-				register_in_C <= '1';
+				Cin <= '1';
 			when ori3b => 
 			when ori4a => 
 				Grb <= '0';
@@ -1018,14 +1118,14 @@ begin
 				Cout <= '1';
 				ALU_cs <= b"0101";
 				Zin <= '1';
-				register_in_Zhigh <= '1';
-				register_in_Zlow <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';
 			when ori4b => 
 			when ori5a => 
 				Cout <= '0';
 				Zin <= '0';
-				register_in_Zhigh <= '0';
-				register_in_Zlow <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
 
 				Zlowout <= '1';
 				Gra <= '1';
@@ -1033,43 +1133,130 @@ begin
 			when ori5b =>
 ---------------------------------------------------------------
 -- shr
-			
 			when shr3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when shr3b => 
 			when shr4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"0110";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';			
 			when shr4b => 
 			when shr5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when shr5b =>
 ---------------------------------------------------------------
--- shl
-			
+-- shl	
 			when shl3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when shl3b => 
 			when shl4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"0111";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';		
 			when shl4b => 
 			when shl5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when shl5b =>
 ---------------------------------------------------------------
--- ror
-			
+-- ror	
 			when ror3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when ror3b => 
 			when ror4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"1000";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';		
 			when ror4b => 
 			when ror5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when ror5b =>
 ---------------------------------------------------------------
 -- rol
-			
 			when rol3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
 			when rol3b => 
 			when rol4a => 
+				Grb <= '0';
+				Yin <= '0';
+				
+				Grc <= '1';
+				ALU_cs <= b"1001";
+				Zin <= '1';
+				Zhighin <= '1';
+				Zlowin <= '1';	
 			when rol4b => 
 			when rol5a => 
+				Grc <= '0';
+				Rout <= '0';
+				Zin <= '0';
+				Zhighin <= '0';
+				Zlowin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				Zlowout <= '1';
 			when rol5b =>
 ---------------------------------------------------------------
 -- bzzr
-			
 			when brzr3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -1089,7 +1276,6 @@ begin
 			when brzr4b =>
 ---------------------------------------------------------------
 -- brnz
-			
 			when brnz3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -1109,7 +1295,6 @@ begin
 			when brnz4b =>
 ---------------------------------------------------------------
 -- brmi
-			
 			when brmi3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -1129,7 +1314,6 @@ begin
 			when brmi4b =>
 ---------------------------------------------------------------
 -- brpl			
-			
 			when brpl3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -1150,7 +1334,6 @@ begin
 			when brpl4b =>
 ---------------------------------------------------------------
 -- jr
-			
 			when jr3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -1161,7 +1344,6 @@ begin
 			when jr3b =>
 ---------------------------------------------------------------
 -- jal
-			
 			when jal3a => 
 				IRin <= '0';
 				MDRout <= '0';
@@ -1215,11 +1397,9 @@ begin
 			when nop =>
 ---------------------------------------------------------------
 -- halt
-			
 			when halt =>
 			
-		
 		end case;
 	end process;	
-end architecture
+end behavioral;
 		

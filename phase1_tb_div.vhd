@@ -316,9 +316,9 @@ ARCHITECTURE phase1_tb_arch OF phase1_tb_div IS
 						MDRout_tb <= '0';				
 					 
 					 WHEN T1 =>
-						 read_tb <= '1';
-						 register_in_MDR_tb <= '1';
-						 Mdatain_tb <= x"89000000";
+						read_tb <= '1';
+						register_in_MDR_tb <= '1';
+						Mdatain_tb <= x"89000000";
 	
 					WHEN T2 =>						
 						MDRout_tb <= '1'; 
