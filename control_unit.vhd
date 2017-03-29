@@ -25,7 +25,7 @@ architecture behavioral of control_unit is
 						ldi3a, ldi3b, ldi4a, ldi4b, ldi5a, ldi5b,
 						ldr3a, ldr3b, ldr4a, ldr4b, ldr5a, ldr5b, ldr6a, ldr6b,
 						st3a, st3b, st4a, st4b, st5a, st5b, st6a, st6b, st7a, st7b,
-						str3a, str3b, str4a, str4b, str5a, str5b, str6a, str6b, str7a, str7b,
+						str3a, str3b, str4a, str4b, str5a, str5b, str6a, str6b,
 						addi3a, addi3b, addi4a, addi4b, addi5a, addi5b,
 						add3a, add3b, add4a, add4b, add5a, add5b,
 						sub3a, sub3b, sub4a, sub4b, sub5a, sub5b, 
@@ -254,10 +254,6 @@ begin
 				when str6a =>
 					Present_state <= str6b;
 				when str6b =>
-					Present_state <= str7a;
-				when str7a =>
-					Present_state <= str7b;
-				when str7b =>
 					Present_state <= fetch0a;
 ---------------------------------------------------------------
 -- addi, add, sub, mul, div, neg, not, and, andi, or, ori, shr, shl, ror, rol states
@@ -551,32 +547,32 @@ begin
 		
 		clear <= '0';
 		
---		Gra <= '0';
---		Grb <= '0';
---		Grc <= '0';
---		Rin <= '0';
---		Rout <= '0';
---		PCout <= '0';
---		MDRout <= '0';
---		Zhighout <= '0';
---		Zlowout <= '0';
---		HIout <= '0';
---		LOout <= '0';
---		In_portout <= '0';
---		Cout <= '0';
---		HIin <= '0';
---		LOin <= '0';
---		Con_in <= '0';
---		PCin <= '0';
---		IRin <= '0';
---		Yin <= '0';
---		Zin <= '0';
---		MARin <= '0';
---		MDRin <= '0';
---		Out_portin <= '0';
---		BAout <= '0';
---		R14MUX_enable <= '0';
---		IncPc_enable <= '0';
+		Gra <= '0';
+		Grb <= '0';
+		Grc <= '0';
+		Rin <= '0';
+		Rout <= '0';
+		PCout <= '0';
+		MDRout <= '0';
+		Zhighout <= '0';
+		Zlowout <= '0';
+		HIout <= '0';
+		LOout <= '0';
+		In_portout <= '0';
+		Cout <= '0';
+		HIin <= '0';
+		LOin <= '0';
+		Con_in <= '0';
+		PCin <= '0';
+		IRin <= '0';
+		Yin <= '0';
+		Zin <= '0';
+		MARin <= '0';
+		MDRin <= '0';
+		Out_portin <= '0';
+		BAout <= '0';
+		R14MUX_enable <= '0';
+		IncPc_enable <= '0';
 --		read_signal <= '0';
 --		write_signal <= '0';
 		
@@ -591,145 +587,281 @@ begin
 -- fetch
 			
 			when fetch0a =>
-				MDRout_tb <= '0';
-				Gra_tb <= '0';
-				Rin_tb <= '0';
+				write_signal <= '0'
+				MDRout <= '0';
+				Gra <= '0';
+				Rin <= '0';
 
-				read_tb <= '1';
-				PCout_tb <= '1';
-				register_in_MAR_tb <= '1';
+				read_signal <= '1';
+				PCout <= '1';
+				MARin <= '1';
 			
 			when fetch0b =>
 			
 			when fetch1a =>
-				register_in_MAR_tb <= '0';
-				register_in_PC_tb <= '1';
-				IncPC_enable_tb <= '1';	 
-				register_in_MDR_tb <= '1';
+				MARin <= '0';
+				PCin <= '1';
+				IncPC_enable <= '1';	 
+				MDRin <= '1';
 				 
 			when fetch1b =>
-				IncPC_enable_tb <= '0';
-				register_in_PC_tb <= '0';
+				IncPC_enable <= '0';
+				PCin <= '0';
 				
 			when fetch2a =>
-				PCout_tb <= '0';
-				register_in_MDR_tb <= '0';
-				read_tb <= '0';
+				PCout <= '0';
+				MDRin <= '0';
+				read_signal <= '0';
 				
-				MDRout_tb <= '1'; 
-				register_in_IR_tb <= '1';
+				MDRout <= '1'; 
+				IRin <= '1';
 			
 			when fetch2b => 
 ---------------------------------------------------------------
 -- ld
 			
 			when ld3a =>
-				register_in_IR_tb <= '0';
-				MDRout_tb <= '0';
+				IRin <= '0';
+				MDRout <= '0';
 				
-				Grb_tb <= '1';
-				BAout_tb <= '1';
-				register_in_Y_tb <= '1';
-				register_in_C_tb <= '1';
+				Grb <= '1';
+				BAout <= '1';
+				Yin <= '1';
+				register_in_C <= '1';
 						
 			when ld3b => 
 			
 			when ld4a =>
-				Grb_tb <= '0';
-				BAout_tb <= '0';
-				register_in_Y_tb <= '0';					
+				Grb <= '0';
+				BAout <= '0';
+				Yin <= '0';					
 			
-				Cout_tb <= '1';
-				ALU_cs_tb <= b"0000";
-				register_in_Z_tb <= '1';
-				register_in_Zhigh_tb <= '1';
-				register_in_Zlow_tb <= '1';
+				Cout <= '1';
+				ALU_cs <= b"0000";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';
 				
 			when ld4b =>
 			
 			when ld5a =>
-				Cout_tb <= '0';
-				register_in_Z_tb <= '0';
-				register_in_Zhigh_tb <= '0';
-				register_in_Zlow_tb <= '0';
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';
 
-				Zlowout_tb <= '1';
-				register_in_MAR_tb <= '1';
-				read_tb <= '1';
+				Zlowout <= '1';
+				MARin <= '1';
+				read_signal <= '1';
 				
 			when ld5b =>
 			
 			when ld6a => 
-				Zlowout_tb <= '0';
-				register_in_MAR_tb <= '0';
+				Zlowout <= '0';
+				MARin <= '0';
 
-				register_in_MDR_tb <= '1';
+				MDRin <= '1';
 				
 			when ld6b => 
 			
 			when ld7a => 
-				register_in_MDR_tb <= '0';
-				read_tb <= '0';
+				MDRin <= '0';
+				read_signal <= '0';
 				
-				MDRout_tb <= '1';
-				Gra_tb <= '1';
-				Rin_tb <= '1';
+				MDRout <= '1';
+				Gra <= '1';
+				Rin <= '1';
 				
 			when ld7b => 
 ---------------------------------------------------------------
 -- ldi
 			
 			when ldi3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				BAout <= '1';
+				Yin <= '1';
+				register_in_C <= '1';
 			when ldi3b => 
 			when ldi4a => 
+				Grb <= '0';
+				BAout <= '0';
+				Yin <= '0';					
+			
+				Cout <= '1';
+				ALU_cs <= b"0000";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';	
 			when ldi4b => 
 			when ldi5a => 
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';
+				
+				Zlowout <= '1';
+				Gra <= '1';
+				Rin <= '1';
 			when ldi5b =>
 ---------------------------------------------------------------
 -- ldr
 			
 			when ldr3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Cout <= '1';
+				ALU_cs <= b"0000";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';
 			when ldr3b => 
 			when ldr4a => 
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';		
+				
+				Zlowout <= '1';
+				MARin <= '1';
+				read_signal <= '1';
 			when ldr4b => 
 			when ldr5a => 
+				Zlowout <= '0';
+				MARin <= '0';
+				
+				MDRin <= '1';
 			when ldr5b => 
 			when ldr6a => 
+				MDRin <= '0';
+				read_signal <= '0';
+				
+				MDRout <= '1';
+				Gra <= '1';
+				Rin <= '1';
+----------------------------------------
 			when ldr6b =>
 ---------------------------------------------------------------
 -- st
 			
 			when st3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				BAout <= '1';
+				Yin <= '1';
+				register_in_C <= '1';
 			when st3b => 
 			when st4a => 
+				Grb <= '0';
+				BAout <= '0';
+				Yin <= '0';					
+			
+				Cout <= '1';
+				ALU_cs <= b"0000";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';
 			when st4b => 
 			when st5a => 
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';
+
+				Zlowout <= '1';
+				MARin <= '1';
 			when st5b => 
 			when st6a => 
+				Zlowout <= '0';
+				MARin <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				MDRin <= '1';
+				write_signal <= '1';
 			when st6b => 
-			when st7a => 
+			when st7a =>
+				MDRin <= '0';
+				Gra <= '0';
+				Rout <= '0';
+				
+				MDRout <= '1';	
 			when st7b =>
 ---------------------------------------------------------------
 -- str
 			
 			when str3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Cout <= '1';
+				ALU_cs <= b"0000";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';
 			when str3b => 
 			when str4a => 
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';		
+				
+				Zlowout <= '1';
+				MARin <= '1';
 			when str4b => 
 			when str5a => 
+				Zlowout <= '0';
+				MARin <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				MDRin <= '1';
+				write_signal <= '1';
 			when str5b => 
 			when str6a => 
+				MDRin <= '0';
+				Gra <= '0';
+				Rout <= '0';
+				
+				MDRout <= '1';
 			when str6b => 
-			when str7a => 
-			when str7b =>
+
 ---------------------------------------------------------------
 -- addi
-			
 			when addi3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
+				register_in_C <= '1';
 			when addi3b => 
 			when addi4a => 
+				Grb <= '0';
+				Rout <= '0';
+				Yin <= '0';					
+			
+				Cout <= '1';
+				ALU_cs <= b"0000";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';
 			when addi4b => 
 			when addi5a => 
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';
+
+				Zlowout <= '1';
+				Gra <= '1';
+				Rin <= '1';
 			when addi5b =>
 ---------------------------------------------------------------
 -- add
@@ -753,12 +885,42 @@ begin
 -- mul
 			
 			when mul3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				BAout <= '1';
+				Rout <='1';
+				Yin <= '1';
 			when mul3b => 
 			when mul4a => 
+				Grb <= '0';
+				BAout <= '0';
+				Yin <= '0';					
+				
+				Gra <= '1';
+					
+				ALU_cs <= b"0010";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';
 			when mul4b => 
 			when mul5a => 
+				Rout <= '0';
+				Gra <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';
+
+				Zlowout <= '1';
+				LOin <= '1';
 			when mul5b => 
 			when mul6a => 
+				Zlowout <= '0';
+				LOin <= '0';
+				
+				Zhighout <= '1';
+				HIin <= '1';
 			when mul6b =>
 ---------------------------------------------------------------
 -- div
@@ -798,10 +960,34 @@ begin
 -- andi
 			
 			when andi3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
+				register_in_C <= '1';
 			when andi3b => 
-			when andi4a => 
+			when andi4a =>
+				Grb <= '0';
+				Rout <= '0';
+				Yin <= '0';					
+			
+				Cout <= '1';
+				ALU_cs <= b"0100";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';	
 			when andi4b => 
 			when andi5a => 
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';
+
+				Zlowout <= '1';
+				Gra <= '1';
+				Rin <= '1';
 			when andi5b =>
 ---------------------------------------------------------------
 -- or
@@ -816,10 +1002,34 @@ begin
 -- ori
 			
 			when ori3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Grb <= '1';
+				Rout <= '1';
+				Yin <= '1';
+				register_in_C <= '1';
 			when ori3b => 
 			when ori4a => 
+				Grb <= '0';
+				Rout <= '0';
+				Yin <= '0';					
+			
+				Cout <= '1';
+				ALU_cs <= b"0101";
+				Zin <= '1';
+				register_in_Zhigh <= '1';
+				register_in_Zlow <= '1';
 			when ori4b => 
 			when ori5a => 
+				Cout <= '0';
+				Zin <= '0';
+				register_in_Zhigh <= '0';
+				register_in_Zlow <= '0';
+
+				Zlowout <= '1';
+				Gra <= '1';
+				Rin <= '1';
 			when ori5b =>
 ---------------------------------------------------------------
 -- shr
@@ -861,63 +1071,147 @@ begin
 -- bzzr
 			
 			when brzr3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				CON_in <= '1';
 			when brzr3b => 
 			when brzr4a => 
+				Gra <= '0';
+				Rout <= '0';
+				COn_in <= '0';				
+			
+				Grb <= '1';
+				Rout <= '1';
+				PCin <= '1';
 			when brzr4b =>
 ---------------------------------------------------------------
 -- brnz
 			
 			when brnz3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				CON_in <= '1';
 			when brnz3b => 
 			when brnz4a => 
+				Gra <= '0';
+				Rout <= '0';
+				COn_in <= '0';				
+			
+				Grb <= '1';
+				Rout <= '1';
+				PCin <= '1';
 			when brnz4b =>
 ---------------------------------------------------------------
 -- brmi
 			
 			when brmi3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				CON_in <= '1';
 			when brmi3b => 
 			when brmi4a => 
+				Gra <= '0';
+				Rout <= '0';
+				COn_in <= '0';				
+			
+				Grb <= '1';
+				Rout <= '1';
+				PCin <= '1';
 			when brmi4b =>
 ---------------------------------------------------------------
 -- brpl			
 			
 			when brpl3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				CON_in <= '1';
 			when brpl3b => 
 			when brpl4a => 
+				Gra <= '0';
+				Rout <= '0';
+				COn_in <= '0';				
+			
+				Grb <= '1';
+				Rout <= '1';
+				PCin <= '1';				
+					
 			when brpl4b =>
 ---------------------------------------------------------------
 -- jr
 			
 			when jr3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				PCin <= '1';
 			when jr3b =>
 ---------------------------------------------------------------
 -- jal
 			
 			when jal3a => 
+				IRin <= '0';
+				MDRout <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				PCin <= '1';
 			when jal3b =>
 ---------------------------------------------------------------
--- mfhi
-			
+-- mfhi		
 			when mfhi3a => 
+				MDRout <= '0'; 
+				IRin <= '0';
+				
+				HIout <= '1';
+				Gra <= '1';
+				Rin <= '1';
 			when mfhi3b =>
 ---------------------------------------------------------------
--- mflo
-			
+-- mflo		
 			when mflo3a => 
+				MDRout <= '0'; 
+				IRin <= '0';
+				
+				LOout <= '1';
+				Gra <= '1';
+				Rin <= '1';
 			when mflo3b =>
 ---------------------------------------------------------------
 -- in
-			
 			when in3a => 
+				MDRout <= '0'; 
+				IRin <= '0';
+				
+				Gra <= '1';
+				Rin <= '1';
+				In_portout <= '1';	
 			when in3b =>
 ---------------------------------------------------------------
 -- out
-			
 			when out3a => 
+				MDRout <= '0'; 
+				IRin <= '0';
+				
+				Gra <= '1';
+				Rout <= '1';
+				Out_portin <= '1';	
 			when out3b =>
 ---------------------------------------------------------------
--- nop
-			
+-- nop	
 			when nop =>
 ---------------------------------------------------------------
 -- halt
