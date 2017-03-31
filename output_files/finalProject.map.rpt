@@ -1,5 +1,5 @@
 Analysis & Elaboration report for finalProject
-Fri Mar 31 14:09:38 2017
+Fri Mar 31 14:33:26 2017
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Fri Mar 31 14:09:38 2017           ;
+; Analysis & Elaboration Status      ; Successful - Fri Mar 31 14:33:26 2017           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
 ; Top-level Entity Name              ; phase3                                          ;
@@ -260,7 +260,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Elaboration
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Mar 31 14:09:27 2017
+    Info: Processing started: Fri Mar 31 14:33:24 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalProject -c finalProject --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file phase3.vhd
@@ -445,8 +445,6 @@ Info (12133): Instantiated megafunction "ram_TA:b2v_inst2|altsyncram:altsyncram_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k7i1.tdf
     Info (12023): Found entity 1: altsyncram_k7i1
 Info (12128): Elaborating entity "altsyncram_k7i1" for hierarchy "ram_TA:b2v_inst2|altsyncram:altsyncram_component|altsyncram_k7i1:auto_generated"
-Warning (113028): 256 out of 512 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
-    Warning (113027): Addresses ranging from 256 to 511 are not initialized
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:b2v_inst3"
 Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "temp_C", which holds its previous value in one or more paths through the process
 Info (12128): Elaborating entity "Z_split" for hierarchy "Z_split:b2v_inst4"
@@ -455,10 +453,10 @@ Info (12128): Elaborating entity "MDMUX" for hierarchy "MDMUX:b2v_inst6"
 Info (12128): Elaborating entity "MAR_splicer" for hierarchy "MAR_splicer:b2v_inst7"
 Info (12128): Elaborating entity "SelectEncodeLogic_R_splitter" for hierarchy "SelectEncodeLogic_R_splitter:b2v_inst8"
 Info (12128): Elaborating entity "register_64" for hierarchy "register_64:b2v_Z"
-Info: Quartus II 32-bit Analysis & Elaboration was successful. 0 errors, 40 warnings
+Info: Quartus II 32-bit Analysis & Elaboration was successful. 0 errors, 38 warnings
     Info: Peak virtual memory: 413 megabytes
-    Info: Processing ended: Fri Mar 31 14:09:38 2017
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Processing ended: Fri Mar 31 14:33:26 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

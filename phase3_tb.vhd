@@ -352,9 +352,10 @@ ARCHITECTURE phase3_tb_arch OF phase3_tb IS
 				wait for 20 ns;
 			END PROCESS Clock_process;
 			
-			PROCESS (clk_tb) -- finite state machine
+			PROCESS
 			BEGIN
 				reset_tb <= '1', '0' after 20 ns;
+				wait;
 			END PROCESS;
 		
 END ARCHITECTURE phase3_tb_arch;
