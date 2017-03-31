@@ -52,7 +52,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH phase2_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH phase3_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME register_64_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id register_64_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "100 ns" -section_id register_64_tb
@@ -146,34 +146,10 @@ set_global_assignment -name EDA_TEST_BENCH_NAME phase2_tb_ld -section_id eda_sim
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id phase2_tb_ld
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "10000 ns" -section_id phase2_tb_ld
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME phase2_tb_ld -section_id phase2_tb_ld
-set_global_assignment -name EDA_TEST_BENCH_FILE reg_64_tb.vhd -section_id register_64_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE booth_32_algorithm_tb.vhd -section_id booth_32_algorithm_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE encoder_32_to_5_tb.vhd -section_id encoder_32_to_5_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE bus_mux_32_to_1_tb.vhd -section_id bus_mux_32_to_1_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE MDMux_tb.vhd -section_id MDMux_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_add.vhd -section_id phase1_tb_add
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_sub.vhd -section_id phase1_tb_sub
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_mul.vhd -section_id phase1_tb_mul
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_div.vhd -section_id phase1_tb_div
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_and.vhd -section_id phase1_tb_and
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_or.vhd -section_id phase1_tb_or
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_srl.vhd -section_id phase1_tb_srl
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_sll.vhd -section_id phase1_tb_sll
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_neg.vhd -section_id phase1_tb_neg
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_not.vhd -section_id phase1_tb_not
-set_global_assignment -name EDA_TEST_BENCH_FILE CLA_tb.vhd -section_id CLA_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_ror.vhd -section_id phase1_tb_ror
-set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_rol.vhd -section_id phase1_tb_rol
-set_global_assignment -name EDA_TEST_BENCH_FILE booth_32_bitPairRecoding_algorithm_tb.vhd -section_id booth_32_bitPairRecoding_algorithm_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE array_multiplier_tb.vhd -section_id array_multiplier_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE select_encode_logic_sel_tb.vhd -section_id select_encode_logic_sel_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE con_ff_logic_tb.vhd -section_id con_ff_logic_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE phase2_tb_ld.vhd -section_id phase2_tb_ld
 set_global_assignment -name EDA_TEST_BENCH_NAME phase2_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id phase2_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "9000 ns" -section_id phase2_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME phase2_tb -section_id phase2_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE phase2_tb.vhd -section_id phase2_tb
 set_global_assignment -name VHDL_FILE phase3.vhd
 set_global_assignment -name VHDL_FILE control_unit.vhd
 set_global_assignment -name VHDL_FILE reg_64_tb.vhd
@@ -198,9 +174,38 @@ set_global_assignment -name QIP_FILE lpm_add_sub0.qip
 set_global_assignment -name MIF_FILE ram_mif.mif
 set_global_assignment -name VHDL_FILE IncPC.vhd
 set_global_assignment -name VHDL_FILE R14MUX.vhd
-set_global_assignment -name BDF_FILE phase3.bdf
 set_global_assignment -name VHDL_FILE in_port_reg.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE phase3_tb.vhd
+set_global_assignment -name EDA_TEST_BENCH_FILE reg_64_tb.vhd -section_id register_64_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE booth_32_algorithm_tb.vhd -section_id booth_32_algorithm_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE encoder_32_to_5_tb.vhd -section_id encoder_32_to_5_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE bus_mux_32_to_1_tb.vhd -section_id bus_mux_32_to_1_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE MDMux_tb.vhd -section_id MDMux_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_add.vhd -section_id phase1_tb_add
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_sub.vhd -section_id phase1_tb_sub
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_mul.vhd -section_id phase1_tb_mul
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_div.vhd -section_id phase1_tb_div
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_and.vhd -section_id phase1_tb_and
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_or.vhd -section_id phase1_tb_or
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_srl.vhd -section_id phase1_tb_srl
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_sll.vhd -section_id phase1_tb_sll
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_neg.vhd -section_id phase1_tb_neg
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_not.vhd -section_id phase1_tb_not
+set_global_assignment -name EDA_TEST_BENCH_FILE CLA_tb.vhd -section_id CLA_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_ror.vhd -section_id phase1_tb_ror
+set_global_assignment -name EDA_TEST_BENCH_FILE phase1_tb_rol.vhd -section_id phase1_tb_rol
+set_global_assignment -name EDA_TEST_BENCH_FILE booth_32_bitPairRecoding_algorithm_tb.vhd -section_id booth_32_bitPairRecoding_algorithm_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE array_multiplier_tb.vhd -section_id array_multiplier_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE select_encode_logic_sel_tb.vhd -section_id select_encode_logic_sel_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE con_ff_logic_tb.vhd -section_id con_ff_logic_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE phase2_tb_ld.vhd -section_id phase2_tb_ld
+set_global_assignment -name EDA_TEST_BENCH_FILE phase2_tb.vhd -section_id phase2_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME phase3_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id phase3_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "15000 ns" -section_id phase3_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME phase3_tb -section_id phase3_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE phase3_tb.vhd -section_id phase3_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

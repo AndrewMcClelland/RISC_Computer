@@ -60,6 +60,8 @@ begin
 	begin
 		if (reset = '1') then 
 			present_state <= reset_statea;
+		elsif (stop = '1') then
+			present_state <= halt;
 		elsif (clk'event and clk = '1') then
 			case present_state is
 ---------------------------------------------------------------

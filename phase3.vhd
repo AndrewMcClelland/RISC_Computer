@@ -12,9 +12,9 @@
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
 
--- PROGRAM		"Quartus II 64-Bit"
+-- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Wed Mar 29 15:08:56 2017"
+-- CREATED		"Fri Mar 31 13:51:30 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -59,6 +59,40 @@ ENTITY phase3 IS
 		R13out :  INOUT  STD_LOGIC;
 		R14out :  INOUT  STD_LOGIC;
 		R15out :  INOUT  STD_LOGIC;
+		Gra :  INOUT  STD_LOGIC;
+		Grb :  INOUT  STD_LOGIC;
+		Grc :  INOUT  STD_LOGIC;
+		Rin :  INOUT  STD_LOGIC;
+		Rout :  INOUT  STD_LOGIC;
+		PCout :  INOUT  STD_LOGIC;
+		MDRout :  INOUT  STD_LOGIC;
+		Zhighout :  INOUT  STD_LOGIC;
+		Zlowout :  INOUT  STD_LOGIC;
+		HIout :  INOUT  STD_LOGIC;
+		LOout :  INOUT  STD_LOGIC;
+		In_portout :  INOUT  STD_LOGIC;
+		Cout :  INOUT  STD_LOGIC;
+		HIin :  INOUT  STD_LOGIC;
+		LOin :  INOUT  STD_LOGIC;
+		Con_in :  INOUT  STD_LOGIC;
+		PCin :  INOUT  STD_LOGIC;
+		IRin :  INOUT  STD_LOGIC;
+		Cin :  INOUT  STD_LOGIC;
+		Yin :  INOUT  STD_LOGIC;
+		Zin :  INOUT  STD_LOGIC;
+		Zhighin :  INOUT  STD_LOGIC;
+		Zlowin :  INOUT  STD_LOGIC;
+		MARin :  INOUT  STD_LOGIC;
+		MDRin :  INOUT  STD_LOGIC;
+		Out_portin :  INOUT  STD_LOGIC;
+		BAout :  INOUT  STD_LOGIC;
+		R14MUX_enable :  INOUT  STD_LOGIC;
+		IncPC_enable :  INOUT  STD_LOGIC;
+		clear :  INOUT  STD_LOGIC;
+		read_signal :  INOUT  STD_LOGIC;
+		write_signal :  INOUT  STD_LOGIC;
+		CON_FF_out :  INOUT  STD_LOGIC;
+		ALU_cs :  INOUT  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		ALU_out :  INOUT  STD_LOGIC_VECTOR(63 DOWNTO 0);
 		BusMuxOut :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		C_sign_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -344,46 +378,12 @@ COMPONENT register_64
 END COMPONENT;
 
 SIGNAL	address :  STD_LOGIC_VECTOR(8 DOWNTO 0);
-SIGNAL	ALU_cs :  STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL	BAout :  STD_LOGIC;
 SIGNAL	C_sign_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL	Cin :  STD_LOGIC;
-SIGNAL	clear :  STD_LOGIC;
-SIGNAL	CON_FF_out :  STD_LOGIC;
-SIGNAL	Con_in :  STD_LOGIC;
-SIGNAL	Cout :  STD_LOGIC;
-SIGNAL	HIin :  STD_LOGIC;
-SIGNAL	HIout :  STD_LOGIC;
-SIGNAL	In_portout :  STD_LOGIC;
-SIGNAL	IncPC_enable :  STD_LOGIC;
-SIGNAL	IRin :  STD_LOGIC;
-SIGNAL	LOin :  STD_LOGIC;
-SIGNAL	LOout :  STD_LOGIC;
-SIGNAL	MARin :  STD_LOGIC;
-SIGNAL	MDRin :  STD_LOGIC;
-SIGNAL	MDRout :  STD_LOGIC;
-SIGNAL	Out_portin :  STD_LOGIC;
 SIGNAL	PC_in :  STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL	PCin :  STD_LOGIC;
-SIGNAL	PCout :  STD_LOGIC;
 SIGNAL	R14_enable :  STD_LOGIC;
-SIGNAL	R14MUX_enable :  STD_LOGIC;
-SIGNAL	read_signal :  STD_LOGIC;
 SIGNAL	Reg_in :  STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL	Reg_out :  STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL	write_signal :  STD_LOGIC;
-SIGNAL	Yin :  STD_LOGIC;
-SIGNAL	Zhighin :  STD_LOGIC;
-SIGNAL	Zhighout :  STD_LOGIC;
-SIGNAL	Zin :  STD_LOGIC;
-SIGNAL	Zlowin :  STD_LOGIC;
-SIGNAL	Zlowout :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(1 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_4 :  STD_LOGIC;
-SIGNAL	SYNTHESIZED_WIRE_5 :  STD_LOGIC;
 
 
 BEGIN 
@@ -475,11 +475,11 @@ PORT MAP(clk => clk,
 		 stop => stop,
 		 CON_FF => CON_FF_out,
 		 IR => IR_out,
-		 Gra => SYNTHESIZED_WIRE_1,
-		 Grb => SYNTHESIZED_WIRE_2,
-		 Grc => SYNTHESIZED_WIRE_3,
-		 Rin => SYNTHESIZED_WIRE_4,
-		 Rout => SYNTHESIZED_WIRE_5,
+		 Gra => Gra,
+		 Grb => Grb,
+		 Grc => Grc,
+		 Rin => Rin,
+		 Rout => Rout,
 		 PCout => PCout,
 		 MDRout => MDRout,
 		 Zhighout => Zhighout,
@@ -569,11 +569,11 @@ PORT MAP(Zin => Z_in,
 
 
 b2v_inst5 : select_encode_logic_sel
-PORT MAP(Gra => SYNTHESIZED_WIRE_1,
-		 Grb => SYNTHESIZED_WIRE_2,
-		 Grc => SYNTHESIZED_WIRE_3,
-		 Rin => SYNTHESIZED_WIRE_4,
-		 Rout => SYNTHESIZED_WIRE_5,
+PORT MAP(Gra => Gra,
+		 Grb => Grb,
+		 Grc => Grc,
+		 Rin => Rin,
+		 Rout => Rout,
 		 BAout => BAout,
 		 IR_in => IR_out,
 		 C_sign_extended => C_sign_in,
