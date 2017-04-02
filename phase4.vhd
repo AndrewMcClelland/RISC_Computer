@@ -12,9 +12,9 @@
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
 
--- PROGRAM		"Quartus II 64-Bit"
+-- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sun Apr 02 16:20:46 2017"
+-- CREATED		"Sun Apr 02 18:13:00 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -24,9 +24,9 @@ LIBRARY work;
 ENTITY phase4 IS 
 	PORT
 	(
+		reset :  IN  STD_LOGIC;
 		stop :  IN  STD_LOGIC;
 		clk_in :  IN  STD_LOGIC;
-		reset :  IN  STD_LOGIC;
 		in_port_input :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		run :  OUT  STD_LOGIC;
 		output1 :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -169,6 +169,13 @@ COMPONENT in_port_reg
 	);
 END COMPONENT;
 
+COMPONENT clock_divider
+	PORT(clk_in : IN STD_LOGIC;
+		 reset : IN STD_LOGIC;
+		 clk_out : OUT STD_LOGIC
+	);
+END COMPONENT;
+
 COMPONENT seven_seg_display_out
 	PORT(clk : IN STD_LOGIC;
 		 data : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -201,13 +208,6 @@ COMPONENT ir_conff_split
 	);
 END COMPONENT;
 
-COMPONENT display_splitter
-	PORT(input : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-		 output1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		 output2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
-	);
-END COMPONENT;
-
 COMPONENT ram_ta
 	PORT(clock : IN STD_LOGIC;
 		 rden : IN STD_LOGIC;
@@ -218,10 +218,10 @@ COMPONENT ram_ta
 	);
 END COMPONENT;
 
-COMPONENT clock_divider
-	PORT(clk_in : IN STD_LOGIC;
-		 reset : IN STD_LOGIC;
-		 clk_out : OUT STD_LOGIC
+COMPONENT display_splitter
+	PORT(input : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 output1 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		 output2 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
 	);
 END COMPONENT;
 
@@ -407,8 +407,8 @@ SIGNAL	Zlow_out :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	Zlowin :  STD_LOGIC;
 SIGNAL	Zlowout :  STD_LOGIC;
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_1 :  STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_2 :  STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_3 :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 
@@ -550,16 +550,16 @@ PORT MAP(clk => clk,
 		 output => In_port_out);
 
 
-b2v_inst14 : seven_seg_display_out
-PORT MAP(clk => clk,
-		 data => SYNTHESIZED_WIRE_0,
-		 output => output1);
+b2v_inst14 : clock_divider
+PORT MAP(clk_in => clk_in,
+		 reset => reset,
+		 clk_out => clk);
 
 
 b2v_inst15 : seven_seg_display_out
 PORT MAP(clk => clk,
-		 data => SYNTHESIZED_WIRE_1,
-		 output => output2);
+		 data => SYNTHESIZED_WIRE_0,
+		 output => output1);
 
 
 b2v_inst16 : register_r0
@@ -574,20 +574,20 @@ PORT MAP(clk => clk,
 b2v_inst17 : con_ff_logic
 PORT MAP(Con_in => Con_in,
 		 con_clk => clk,
-		 IR_low_bits => SYNTHESIZED_WIRE_2,
+		 IR_low_bits => SYNTHESIZED_WIRE_1,
 		 register_in => BusMuxOut,
 		 con_out => CON_FF_out);
 
 
 b2v_inst18 : ir_conff_split
 PORT MAP(IR => IR_out,
-		 IR_sliced => SYNTHESIZED_WIRE_2);
+		 IR_sliced => SYNTHESIZED_WIRE_1);
 
 
-b2v_inst19 : display_splitter
-PORT MAP(input => SYNTHESIZED_WIRE_3,
-		 output1 => SYNTHESIZED_WIRE_0,
-		 output2 => SYNTHESIZED_WIRE_1);
+b2v_inst19 : seven_seg_display_out
+PORT MAP(clk => clk,
+		 data => SYNTHESIZED_WIRE_2,
+		 output => output2);
 
 
 b2v_inst2 : ram_ta
@@ -599,10 +599,10 @@ PORT MAP(clock => clk,
 		 q => Mdatain);
 
 
-b2v_inst21 : clock_divider
-PORT MAP(clk_in => clk_in,
-		 reset => reset,
-		 clk_out => clk);
+b2v_inst20 : display_splitter
+PORT MAP(input => SYNTHESIZED_WIRE_3,
+		 output1 => SYNTHESIZED_WIRE_0,
+		 output2 => SYNTHESIZED_WIRE_2);
 
 
 b2v_inst3 : alu

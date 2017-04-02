@@ -1,6 +1,6 @@
 Analysis & Synthesis report for finalProject
-Sun Apr 02 16:21:30 2017
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Sun Apr 02 18:25:12 2017
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -56,13 +56,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 02 16:21:29 2017           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 02 18:25:12 2017           ;
+; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalProject                                    ;
 ; Top-level Entity Name              ; phase4                                          ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 6,035                                           ;
-;     Total combinational functions  ; 5,399                                           ;
+; Total logic elements               ; 6,032                                           ;
+;     Total combinational functions  ; 5,396                                           ;
 ;     Dedicated logic registers      ; 1,120                                           ;
 ; Total registers                    ; 1120                                            ;
 ; Total pins                         ; 52                                              ;
@@ -171,62 +171,62 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; phase4.vhd                       ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase4.vhd                      ;         ;
-; control_unit.vhd                 ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/control_unit.vhd                ;         ;
-; register_R0.vhd                  ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_R0.vhd                 ;         ;
-; select_encode_logic_sel.vhd      ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd     ;         ;
-; Z_split.vhd                      ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Z_split.vhd                     ;         ;
-; register_64.vhd                  ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_64.vhd                 ;         ;
-; register_32.vhd                  ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_32.vhd                 ;         ;
-; MDMux.vhd                        ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MDMux.vhd                       ;         ;
-; encoder_32_to_5.vhd              ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/encoder_32_to_5.vhd             ;         ;
-; bus_mux_32_to_1.vhd              ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/bus_mux_32_to_1.vhd             ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ALU.vhd                         ;         ;
-; con_ff_logic.vhd                 ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd                ;         ;
-; D_flipflop.vhd                   ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd                  ;         ;
-; MAR_splicer.vhd                  ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MAR_splicer.vhd                 ;         ;
-; SelecEncodeLogic_R_splitter.vhd  ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/SelecEncodeLogic_R_splitter.vhd ;         ;
-; IR_ConFF_Split.vhd               ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IR_ConFF_Split.vhd              ;         ;
-; ram_TA.vhd                       ; yes             ; User Wizard-Generated File       ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_TA.vhd                      ;         ;
-; ram_mif.mif                      ; yes             ; User Memory Initialization File  ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_mif.mif                     ;         ;
-; IncPC.vhd                        ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IncPC.vhd                       ;         ;
-; R14MUX.vhd                       ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/R14MUX.vhd                      ;         ;
-; in_port_reg.vhd                  ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/in_port_reg.vhd                 ;         ;
-; Seven_Seg_Display_Out.vhd        ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Seven_Seg_Display_Out.vhd       ;         ;
-; display_splitter.vhd             ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/display_splitter.vhd            ;         ;
-; clock_divider.vhd                ; yes             ; User VHDL File                   ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/clock_divider.vhd               ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                     ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
-; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
-; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                         ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
-; db/altsyncram_k7i1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/altsyncram_k7i1.tdf          ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf                                       ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                    ;         ;
-; multcore.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc                                       ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                       ;         ;
-; altshift.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                       ;         ;
-; db/mult_r4t.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/mult_r4t.tdf                 ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf                                     ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc                                    ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc                                ;         ;
-; db/lpm_divide_01p.tdf            ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/lpm_divide_01p.tdf           ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/abs_divider_4dg.tdf          ;         ;
-; db/alt_u_div_t8f.tdf             ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/alt_u_div_t8f.tdf            ;         ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/add_sub_unc.tdf              ;         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/add_sub_vnc.tdf              ;         ;
-; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/lpm_abs_9v9.tdf              ;         ;
-; db/lpm_divide_3po.tdf            ; yes             ; Auto-Generated Megafunction      ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/db/lpm_divide_3po.tdf           ;         ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+---------+
+; ram_mif.mif                      ; yes             ; User Memory Initialization File  ; C:/Users/luke/Documents/ELEC374_RISC_Computer/ram_mif.mif                     ;         ;
+; phase4.vhd                       ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/phase4.vhd                      ;         ;
+; control_unit.vhd                 ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/control_unit.vhd                ;         ;
+; register_R0.vhd                  ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/register_R0.vhd                 ;         ;
+; select_encode_logic_sel.vhd      ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd     ;         ;
+; Z_split.vhd                      ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/Z_split.vhd                     ;         ;
+; register_64.vhd                  ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/register_64.vhd                 ;         ;
+; register_32.vhd                  ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/register_32.vhd                 ;         ;
+; MDMux.vhd                        ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/MDMux.vhd                       ;         ;
+; encoder_32_to_5.vhd              ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd             ;         ;
+; bus_mux_32_to_1.vhd              ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd             ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/ALU.vhd                         ;         ;
+; con_ff_logic.vhd                 ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd                ;         ;
+; D_flipflop.vhd                   ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/D_flipflop.vhd                  ;         ;
+; MAR_splicer.vhd                  ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd                 ;         ;
+; SelecEncodeLogic_R_splitter.vhd  ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd ;         ;
+; IR_ConFF_Split.vhd               ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd              ;         ;
+; ram_TA.vhd                       ; yes             ; User Wizard-Generated File       ; C:/Users/luke/Documents/ELEC374_RISC_Computer/ram_TA.vhd                      ;         ;
+; IncPC.vhd                        ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/IncPC.vhd                       ;         ;
+; R14MUX.vhd                       ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/R14MUX.vhd                      ;         ;
+; in_port_reg.vhd                  ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/in_port_reg.vhd                 ;         ;
+; Seven_Seg_Display_Out.vhd        ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/Seven_Seg_Display_Out.vhd       ;         ;
+; display_splitter.vhd             ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/display_splitter.vhd            ;         ;
+; clock_divider.vhd                ; yes             ; User VHDL File                   ; C:/Users/luke/Documents/ELEC374_RISC_Computer/clock_divider.vhd               ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf              ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                 ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc              ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc              ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc               ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                  ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                  ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                ;         ;
+; db/altsyncram_k7i1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/altsyncram_k7i1.tdf          ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mult.tdf                ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc             ;         ;
+; multcore.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/multcore.inc                ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                ;         ;
+; altshift.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                ;         ;
+; db/mult_r4t.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/mult_r4t.tdf                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf              ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc             ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc         ;         ;
+; db/lpm_divide_01p.tdf            ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/lpm_divide_01p.tdf           ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/abs_divider_4dg.tdf          ;         ;
+; db/alt_u_div_t8f.tdf             ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/alt_u_div_t8f.tdf            ;         ;
+; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/add_sub_unc.tdf              ;         ;
+; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/add_sub_vnc.tdf              ;         ;
+; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/lpm_abs_9v9.tdf              ;         ;
+; db/lpm_divide_3po.tdf            ; yes             ; Auto-Generated Megafunction      ; C:/Users/luke/Documents/ELEC374_RISC_Computer/db/lpm_divide_3po.tdf           ;         ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------+
@@ -234,16 +234,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------------+
 ; Resource                                    ; Usage                         ;
 +---------------------------------------------+-------------------------------+
-; Estimated Total logic elements              ; 6,035                         ;
+; Estimated Total logic elements              ; 6,032                         ;
 ;                                             ;                               ;
-; Total combinational functions               ; 5399                          ;
+; Total combinational functions               ; 5396                          ;
 ; Logic element usage by number of LUT inputs ;                               ;
-;     -- 4 input functions                    ; 2752                          ;
-;     -- 3 input functions                    ; 2021                          ;
-;     -- <=2 input functions                  ; 626                           ;
+;     -- 4 input functions                    ; 2754                          ;
+;     -- 3 input functions                    ; 2013                          ;
+;     -- <=2 input functions                  ; 629                           ;
 ;                                             ;                               ;
 ; Logic elements by mode                      ;                               ;
-;     -- normal mode                          ; 3917                          ;
+;     -- normal mode                          ; 3914                          ;
 ;     -- arithmetic mode                      ; 1482                          ;
 ;                                             ;                               ;
 ; Total registers                             ; 1120                          ;
@@ -253,9 +253,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 52                            ;
 ; Total memory bits                           ; 16384                         ;
 ; Embedded Multiplier 9-bit elements          ; 8                             ;
-; Maximum fan-out node                        ; clock_divider:b2v_inst21|temp ;
+; Maximum fan-out node                        ; clock_divider:b2v_inst14|temp ;
 ; Maximum fan-out                             ; 1120                          ;
-; Total fan-out                               ; 22275                         ;
+; Total fan-out                               ; 22266                         ;
 ; Average fan-out                             ; 3.34                          ;
 +---------------------------------------------+-------------------------------+
 
@@ -265,29 +265,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |phase4                                   ; 5399 (1)          ; 1120 (0)     ; 16384       ; 8            ; 0       ; 4         ; 52   ; 0            ; |phase4                                                                                                                                 ; work         ;
-;    |ALU:b2v_inst3|                        ; 4054 (1526)       ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase4|ALU:b2v_inst3                                                                                                                   ; work         ;
-;       |lpm_divide:Div0|                   ; 1216 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0                                                                                                   ; work         ;
-;          |lpm_divide_01p:auto_generated|  ; 1216 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
-;             |abs_divider_4dg:divider|     ; 1216 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
+; |phase4                                   ; 5396 (1)          ; 1120 (0)     ; 16384       ; 8            ; 0       ; 4         ; 52   ; 0            ; |phase4                                                                                                                                 ; work         ;
+;    |ALU:b2v_inst3|                        ; 4046 (1518)       ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase4|ALU:b2v_inst3                                                                                                                   ; work         ;
+;       |lpm_divide:Div0|                   ; 1226 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0                                                                                                   ; work         ;
+;          |lpm_divide_01p:auto_generated|  ; 1226 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
+;             |abs_divider_4dg:divider|     ; 1226 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
 ;                |alt_u_div_t8f:divider|    ; 1086 (1083)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                       ; work         ;
 ;                   |add_sub_unc:add_sub_0| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_unc:add_sub_0 ; work         ;
 ;                   |add_sub_vnc:add_sub_1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
-;                |lpm_abs_9v9:my_abs_den|   ; 54 (54)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
+;                |lpm_abs_9v9:my_abs_den|   ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
 ;                |lpm_abs_9v9:my_abs_num|   ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num                      ; work         ;
-;       |lpm_divide:Mod0|                   ; 1220 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0                                                                                                   ; work         ;
-;          |lpm_divide_3po:auto_generated|  ; 1220 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                                     ; work         ;
-;             |abs_divider_4dg:divider|     ; 1220 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                             ; work         ;
+;       |lpm_divide:Mod0|                   ; 1210 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0                                                                                                   ; work         ;
+;          |lpm_divide_3po:auto_generated|  ; 1210 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                                     ; work         ;
+;             |abs_divider_4dg:divider|     ; 1210 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                             ; work         ;
 ;                |alt_u_div_t8f:divider|    ; 1113 (1113)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                       ; work         ;
-;                |lpm_abs_9v9:my_abs_den|   ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
 ;                |lpm_abs_9v9:my_abs_num|   ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num                      ; work         ;
 ;       |lpm_mult:Mult0|                    ; 92 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_mult:Mult0                                                                                                    ; work         ;
 ;          |mult_r4t:auto_generated|        ; 92 (92)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |phase4|ALU:b2v_inst3|lpm_mult:Mult0|mult_r4t:auto_generated                                                                            ; work         ;
-;    |Seven_Seg_Display_Out:b2v_inst14|     ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|Seven_Seg_Display_Out:b2v_inst14                                                                                                ; work         ;
 ;    |Seven_Seg_Display_Out:b2v_inst15|     ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|Seven_Seg_Display_Out:b2v_inst15                                                                                                ; work         ;
-;    |bus_mux_32_to_1:b2v_inst1|            ; 514 (514)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|bus_mux_32_to_1:b2v_inst1                                                                                                       ; work         ;
-;    |clock_divider:b2v_inst21|             ; 57 (57)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|clock_divider:b2v_inst21                                                                                                        ; work         ;
-;    |control_unit:b2v_inst11|              ; 361 (361)         ; 173 (173)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|control_unit:b2v_inst11                                                                                                         ; work         ;
+;    |Seven_Seg_Display_Out:b2v_inst19|     ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|Seven_Seg_Display_Out:b2v_inst19                                                                                                ; work         ;
+;    |bus_mux_32_to_1:b2v_inst1|            ; 513 (513)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|bus_mux_32_to_1:b2v_inst1                                                                                                       ; work         ;
+;    |clock_divider:b2v_inst14|             ; 57 (57)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|clock_divider:b2v_inst14                                                                                                        ; work         ;
+;    |control_unit:b2v_inst11|              ; 367 (367)         ; 173 (173)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|control_unit:b2v_inst11                                                                                                         ; work         ;
 ;    |encoder_32_to_5:b2v_inst|             ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|encoder_32_to_5:b2v_inst                                                                                                        ; work         ;
 ;    |in_port_reg:b2v_inst13|               ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|in_port_reg:b2v_inst13                                                                                                          ; work         ;
 ;    |ram_TA:b2v_inst2|                     ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ram_TA:b2v_inst2                                                                                                                ; work         ;
@@ -295,7 +294,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altsyncram_k7i1:auto_generated| ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|ram_TA:b2v_inst2|altsyncram:altsyncram_component|altsyncram_k7i1:auto_generated                                                 ; work         ;
 ;    |register_32:b2v_C_sign_extended|      ; 19 (19)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_C_sign_extended                                                                                                 ; work         ;
 ;    |register_32:b2v_HI|                   ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_HI                                                                                                              ; work         ;
-;    |register_32:b2v_IR|                   ; 13 (13)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_IR                                                                                                              ; work         ;
+;    |register_32:b2v_IR|                   ; 18 (18)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_IR                                                                                                              ; work         ;
 ;    |register_32:b2v_LO|                   ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_LO                                                                                                              ; work         ;
 ;    |register_32:b2v_MAR|                  ; 1 (1)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_MAR                                                                                                             ; work         ;
 ;    |register_32:b2v_MDR|                  ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_MDR                                                                                                             ; work         ;
@@ -308,7 +307,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |register_32:b2v_R14|                  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R14                                                                                                             ; work         ;
 ;    |register_32:b2v_R15|                  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R15                                                                                                             ; work         ;
 ;    |register_32:b2v_R1|                   ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R1                                                                                                              ; work         ;
-;    |register_32:b2v_R2|                   ; 13 (13)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R2                                                                                                              ; work         ;
+;    |register_32:b2v_R2|                   ; 8 (8)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R2                                                                                                              ; work         ;
 ;    |register_32:b2v_R3|                   ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R3                                                                                                              ; work         ;
 ;    |register_32:b2v_R4|                   ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R4                                                                                                              ; work         ;
 ;    |register_32:b2v_R5|                   ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phase4|register_32:b2v_R5                                                                                                              ; work         ;
@@ -353,13 +352,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                      ;
-+--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                                                 ;
-+--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------+
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |phase4|ram_TA:b2v_inst2 ; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_TA.vhd ;
-+--------+--------------+---------+--------------+--------------+--------------------------+---------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                               ;
++--------+--------------+---------+--------------+--------------+--------------------------+----------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File                                          ;
++--------+--------------+---------+--------------+--------------+--------------------------+----------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |phase4|ram_TA:b2v_inst2 ; C:/Users/luke/Documents/ELEC374_RISC_Computer/ram_TA.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -367,41 +366,42 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-----------------------------------------------------+-----------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal               ; Free of Timing Hazards ;
 +-----------------------------------------------------+-----------------------------------+------------------------+
+; control_unit:b2v_inst11|run                         ; control_unit:b2v_inst11|WideOr143 ; yes                    ;
 ; control_unit:b2v_inst11|clear                       ; control_unit:b2v_inst11|WideOr142 ; yes                    ;
-; control_unit:b2v_inst11|HIout                       ; control_unit:b2v_inst11|WideOr164 ; yes                    ;
-; control_unit:b2v_inst11|Gra                         ; control_unit:b2v_inst11|WideOr143 ; yes                    ;
-; control_unit:b2v_inst11|Grb                         ; control_unit:b2v_inst11|WideOr146 ; yes                    ;
-; control_unit:b2v_inst11|Grc                         ; control_unit:b2v_inst11|WideOr149 ; yes                    ;
-; control_unit:b2v_inst11|Rout                        ; control_unit:b2v_inst11|WideOr154 ; yes                    ;
-; control_unit:b2v_inst11|BAout                       ; control_unit:b2v_inst11|WideOr187 ; yes                    ;
-; control_unit:b2v_inst11|LOout                       ; control_unit:b2v_inst11|WideOr165 ; yes                    ;
-; control_unit:b2v_inst11|Zlowout                     ; control_unit:b2v_inst11|WideOr161 ; yes                    ;
-; control_unit:b2v_inst11|Zhighout                    ; control_unit:b2v_inst11|WideOr160 ; yes                    ;
-; control_unit:b2v_inst11|PCout                       ; control_unit:b2v_inst11|WideOr196 ; yes                    ;
-; control_unit:b2v_inst11|MDRout                      ; control_unit:b2v_inst11|WideOr157 ; yes                    ;
-; control_unit:b2v_inst11|In_portout                  ; control_unit:b2v_inst11|WideOr166 ; yes                    ;
-; control_unit:b2v_inst11|Cout                        ; control_unit:b2v_inst11|WideOr167 ; yes                    ;
-; control_unit:b2v_inst11|Out_portin                  ; control_unit:b2v_inst11|WideOr186 ; yes                    ;
-; control_unit:b2v_inst11|Rin                         ; control_unit:b2v_inst11|WideOr152 ; yes                    ;
-; control_unit:b2v_inst11|IRin                        ; control_unit:b2v_inst11|WideOr177 ; yes                    ;
-; control_unit:b2v_inst11|R14MUX_enable               ; control_unit:b2v_inst11|WideOr190 ; yes                    ;
-; control_unit:b2v_inst11|ZLowin                      ; control_unit:b2v_inst11|WideOr212 ; yes                    ;
-; control_unit:b2v_inst11|LOin                        ; control_unit:b2v_inst11|WideOr170 ; yes                    ;
-; control_unit:b2v_inst11|HIin                        ; control_unit:b2v_inst11|WideOr160 ; yes                    ;
-; control_unit:b2v_inst11|Zhighin                     ; control_unit:b2v_inst11|WideOr212 ; yes                    ;
-; control_unit:b2v_inst11|read_signal                 ; control_unit:b2v_inst11|WideOr193 ; yes                    ;
-; control_unit:b2v_inst11|MDRin                       ; control_unit:b2v_inst11|WideOr184 ; yes                    ;
-; control_unit:b2v_inst11|IncPC_enable                ; control_unit:b2v_inst11|WideOr191 ; yes                    ;
-; control_unit:b2v_inst11|PCin                        ; control_unit:b2v_inst11|WideOr175 ; yes                    ;
-; control_unit:b2v_inst11|Zin                         ; control_unit:b2v_inst11|WideOr181 ; yes                    ;
-; control_unit:b2v_inst11|write_signal                ; control_unit:b2v_inst11|WideOr192 ; yes                    ;
-; control_unit:b2v_inst11|ALU_cs[1]                   ; control_unit:b2v_inst11|WideOr203 ; yes                    ;
-; control_unit:b2v_inst11|ALU_cs[0]                   ; control_unit:b2v_inst11|WideOr203 ; yes                    ;
-; control_unit:b2v_inst11|ALU_cs[3]                   ; control_unit:b2v_inst11|WideOr203 ; yes                    ;
-; control_unit:b2v_inst11|ALU_cs[2]                   ; control_unit:b2v_inst11|WideOr203 ; yes                    ;
-; control_unit:b2v_inst11|MARin                       ; control_unit:b2v_inst11|WideOr199 ; yes                    ;
-; control_unit:b2v_inst11|Yin                         ; control_unit:b2v_inst11|WideOr178 ; yes                    ;
-; Number of user-specified and inferred latches = 34  ;                                   ;                        ;
+; control_unit:b2v_inst11|HIout                       ; control_unit:b2v_inst11|WideOr165 ; yes                    ;
+; control_unit:b2v_inst11|Gra                         ; control_unit:b2v_inst11|WideOr144 ; yes                    ;
+; control_unit:b2v_inst11|Grb                         ; control_unit:b2v_inst11|WideOr147 ; yes                    ;
+; control_unit:b2v_inst11|Grc                         ; control_unit:b2v_inst11|WideOr150 ; yes                    ;
+; control_unit:b2v_inst11|Rout                        ; control_unit:b2v_inst11|WideOr155 ; yes                    ;
+; control_unit:b2v_inst11|BAout                       ; control_unit:b2v_inst11|WideOr188 ; yes                    ;
+; control_unit:b2v_inst11|LOout                       ; control_unit:b2v_inst11|WideOr166 ; yes                    ;
+; control_unit:b2v_inst11|Zlowout                     ; control_unit:b2v_inst11|WideOr162 ; yes                    ;
+; control_unit:b2v_inst11|Zhighout                    ; control_unit:b2v_inst11|WideOr161 ; yes                    ;
+; control_unit:b2v_inst11|PCout                       ; control_unit:b2v_inst11|WideOr197 ; yes                    ;
+; control_unit:b2v_inst11|MDRout                      ; control_unit:b2v_inst11|WideOr158 ; yes                    ;
+; control_unit:b2v_inst11|In_portout                  ; control_unit:b2v_inst11|WideOr167 ; yes                    ;
+; control_unit:b2v_inst11|Cout                        ; control_unit:b2v_inst11|WideOr168 ; yes                    ;
+; control_unit:b2v_inst11|Out_portin                  ; control_unit:b2v_inst11|WideOr187 ; yes                    ;
+; control_unit:b2v_inst11|IRin                        ; control_unit:b2v_inst11|WideOr178 ; yes                    ;
+; control_unit:b2v_inst11|Rin                         ; control_unit:b2v_inst11|WideOr153 ; yes                    ;
+; control_unit:b2v_inst11|R14MUX_enable               ; control_unit:b2v_inst11|WideOr191 ; yes                    ;
+; control_unit:b2v_inst11|ZLowin                      ; control_unit:b2v_inst11|WideOr213 ; yes                    ;
+; control_unit:b2v_inst11|LOin                        ; control_unit:b2v_inst11|WideOr171 ; yes                    ;
+; control_unit:b2v_inst11|HIin                        ; control_unit:b2v_inst11|WideOr161 ; yes                    ;
+; control_unit:b2v_inst11|Zhighin                     ; control_unit:b2v_inst11|WideOr213 ; yes                    ;
+; control_unit:b2v_inst11|read_signal                 ; control_unit:b2v_inst11|WideOr194 ; yes                    ;
+; control_unit:b2v_inst11|MDRin                       ; control_unit:b2v_inst11|WideOr185 ; yes                    ;
+; control_unit:b2v_inst11|IncPC_enable                ; control_unit:b2v_inst11|WideOr192 ; yes                    ;
+; control_unit:b2v_inst11|PCin                        ; control_unit:b2v_inst11|WideOr176 ; yes                    ;
+; control_unit:b2v_inst11|Zin                         ; control_unit:b2v_inst11|WideOr182 ; yes                    ;
+; control_unit:b2v_inst11|write_signal                ; control_unit:b2v_inst11|WideOr193 ; yes                    ;
+; control_unit:b2v_inst11|ALU_cs[1]                   ; control_unit:b2v_inst11|WideOr204 ; yes                    ;
+; control_unit:b2v_inst11|ALU_cs[0]                   ; control_unit:b2v_inst11|WideOr204 ; yes                    ;
+; control_unit:b2v_inst11|ALU_cs[3]                   ; control_unit:b2v_inst11|WideOr204 ; yes                    ;
+; control_unit:b2v_inst11|ALU_cs[2]                   ; control_unit:b2v_inst11|WideOr204 ; yes                    ;
+; control_unit:b2v_inst11|MARin                       ; control_unit:b2v_inst11|WideOr200 ; yes                    ;
+; control_unit:b2v_inst11|Yin                         ; control_unit:b2v_inst11|WideOr179 ; yes                    ;
+; Number of user-specified and inferred latches = 35  ;                                   ;                        ;
 +-----------------------------------------------------+-----------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -427,6 +427,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ALU:b2v_inst3|C[38]                                    ;    ;
 ; ALU:b2v_inst3|C[7]                                     ;    ;
 ; ALU:b2v_inst3|C[39]                                    ;    ;
+; ALU:b2v_inst3|C[27]                                    ;    ;
+; ALU:b2v_inst3|C[59]                                    ;    ;
+; ALU:b2v_inst3|C[28]                                    ;    ;
+; ALU:b2v_inst3|C[60]                                    ;    ;
+; ALU:b2v_inst3|C[29]                                    ;    ;
+; ALU:b2v_inst3|C[61]                                    ;    ;
+; ALU:b2v_inst3|C[30]                                    ;    ;
+; ALU:b2v_inst3|C[62]                                    ;    ;
+; ALU:b2v_inst3|C[31]                                    ;    ;
+; ALU:b2v_inst3|C[63]                                    ;    ;
 ; ALU:b2v_inst3|C[24]                                    ;    ;
 ; ALU:b2v_inst3|C[56]                                    ;    ;
 ; ALU:b2v_inst3|C[20]                                    ;    ;
@@ -465,16 +475,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ALU:b2v_inst3|C[41]                                    ;    ;
 ; ALU:b2v_inst3|C[8]                                     ;    ;
 ; ALU:b2v_inst3|C[40]                                    ;    ;
-; ALU:b2v_inst3|C[29]                                    ;    ;
-; ALU:b2v_inst3|C[61]                                    ;    ;
-; ALU:b2v_inst3|C[30]                                    ;    ;
-; ALU:b2v_inst3|C[62]                                    ;    ;
-; ALU:b2v_inst3|C[31]                                    ;    ;
-; ALU:b2v_inst3|C[63]                                    ;    ;
-; ALU:b2v_inst3|C[27]                                    ;    ;
-; ALU:b2v_inst3|C[59]                                    ;    ;
-; ALU:b2v_inst3|C[28]                                    ;    ;
-; ALU:b2v_inst3|C[60]                                    ;    ;
 ; Number of logic cells representing combinational loops ; 64 ;
 +--------------------------------------------------------+----+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -485,8 +485,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +------------------------------------------------+--------------------------------------------------------+
 ; Register name                                  ; Reason for Removal                                     ;
 +------------------------------------------------+--------------------------------------------------------+
+; Seven_Seg_Display_Out:b2v_inst19|output[7]     ; Stuck at VCC due to stuck port data_in                 ;
 ; Seven_Seg_Display_Out:b2v_inst15|output[7]     ; Stuck at VCC due to stuck port data_in                 ;
-; Seven_Seg_Display_Out:b2v_inst14|output[7]     ; Stuck at VCC due to stuck port data_in                 ;
 ; register_32:b2v_C_sign_extended|output[19..31] ; Merged with register_32:b2v_C_sign_extended|output[18] ;
 ; Total Number of Removed Registers = 15         ;                                                        ;
 +------------------------------------------------+--------------------------------------------------------+
@@ -512,52 +512,52 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; clock_divider:b2v_inst21|count[0]      ; 3       ;
+; clock_divider:b2v_inst14|count[0]      ; 3       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |phase4|register_32:b2v_Out_port|output[2]           ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_R0:b2v_inst16|temp[3]               ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R1|output[3]                 ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R2|output[3]                 ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R3|output[3]                 ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R4|output[3]                 ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R5|output[21]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R6|output[24]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R7|output[6]                 ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R8|output[16]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R9|output[17]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R10|output[10]               ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R11|output[7]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R12|output[5]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R13|output[12]               ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R14|output[26]               ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R15|output[12]               ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_HI|output[12]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_LO|output[12]                ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_Zlow|output[19]              ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_Zhigh|output[3]              ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_IR|output[31]                ;
-; 3:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |phase4|register_64:b2v_Z|output[54]                 ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |phase4|register_32:b2v_MAR|output[4]                ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |phase4|register_32:b2v_PC|output[18]                ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |phase4|register_32:b2v_MDR|output[2]                ;
-; 33:1               ; 27 bits   ; 594 LEs       ; 540 LEs              ; 54 LEs                 ; Yes        ; |phase4|control_unit:b2v_inst11|present_state.st3a   ;
-; 33:1               ; 4 bits    ; 88 LEs        ; 4 LEs                ; 84 LEs                 ; Yes        ; |phase4|control_unit:b2v_inst11|present_state.brzr3a ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_Y|output[16]                 ;
-; 32:1               ; 141 bits  ; 2961 LEs      ; 564 LEs              ; 2397 LEs               ; No         ; |phase4|control_unit:b2v_inst11|Mux52                ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |phase4|ALU:b2v_inst3|Mux18                          ;
-; 33:1               ; 18 bits   ; 396 LEs       ; 288 LEs              ; 108 LEs                ; No         ; |phase4|bus_mux_32_to_1:b2v_inst1|Mux20              ;
-; 29:1               ; 14 bits   ; 266 LEs       ; 224 LEs              ; 42 LEs                 ; No         ; |phase4|bus_mux_32_to_1:b2v_inst1|Mux12              ;
-; 32:1               ; 14 bits   ; 294 LEs       ; 224 LEs              ; 70 LEs                 ; No         ; |phase4|ALU:b2v_inst3|Mux38                          ;
-; 32:1               ; 14 bits   ; 294 LEs       ; 224 LEs              ; 70 LEs                 ; No         ; |phase4|ALU:b2v_inst3|Mux57                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |phase4|register_32:b2v_Out_port|output[1]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_IR|output[16]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_R0:b2v_inst16|temp[18]                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R1|output[22]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R2|output[7]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R3|output[14]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R4|output[21]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R5|output[22]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R6|output[26]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R7|output[12]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R8|output[3]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R9|output[12]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R10|output[12]                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R11|output[4]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R12|output[28]                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R13|output[17]                 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R14|output[3]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_R15|output[1]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_HI|output[12]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_LO|output[19]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_Zlow|output[24]                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_Zhigh|output[25]               ;
+; 3:1                ; 64 bits   ; 128 LEs       ; 64 LEs               ; 64 LEs                 ; Yes        ; |phase4|register_64:b2v_Z|output[28]                   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |phase4|register_32:b2v_MAR|output[6]                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |phase4|register_32:b2v_PC|output[22]                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |phase4|register_32:b2v_MDR|output[26]                 ;
+; 33:1               ; 27 bits   ; 594 LEs       ; 540 LEs              ; 54 LEs                 ; Yes        ; |phase4|control_unit:b2v_inst11|present_state.jal_init ;
+; 33:1               ; 4 bits    ; 88 LEs        ; 4 LEs                ; 84 LEs                 ; Yes        ; |phase4|control_unit:b2v_inst11|present_state.brpl3a   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |phase4|register_32:b2v_Y|output[31]                   ;
+; 32:1               ; 141 bits  ; 2961 LEs      ; 564 LEs              ; 2397 LEs               ; No         ; |phase4|control_unit:b2v_inst11|Mux42                  ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |phase4|ALU:b2v_inst3|Mux21                            ;
+; 33:1               ; 18 bits   ; 396 LEs       ; 288 LEs              ; 108 LEs                ; No         ; |phase4|bus_mux_32_to_1:b2v_inst1|Mux19                ;
+; 29:1               ; 14 bits   ; 266 LEs       ; 224 LEs              ; 42 LEs                 ; No         ; |phase4|bus_mux_32_to_1:b2v_inst1|Mux4                 ;
+; 32:1               ; 14 bits   ; 294 LEs       ; 224 LEs              ; 70 LEs                 ; No         ; |phase4|ALU:b2v_inst3|Mux40                            ;
+; 32:1               ; 14 bits   ; 294 LEs       ; 224 LEs              ; 70 LEs                 ; No         ; |phase4|ALU:b2v_inst3|Mux61                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -756,7 +756,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:34     ;
+; Top            ; 00:00:36     ;
 +----------------+--------------+
 
 
@@ -764,9 +764,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Apr 02 16:20:51 2017
+    Info: Processing started: Sun Apr 02 18:24:30 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalProject -c finalProject
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file phase4.vhd
@@ -856,6 +856,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file display
 Info (12021): Found 2 design units, including 1 entities, in source file clock_divider.vhd
     Info (12022): Found design unit 1: clock_divider-Behavioral
     Info (12023): Found entity 1: clock_divider
+Warning (12019): Can't analyze file -- file phase4_2.bdf is missing
 Info (12127): Elaborating entity "phase4" for the top level hierarchy
 Info (12128): Elaborating entity "register_32" for hierarchy "register_32:b2v_C_sign_extended"
 Info (12128): Elaborating entity "encoder_32_to_5" for hierarchy "encoder_32_to_5:b2v_inst"
@@ -937,13 +938,14 @@ Info (10041): Inferred latch for "clear" at control_unit.vhd(534)
 Info (10018): Can't recognize finite state machine "present_state" because it has a complex reset state
 Info (12128): Elaborating entity "R14MUX" for hierarchy "R14MUX:b2v_inst12"
 Info (12128): Elaborating entity "in_port_reg" for hierarchy "in_port_reg:b2v_inst13"
-Info (12128): Elaborating entity "Seven_Seg_Display_Out" for hierarchy "Seven_Seg_Display_Out:b2v_inst14"
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:b2v_inst14"
+Warning (10492): VHDL Process Statement warning at clock_divider.vhd(27): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Seven_Seg_Display_Out" for hierarchy "Seven_Seg_Display_Out:b2v_inst15"
 Info (12128): Elaborating entity "register_R0" for hierarchy "register_R0:b2v_inst16"
 Info (12128): Elaborating entity "con_ff_logic" for hierarchy "con_ff_logic:b2v_inst17"
 Info (12128): Elaborating entity "d_flipflop" for hierarchy "con_ff_logic:b2v_inst17|d_flipflop:d_ff_con"
 Warning (10492): VHDL Process Statement warning at D_flipflop.vhd(14): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "IR_ConFF_Split" for hierarchy "IR_ConFF_Split:b2v_inst18"
-Info (12128): Elaborating entity "display_splitter" for hierarchy "display_splitter:b2v_inst19"
 Info (12128): Elaborating entity "ram_TA" for hierarchy "ram_TA:b2v_inst2"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram_TA:b2v_inst2|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "ram_TA:b2v_inst2|altsyncram:altsyncram_component"
@@ -966,8 +968,7 @@ Info (12133): Instantiated megafunction "ram_TA:b2v_inst2|altsyncram:altsyncram_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k7i1.tdf
     Info (12023): Found entity 1: altsyncram_k7i1
 Info (12128): Elaborating entity "altsyncram_k7i1" for hierarchy "ram_TA:b2v_inst2|altsyncram:altsyncram_component|altsyncram_k7i1:auto_generated"
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:b2v_inst21"
-Warning (10492): VHDL Process Statement warning at clock_divider.vhd(27): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "display_splitter" for hierarchy "display_splitter:b2v_inst20"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:b2v_inst3"
 Warning (10631): VHDL Process Statement warning at ALU.vhd(15): inferring latch(es) for signal or variable "temp_C", which holds its previous value in one or more paths through the process
 Info (12128): Elaborating entity "Z_split" for hierarchy "Z_split:b2v_inst4"
@@ -1031,22 +1032,21 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "control_unit:b2v_inst11|present_state.halt" is converted into an equivalent circuit using register "control_unit:b2v_inst11|present_state.halt~_emulated" and latch "control_unit:b2v_inst11|present_state.halt~1"
     Warning (13310): Register "control_unit:b2v_inst11|present_state.reset_statea" is converted into an equivalent circuit using register "control_unit:b2v_inst11|present_state.reset_statea~_emulated" and latch "control_unit:b2v_inst11|present_state.reset_statea~1"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "run" is stuck at VCC
     Warning (13410): Pin "output1[7]" is stuck at VCC
     Warning (13410): Pin "output2[7]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6171 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6168 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 6079 logic cells
+    Info (21061): Implemented 6076 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 8 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 46 warnings
-    Info: Peak virtual memory: 569 megabytes
-    Info: Processing ended: Sun Apr 02 16:21:30 2017
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 445 megabytes
+    Info: Processing ended: Sun Apr 02 18:25:12 2017
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:42
 
 
