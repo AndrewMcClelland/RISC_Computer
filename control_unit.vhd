@@ -23,9 +23,9 @@ architecture behavioral of control_unit is
 						fetch0a, fetch0b, fetch1a, fetch1b, fetch2a, fetch2b, 
 						ld3a, ld3b, ld4a, ld4b, ld5a, ld5b, ld6a, ld6b, ld7a, ld7b, 
 						ldi3a, ldi3b, ldi4a, ldi4b, ldi5a, ldi5b,
-						ldr3a, ldr3b, ldr4a, ldr4b, ldr5a, ldr5b, ldr6a, ldr6b,
+						ldr_init, ldr3a, ldr3b, ldr4a, ldr4b, ldr5a, ldr5b, ldr6a, ldr6b,
 						st3a, st3b, st4a, st4b, st5a, st5b, st6a, st6b, st7a, st7b,
-						str3a, str3b, str4a, str4b, str5a, str5b, str6a, str6b,
+						str_init, str3a, str3b, str4a, str4b, str5a, str5b, str6a, str6b,
 						addi3a, addi3b, addi4a, addi4b, addi5a, addi5b,
 						add3a, add3b, add4a, add4b, add5a, add5b,
 						sub3a, sub3b, sub4a, sub4b, sub5a, sub5b, 
@@ -46,7 +46,7 @@ architecture behavioral of control_unit is
 						brmi3a, brmi3b, brmi4a, brmi4b,
 						brpl3a, brpl3b, brpl4a, brpl4b,
 						jr3a, jr3b,
-						jal3a, jal3b,
+						jal_init, jal3a, jal3b,
 						mfhi3a, mfhi3b,
 						mflo3a, mflo3b,
 						in3a, in3b,
@@ -91,9 +91,9 @@ begin
 						when "00010" =>
 							Present_state <= st3a;
 						when "00011" =>
-							Present_state <= ldr3a;
+							Present_state <= ldr_init;
 						when "00100" =>
-							Present_state <= str3a;
+							Present_state <= str_init;
 						when "00101" =>
 							Present_state <= add3a;
 						when "00110" =>
@@ -139,7 +139,7 @@ begin
 						when "10101" =>
 							Present_state <= jr3a;
 						when "10110" =>
-							Present_state <= jal3a;
+							Present_state <= jal_init;
 						when "10111" =>
 							Present_state <= in3a;
 						when "11000" =>
@@ -191,6 +191,8 @@ begin
 				when ldi5b =>
 					Present_state <= fetch0a;
 				
+				when ldr_init =>
+					Present_state <= ldr3a;
 				when ldr3a =>
 					Present_state <= ldr3b;
 				when ldr3b =>
@@ -230,6 +232,8 @@ begin
 				when st7b =>
 					Present_state <= fetch0a;
 				
+				when str_init =>
+					Present_state <= str3a;
 				when str3a =>
 					Present_state <= str3b;
 				when str3b =>
@@ -486,6 +490,8 @@ begin
 				when jr3b =>
 					Present_state <= fetch0a;
 					
+				when jal_init =>
+					Present_state <= jal3a;
 				when jal3a =>
 					Present_state <= jal3b;
 				when jal3b =>
@@ -532,6 +538,7 @@ begin
 -- reset
 			when reset_statea =>
 				clear <= '1';
+				run <= '1';
 			when reset_stateb =>
 ---------------------------------------------------------------
 -- fetch
@@ -663,9 +670,16 @@ begin
 			when ldi5b =>
 ---------------------------------------------------------------
 -- ldr	
-			when ldr3a => 
+			when ldr_init =>
 				IRin <= '0';
 				MDRout <= '0';
+				
+				PCout <= '1';
+				Yin <= '1';
+				
+			when ldr3a =>
+				PCout <= '0';
+				Yin <= '0';
 				
 				Cout <= '1';
 				ALU_cs <= b"0000";
@@ -746,9 +760,16 @@ begin
 			when st7b =>
 ---------------------------------------------------------------
 -- str	
-			when str3a => 
+			when str_init =>
 				IRin <= '0';
 				MDRout <= '0';
+				
+				PCout <= '1';
+				Yin <= '1';
+			
+			when str3a => 
+				PCout <= '0';
+				Yin <= '0';
 				
 				Cout <= '1';
 				ALU_cs <= b"0000";
@@ -922,17 +943,17 @@ begin
 				IRin <= '0';
 				MDRout <= '0';
 				
-				Grb <= '1';
+				Gra <= '1';
 				BAout <= '1';
 				Rout <='1';
 				Yin <= '1';
 			when div3b => 
 			when div4a => 
-				Grb <= '0';
+				Gra <= '0';
 				BAout <= '0';
 				Yin <= '0';					
 				
-				Gra <= '1';
+				Grb <= '1';
 					
 				ALU_cs <= b"0011";
 				Zin <= '1';
@@ -941,7 +962,7 @@ begin
 			when div4b => 
 			when div5a =>
 				Rout <= '0';
-				Gra <= '0';
+				Grb <= '0';
 				Zin <= '0';
 				Zhighin <= '0';
 				Zlowin <= '0';
@@ -1346,9 +1367,15 @@ begin
 			when jr3b =>
 ---------------------------------------------------------------
 -- jal
-			when jal3a => 
+			when jal_init =>
 				IRin <= '0';
 				MDRout <= '0';
+				
+				PCout <= '1';
+				R14MUX_enable <= '1';
+			when jal3a => 
+				PCout <= '0';
+				R14MUX_enable <= '0';
 				
 				Gra <= '1';
 				Rout <= '1';

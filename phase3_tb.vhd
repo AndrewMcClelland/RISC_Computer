@@ -268,7 +268,7 @@ ARCHITECTURE phase3_tb_arch OF phase3_tb IS
 		R9out => R9out_tb,    
 		R10out => R10out_tb,    
 		R11out => R11out_tb,    
-		R12out => R14out_tb,    
+		R12out => R12out_tb,    
 		R13out => R13out_tb,   
 		R14out => R14out_tb,   
 		R15out => R15out_tb,    
@@ -354,6 +354,7 @@ ARCHITECTURE phase3_tb_arch OF phase3_tb IS
 			
 			PROCESS
 			BEGIN
+				stop_tb <= '0';
 				reset_tb <= '1', '0' after 20 ns;
 				wait;
 			END PROCESS;

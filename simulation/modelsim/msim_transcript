@@ -10,77 +10,77 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase3.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity phase3
 # -- Compiling architecture bdf_type of phase3
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/control_unit.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/control_unit.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity control_unit
 # -- Compiling architecture behavioral of control_unit
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/register_R0.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_R0.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_R0
 # -- Compiling architecture behavioral of register_R0
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity select_encode_logic_sel
 # -- Compiling architecture behavioral of select_encode_logic_sel
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/Z_split.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Z_split.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Z_split
 # -- Compiling architecture behavioral of Z_split
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/register_64.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_64.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_64
 # -- Compiling architecture behavioral of register_64
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/register_32.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_32.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity register_32
 # -- Compiling architecture behavioral of register_32
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/MDMux.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MDMux.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MDMUX
 # -- Compiling architecture behavioral of MDMUX
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/encoder_32_to_5.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity encoder_32_to_5
 # -- Compiling architecture behavioral of encoder_32_to_5
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/bus_mux_32_to_1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity bus_mux_32_to_1
 # -- Compiling architecture behavioral of bus_mux_32_to_1
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/ALU.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ALU.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -88,49 +88,49 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU
 # -- Compiling architecture behavioral of ALU
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity con_ff_logic
 # -- Compiling architecture behavioral of con_ff_logic
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/D_flipflop.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity d_flipflop
 # -- Compiling architecture behavioral of d_flipflop
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MAR_splicer.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MAR_splicer
 # -- Compiling architecture behavioral of MAR_splicer
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/SelecEncodeLogic_R_splitter.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SelectEncodeLogic_R_splitter
 # -- Compiling architecture behavioral of SelectEncodeLogic_R_splitter
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IR_ConFF_Split.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity IR_ConFF_Split
 # -- Compiling architecture behavioral of IR_ConFF_Split
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/ram_TA.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_TA.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ram_TA
 # -- Compiling architecture SYN of ram_ta
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/IncPC.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IncPC.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -138,14 +138,14 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity IncPC
 # -- Compiling architecture behavioral of IncPC
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/R14MUX.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/R14MUX.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity R14MUX
 # -- Compiling architecture behavioral of R14MUX
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/in_port_reg.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/in_port_reg.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -153,7 +153,7 @@
 # -- Compiling entity in_port_reg
 # -- Compiling architecture behavioral of in_port_reg
 # 
-# vcom -93 -work work {C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3_tb.vhd}
+# vcom -93 -work work {C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase3_tb.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -193,10 +193,6 @@
 # Loading work.mar_splicer(behavioral)
 # Loading work.selectencodelogic_r_splitter(behavioral)
 # Loading work.register_64(behavioral)
-# ** Warning: (vsim-8683) Uninitialized out port /phase3_tb/DUT/b2v_inst11/run has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
 # 
 # add wave *
 # view structure
@@ -204,3 +200,14 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 15000 ns
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7350 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7350 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7550 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7550 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3
+mem save -o *.mem -f mti -data hex -addr hex -startaddress 0 -endaddress 160 -wordsperline 16 /phase3_tb/DUT/b2v_inst2/altsyncram_component/MEMORY/m_mem_data_a
+# ** Error: (vsim-7) Failed to open mem file "*.mem" in write mode.
+# Invalid argument. (errno = EINVAL)

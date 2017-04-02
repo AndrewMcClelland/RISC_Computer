@@ -1,5 +1,5 @@
 EDA Netlist Writer report for finalProject
-Mon Feb 27 09:38:32 2017
+Sun Apr 02 16:24:28 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Feb 27 09:38:32 2017 ;
+; EDA Netlist Writer Status ; Successful - Sun Apr 02 16:24:28 2017 ;
 ; Revision Name             ; finalProject                          ;
-; Top-level Entity Name     ; carry_lookahead_adder                 ;
+; Top-level Entity Name     ; phase4                                ;
 ; Family                    ; Cyclone III                           ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                 ;
-+------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                            ;
-+------------------------------------------------------------------------------------------------------------+
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject_6_1200mv_85c_slow.vho      ;
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject_6_1200mv_0c_slow.vho       ;
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject_min_1200mv_0c_fast.vho     ;
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject.vho                        ;
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject_6_1200mv_85c_vhd_slow.sdo  ;
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject_6_1200mv_0c_vhd_slow.sdo   ;
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject_min_1200mv_0c_vhd_fast.sdo ;
-; C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/finalProject_vhd.sdo                    ;
-+------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                       ;
++----------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                  ;
++----------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject_6_1200mv_85c_slow.vho      ;
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject_6_1200mv_0c_slow.vho       ;
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject_min_1200mv_0c_fast.vho     ;
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject.vho                        ;
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject_6_1200mv_85c_vhd_slow.sdo  ;
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject_6_1200mv_0c_vhd_slow.sdo   ;
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject_min_1200mv_0c_vhd_fast.sdo ;
+; C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/finalProject_vhd.sdo                    ;
++----------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,20 +88,20 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 27 09:38:32 2017
+    Info: Processing started: Sun Apr 02 16:24:18 2017
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off finalProject -c finalProject
-Info (204019): Generated file finalProject_6_1200mv_85c_slow.vho in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file finalProject_6_1200mv_0c_slow.vho in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file finalProject_min_1200mv_0c_fast.vho in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file finalProject.vho in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file finalProject_6_1200mv_85c_vhd_slow.sdo in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file finalProject_6_1200mv_0c_vhd_slow.sdo in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file finalProject_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file finalProject_vhd.sdo in folder "C:/Users/lukea/Documents/ELEC374_RISC_Computer/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject_6_1200mv_85c_slow.vho in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject_6_1200mv_0c_slow.vho in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject_min_1200mv_0c_fast.vho in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject.vho in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject_6_1200mv_85c_vhd_slow.sdo in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject_6_1200mv_0c_vhd_slow.sdo in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file finalProject_vhd.sdo in folder "C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 402 megabytes
-    Info: Processing ended: Mon Feb 27 09:38:33 2017
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 470 megabytes
+    Info: Processing ended: Sun Apr 02 16:24:28 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
 
 
