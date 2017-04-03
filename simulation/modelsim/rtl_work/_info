@@ -2,23 +2,23 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\luke\Documents\ELEC374_RISC_Computer\simulation\modelsim
+Z0 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
 Ealu
-Z1 w1490972798
+Z1 w1490930395
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dC:\Users\luke\Documents\ELEC374_RISC_Computer\simulation\modelsim
-Z6 8C:/Users/luke/Documents/ELEC374_RISC_Computer/ALU.vhd
-Z7 FC:/Users/luke/Documents/ELEC374_RISC_Computer/ALU.vhd
+Z5 dC:\Users\andre\Documents\Queens 16-17\Comp Eng\ELEC 374\Project\Code\simulation\modelsim
+Z6 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ALU.vhd
+Z7 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ALU.vhd
 l0
 L5
 VAdhdAo00Ek5@50A1jV;z=1
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1491188375.052000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/ALU.vhd|
-Z11 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/ALU.vhd|
+Z9 !s108 1491228810.147000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ALU.vhd|
+Z11 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ALU.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
 !s100 3aF5EiBz3Z_iDL9Ze3PBK1
@@ -41,20 +41,20 @@ R13
 !s100 6hTOkN=DzWmc3JclD3zZ10
 !i10b 1
 Ebus_mux_32_to_1
-Z14 w1489263974
+Z14 w1488832698
 R3
 R4
 R5
-Z15 8C:/Users/luke/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd
-Z16 FC:/Users/luke/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd
+Z15 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/bus_mux_32_to_1.vhd
+Z16 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/bus_mux_32_to_1.vhd
 l0
 L4
 VZLo]dH0PdAZ>MEm0>cc]e1
 R8
 31
-Z17 !s108 1491188374.921000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd|
-Z19 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/bus_mux_32_to_1.vhd|
+Z17 !s108 1491228809.876000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/bus_mux_32_to_1.vhd|
+Z19 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/bus_mux_32_to_1.vhd|
 R12
 R13
 !s100 DR5i<a@P8U`<fEES7438f2
@@ -75,21 +75,56 @@ R12
 R13
 !s100 IOaBamS73@jQaVAOA4h7A2
 !i10b 1
-Econ_ff_logic
-Z20 w1489344174
+Eclock_divider
+Z20 w1491228297
 R3
 R4
 R5
-Z21 8C:/Users/luke/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd
-Z22 FC:/Users/luke/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd
+Z21 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/clock_divider.vhd
+Z22 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/clock_divider.vhd
+l0
+L4
+VP:_MHCTEH?@V?<1;]jE[k0
+R8
+31
+Z23 !s108 1491228813.961000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/clock_divider.vhd|
+Z25 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/clock_divider.vhd|
+R12
+R13
+!s100 <S7GCfgEekWHi5S[MnzSh3
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 13 clock_divider 0 22 P:_MHCTEH?@V?<1;]jE[k0
+l15
+L12
+V_oKWKNS]fI3^kk3^CEb;f2
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 LI7a<>QB6<Yg^g@W6CBNH0
+!i10b 1
+Econ_ff_logic
+Z26 w1489269891
+R3
+R4
+R5
+Z27 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd
+Z28 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd
 l0
 L4
 V;M=YdSFfIQTYTL?]CgG:00
 R8
 31
-Z23 !s108 1491188375.176000
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd|
-Z25 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/con_ff_logic.vhd|
+Z29 !s108 1491228810.440000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd|
+Z31 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/con_ff_logic.vhd|
 R12
 R13
 !s100 >oY0OIZ``X4Yc1NlcP@>@2
@@ -103,28 +138,28 @@ L12
 VCC7PQT6>g1^FF_S=FP4fb0
 R8
 31
-R23
-R24
-R25
+R29
+R30
+R31
 R12
 R13
 !s100 =R4QeRgI]dL[d7QGnJ3cU1
 !i10b 1
 Econtrol_unit
-Z26 w1491188135
+Z32 w1491225503
 R3
 R4
 R5
-Z27 8C:/Users/luke/Documents/ELEC374_RISC_Computer/control_unit.vhd
-Z28 FC:/Users/luke/Documents/ELEC374_RISC_Computer/control_unit.vhd
+Z33 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/control_unit.vhd
+Z34 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/control_unit.vhd
 l0
 L4
 VJQIajf9K9GZRYezd8MPiO0
 R8
 31
-Z29 !s108 1491188373.908000
-Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/control_unit.vhd|
-Z31 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/control_unit.vhd|
+Z35 !s108 1491228807.145000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/control_unit.vhd|
+Z37 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/control_unit.vhd|
 R12
 R13
 !s100 AoSaZ<oQ@oZCFA4QMldob2
@@ -135,31 +170,31 @@ R4
 DEx4 work 12 control_unit 0 22 JQIajf9K9GZRYezd8MPiO0
 l58
 L21
-VCD0ZblHLUbfHA^0GJ89423
+VZ2@FEM_YoWNUi>m:4TlSD3
 R8
 31
-R29
-R30
-R31
+R35
+R36
+R37
 R12
 R13
-!s100 n318DQmR]@K2n_JIMGkPj1
+!s100 R12W0IBW8E[eAVGVIQ:V80
 !i10b 1
 Ed_flipflop
-R20
+Z38 w1489269904
 R3
 R4
 R5
-Z32 8C:/Users/luke/Documents/ELEC374_RISC_Computer/D_flipflop.vhd
-Z33 FC:/Users/luke/Documents/ELEC374_RISC_Computer/D_flipflop.vhd
+Z39 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd
+Z40 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd
 l0
 L4
 V?^LloSkPn18QmnWSF9mJ]3
 R8
 31
-Z34 !s108 1491188375.292000
-Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/D_flipflop.vhd|
-Z36 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/D_flipflop.vhd|
+Z41 !s108 1491228810.798000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd|
+Z43 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/D_flipflop.vhd|
 R12
 R13
 !s100 ;EK=l?0LZ9BnH8IW`Y6^S2
@@ -173,28 +208,63 @@ L10
 VJcOWfWCiH^_=^VfJXEO4G3
 R8
 31
-R34
-R35
-R36
+R41
+R42
+R43
 R12
 R13
 !s100 K_lLCSUi67E8HBSWKPOlT3
+!i10b 1
+Edisplay_splitter
+Z44 w1491163258
+R3
+R4
+R5
+Z45 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/display_splitter.vhd
+Z46 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/display_splitter.vhd
+l0
+L4
+VEIg707T3TknC^b:STk:aL2
+R8
+31
+Z47 !s108 1491228813.662000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/display_splitter.vhd|
+Z49 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/display_splitter.vhd|
+R12
+R13
+!s100 Z6mEmWS`E9OZ4264BMcGb0
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 16 display_splitter 0 22 EIg707T3TknC^b:STk:aL2
+l11
+L10
+V[TP]:c2[N6_[F^S5hIhVR2
+R8
+31
+R47
+R48
+R49
+R12
+R13
+!s100 =oRI^KfE[_X1XVfa^^`j73
 !i10b 1
 Eencoder_32_to_5
 R14
 R3
 R4
 R5
-Z37 8C:/Users/luke/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd
-Z38 FC:/Users/luke/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd
+Z50 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/encoder_32_to_5.vhd
+Z51 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/encoder_32_to_5.vhd
 l0
 L4
 V8dQ9?da=ME;Xc`1[>L3Uh1
 R8
 31
-Z39 !s108 1491188374.772000
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd|
-Z41 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/encoder_32_to_5.vhd|
+Z52 !s108 1491228809.575000
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/encoder_32_to_5.vhd|
+Z54 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/encoder_32_to_5.vhd|
 R12
 R13
 !s100 g0<mjHZ^FJD]abD`f@jS53
@@ -208,28 +278,28 @@ L35
 V4Td1Xj]^NVVPQ<>lYag]B3
 R8
 31
-R39
-R40
-R41
+R52
+R53
+R54
 R12
 R13
 !s100 jUU]OITXDMICd>=9mQ5NX3
 !i10b 1
 Ein_port_reg
-Z42 w1491185279
+Z55 w1491223411
 R3
 R4
 R5
-Z43 8C:/Users/luke/Documents/ELEC374_RISC_Computer/in_port_reg.vhd
-Z44 FC:/Users/luke/Documents/ELEC374_RISC_Computer/in_port_reg.vhd
+Z56 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/in_port_reg.vhd
+Z57 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/in_port_reg.vhd
 l0
 L4
 V;n]SEWCO9FNUh?;Fo2fBz3
 R8
 31
-Z45 !s108 1491188376.246000
-Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/in_port_reg.vhd|
-Z47 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/in_port_reg.vhd|
+Z58 !s108 1491228812.925000
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/in_port_reg.vhd|
+Z60 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/in_port_reg.vhd|
 R12
 R13
 !s100 [;HmkYYW`_W0nnm?Oj7:U1
@@ -243,29 +313,29 @@ L12
 Vi<0bAY@UiTKGO7WAUL:Vm1
 R8
 31
-R45
-R46
-R47
+R58
+R59
+R60
 R12
 R13
 !s100 z0hZiJC]J_3EWXQ=a67z11
 !i10b 1
 Eincpc
-R1
+Z61 w1490044066
 R2
 R3
 R4
 R5
-Z48 8C:/Users/luke/Documents/ELEC374_RISC_Computer/IncPC.vhd
-Z49 FC:/Users/luke/Documents/ELEC374_RISC_Computer/IncPC.vhd
+Z62 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IncPC.vhd
+Z63 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IncPC.vhd
 l0
 L5
 V8Q[<8`1Vc9Q<1GobkbkUa3
 R8
 31
-Z50 !s108 1491188375.970000
-Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/IncPC.vhd|
-Z52 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/IncPC.vhd|
+Z64 !s108 1491228812.396000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IncPC.vhd|
+Z66 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IncPC.vhd|
 R12
 R13
 !s100 dnRi8e8O;AOzXnm?][kU[0
@@ -280,28 +350,28 @@ L13
 V0WDb9M7Ql;:j9K;A5B>ZW0
 R8
 31
-R50
-R51
-R52
+R64
+R65
+R66
 R12
 R13
 !s100 Bc=NO`HM::In]FSaJn=Sc0
 !i10b 1
 Eir_conff_split
-Z53 w1489512182
+Z67 w1489346653
 R3
 R4
 R5
-Z54 8C:/Users/luke/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd
-Z55 FC:/Users/luke/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd
+Z68 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IR_ConFF_Split.vhd
+Z69 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IR_ConFF_Split.vhd
 l0
 L4
 V2SGVVJMl2NjX]`<EB[4:42
 R8
 31
-Z56 !s108 1491188375.656000
-Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd|
-Z58 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/IR_ConFF_Split.vhd|
+Z70 !s108 1491228811.788000
+Z71 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IR_ConFF_Split.vhd|
+Z72 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/IR_ConFF_Split.vhd|
 R12
 R13
 !s100 >8;U;A:Uhm4WZWK0n>Z?E0
@@ -315,28 +385,28 @@ L11
 Vm]QN;Q^_d5D1nV:gcn]Y<0
 R8
 31
-R56
-R57
-R58
+R70
+R71
+R72
 R12
 R13
 !s100 A3m8XT=G_Wm]?ed0OK2X52
 !i10b 1
 Emar_splicer
-R20
+Z73 w1489271710
 R3
 R4
 R5
-Z59 8C:/Users/luke/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd
-Z60 FC:/Users/luke/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd
+Z74 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MAR_splicer.vhd
+Z75 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MAR_splicer.vhd
 l0
 L4
 VXzWi50MnUzDjeRN2a7Fn93
 R8
 31
-Z61 !s108 1491188375.405000
-Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd|
-Z63 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/MAR_splicer.vhd|
+Z76 !s108 1491228811.130000
+Z77 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MAR_splicer.vhd|
+Z78 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MAR_splicer.vhd|
 R12
 R13
 !s100 RISjAQf41iPSe=ZFH?RLA1
@@ -350,9 +420,9 @@ L10
 VAQPMQD<>azGbC=d:DWmfi1
 R8
 31
-R61
-R62
-R63
+R76
+R77
+R78
 R12
 R13
 !s100 jZ4Ilc0Q<GLQHgVSjH7<=2
@@ -362,16 +432,16 @@ R14
 R3
 R4
 R5
-Z64 8C:/Users/luke/Documents/ELEC374_RISC_Computer/MDMux.vhd
-Z65 FC:/Users/luke/Documents/ELEC374_RISC_Computer/MDMux.vhd
+Z79 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MDMux.vhd
+Z80 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MDMux.vhd
 l0
 L4
 VaFT338<nemh=`>F=6M=n=1
 R8
 31
-Z66 !s108 1491188374.636000
-Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/MDMux.vhd|
-Z68 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/MDMux.vhd|
+Z81 !s108 1491228809.177000
+Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MDMux.vhd|
+Z83 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/MDMux.vhd|
 R12
 R13
 !s100 emQXkAn1QMWmPYl6g05@e2
@@ -385,55 +455,20 @@ L13
 VAalGRDccboBDD=jgi3R:i1
 R8
 31
-R66
-R67
-R68
+R81
+R82
+R83
 R12
 R13
 !s100 ]]Dd>OHkQb<<4OH7^LkZ;2
 !i10b 1
-Ephase3
-Z69 w1491188325
-R3
-R4
-R5
-Z70 8C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3.vhd
-Z71 FC:/Users/luke/Documents/ELEC374_RISC_Computer/phase3.vhd
-l0
-L24
-VC^P5Vod6WM3`X<DDA]XC:3
-R8
-31
-Z72 !s108 1491188373.775000
-Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3.vhd|
-Z74 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3.vhd|
-R12
-R13
-!s100 e@;zT^9cjC=Z36P4GaIjM3
-!i10b 1
-Abdf_type
-R3
-R4
-DEx4 work 6 phase3 0 22 C^P5Vod6WM3`X<DDA]XC:3
-l389
-L137
-VVTl=WTR[V[UWAXmCVfQdf3
-R8
-31
-R72
-R73
-R74
-R12
-R13
-!s100 nT<BlbiQ@[<bT;7YW=RJ=2
-!i10b 1
 Ephase3_tb
-Z75 w1491187498
+Z84 w1491227246
 R3
 R4
 R5
-Z76 8C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3_tb.vhd
-Z77 FC:/Users/luke/Documents/ELEC374_RISC_Computer/phase3_tb.vhd
+Z85 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase3_tb.vhd
+Z86 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase3_tb.vhd
 l0
 L5
 VRI5EU:n;Xg3o7mg0:kIo80
@@ -441,42 +476,77 @@ VRI5EU:n;Xg3o7mg0:kIo80
 R8
 31
 !i10b 1
-Z78 !s108 1491188376.371000
-Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3_tb.vhd|
-Z80 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/phase3_tb.vhd|
+Z87 !s108 1491228814.223000
+Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase3_tb.vhd|
+Z89 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase3_tb.vhd|
 R12
 R13
 Aphase3_tb_arch
 R3
 R4
 DEx4 work 9 phase3_tb 0 22 RI5EU:n;Xg3o7mg0:kIo80
-l236
+l237
 L9
-Vn<iIE]iz17]`LBmJ5RUXJ3
-!s100 M9EXMdnl:n5cGzK21OU5T3
+V_d1anHZCl[kXfd[`MJUi^2
+!s100 ;[HYgfk]m[];]GF0:z>652
 R8
 31
 !i10b 1
-R78
-R79
-R80
+R87
+R88
+R89
 R12
 R13
-Er14mux
-R1
+Ephase4
+Z90 w1491227874
 R3
 R4
 R5
-Z81 8C:/Users/luke/Documents/ELEC374_RISC_Computer/R14MUX.vhd
-Z82 FC:/Users/luke/Documents/ELEC374_RISC_Computer/R14MUX.vhd
+Z91 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase4.vhd
+Z92 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase4.vhd
+l0
+L24
+VaP_10X2E7Lbm5a8N5k_ko3
+R8
+31
+Z93 !s108 1491228806.810000
+Z94 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase4.vhd|
+Z95 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/phase4.vhd|
+R12
+R13
+!s100 ZPGiz7G>[6Wn]L?_E1l9M2
+!i10b 1
+Abdf_type
+R3
+R4
+DEx4 work 6 phase4 0 22 aP_10X2E7Lbm5a8N5k_ko3
+l415
+L37
+V<Mj35W];lPf=5ll5BniM>2
+R8
+31
+R93
+R94
+R95
+R12
+R13
+!s100 YM`Wk;FiEF@iVRF7WZLdM3
+!i10b 1
+Er14mux
+Z96 w1490458620
+R3
+R4
+R5
+Z97 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/R14MUX.vhd
+Z98 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/R14MUX.vhd
 l0
 L4
 VG@lbkF4YGQlEKSjZ;:SlE2
 R8
 31
-Z83 !s108 1491188376.117000
-Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/R14MUX.vhd|
-Z85 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/R14MUX.vhd|
+Z99 !s108 1491228812.628000
+Z100 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/R14MUX.vhd|
+Z101 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/R14MUX.vhd|
 R12
 R13
 !s100 hNHh>bM94^6OMiI6af_DY3
@@ -490,28 +560,28 @@ L12
 V0:iG@WVmSf^GX2IGmGn_Q0
 R8
 31
-R83
-R84
-R85
+R99
+R100
+R101
 R12
 R13
 !s100 <BPC9mkzlKMTmgCdnUYVh3
 !i10b 1
 Eram_ta
-Z86 w1491167587
+Z102 w1491173153
 R3
 R4
 R5
-Z87 8C:/Users/luke/Documents/ELEC374_RISC_Computer/ram_TA.vhd
-Z88 FC:/Users/luke/Documents/ELEC374_RISC_Computer/ram_TA.vhd
+Z103 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_TA.vhd
+Z104 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_TA.vhd
 l0
 L42
 VMB_EeONjXdIcHMh5ENzm<0
 R8
 31
-Z89 !s108 1491188375.798000
-Z90 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/ram_TA.vhd|
-Z91 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/ram_TA.vhd|
+Z105 !s108 1491228812.088000
+Z106 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_TA.vhd|
+Z107 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/ram_TA.vhd|
 R12
 R13
 !s100 MJ76MKVF]0>_05GkjgMQE3
@@ -525,28 +595,28 @@ L55
 VS]dODC_XEF;0G0Lj8?X@03
 R8
 31
-R89
-R90
-R91
+R105
+R106
+R107
 R12
 R13
 !s100 A81CENWMObEDo<Oe;GgI32
 !i10b 1
 Eregister_32
-R53
+Z108 w1489346326
 R3
 R4
 R5
-Z92 8C:/Users/luke/Documents/ELEC374_RISC_Computer/register_32.vhd
-Z93 FC:/Users/luke/Documents/ELEC374_RISC_Computer/register_32.vhd
+Z109 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_32.vhd
+Z110 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_32.vhd
 l0
 L4
 VF7302UC=h:F1NIz2N9zJA2
 R8
 31
-Z94 !s108 1491188374.509000
-Z95 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/register_32.vhd|
-Z96 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/register_32.vhd|
+Z111 !s108 1491228808.838000
+Z112 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_32.vhd|
+Z113 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_32.vhd|
 R12
 R13
 !s100 kkbH[5zbPYzF`R0T5E44R0
@@ -560,28 +630,28 @@ L12
 VYJ1Yn1R^K0UNc8SLja=;83
 R8
 31
-R94
-R95
-R96
+R111
+R112
+R113
 R12
 R13
 !s100 kLAEJEhdlHN:9_[PhPWWb2
 !i10b 1
 Eregister_64
-Z97 w1489263975
+Z114 w1488832699
 R3
 R4
 R5
-Z98 8C:/Users/luke/Documents/ELEC374_RISC_Computer/register_64.vhd
-Z99 FC:/Users/luke/Documents/ELEC374_RISC_Computer/register_64.vhd
+Z115 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_64.vhd
+Z116 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_64.vhd
 l0
 L4
 VL7G>@SzFg[`QoDfMEc3[n2
 R8
 31
-Z100 !s108 1491188374.394000
-Z101 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/register_64.vhd|
-Z102 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/register_64.vhd|
+Z117 !s108 1491228808.524000
+Z118 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_64.vhd|
+Z119 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_64.vhd|
 R12
 R13
 !s100 YeK8Vhg]5z53@9f26KdcW0
@@ -595,28 +665,28 @@ L12
 VGIk_:hTIZR=<ef^6J5?Tf2
 R8
 31
-R100
-R101
-R102
+R117
+R118
+R119
 R12
 R13
 !s100 hMbSm9RPHJlYl^eOOFL4X0
 !i10b 1
 Eregister_r0
-Z103 w1490972801
+R96
 R3
 R4
 R5
-Z104 8C:/Users/luke/Documents/ELEC374_RISC_Computer/register_R0.vhd
-Z105 FC:/Users/luke/Documents/ELEC374_RISC_Computer/register_R0.vhd
+Z120 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_R0.vhd
+Z121 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_R0.vhd
 l0
 L4
 V7?lb?3^3hO=b@OZOMQ8n_0
 R8
 31
-Z106 !s108 1491188374.047000
-Z107 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/register_R0.vhd|
-Z108 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/register_R0.vhd|
+Z122 !s108 1491228807.469000
+Z123 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_R0.vhd|
+Z124 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/register_R0.vhd|
 R12
 R13
 !s100 `8YcX2MDFLz]EK:?jBBa^2
@@ -630,28 +700,28 @@ L12
 VVFnVYKFbWR0e5>DKikcmZ0
 R8
 31
-R106
-R107
-R108
+R122
+R123
+R124
 R12
 R13
 !s100 G>D75^6ZAa@Z`hZB2><QC0
 !i10b 1
 Eselect_encode_logic_sel
-Z109 w1489270900
+Z125 w1489266666
 R3
 R4
 R5
-Z110 8C:/Users/luke/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd
-Z111 FC:/Users/luke/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd
+Z126 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd
+Z127 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd
 l0
 L4
 V[Mg7_@KkA@aJW>PaaWMEJ1
 R8
 31
-Z112 !s108 1491188374.164000
-Z113 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd|
-Z114 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/select_encode_logic_sel.vhd|
+Z128 !s108 1491228807.821000
+Z129 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd|
+Z130 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/select_encode_logic_sel.vhd|
 R12
 R13
 !s100 IfBQ7h`[ckFXh2K`J3OZa1
@@ -665,28 +735,28 @@ L12
 VNbfUfa@c?UQ?i19=N=V9F2
 R8
 31
-R112
-R113
-R114
+R128
+R129
+R130
 R12
 R13
 !s100 D>da0JVVmlke6G5]Bg5120
 !i10b 1
 Eselectencodelogic_r_splitter
-R53
+Z131 w1489344589
 R3
 R4
 R5
-Z115 8C:/Users/luke/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd
-Z116 FC:/Users/luke/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd
+Z132 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/SelecEncodeLogic_R_splitter.vhd
+Z133 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/SelecEncodeLogic_R_splitter.vhd
 l0
 L4
 VR:Fc7z0^_e0TNPFJh8lF:3
 R8
 31
-Z117 !s108 1491188375.531000
-Z118 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd|
-Z119 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/SelecEncodeLogic_R_splitter.vhd|
+Z134 !s108 1491228811.527000
+Z135 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/SelecEncodeLogic_R_splitter.vhd|
+Z136 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/SelecEncodeLogic_R_splitter.vhd|
 R12
 R13
 !s100 `IV9?1Xm4TEGU2D8XJ`f91
@@ -700,28 +770,63 @@ L11
 V@iiNQmFO9omZe:_iZC@P`0
 R8
 31
-R117
-R118
-R119
+R134
+R135
+R136
 R12
 R13
 !s100 YQ4k3SmYENMN>_al27=<G1
 !i10b 1
-Ez_split
-R14
+Eseven_seg_display_out
+Z137 w1491161090
 R3
 R4
 R5
-Z120 8C:/Users/luke/Documents/ELEC374_RISC_Computer/Z_split.vhd
-Z121 FC:/Users/luke/Documents/ELEC374_RISC_Computer/Z_split.vhd
+Z138 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Seven_Seg_Display_Out.vhd
+Z139 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Seven_Seg_Display_Out.vhd
+l0
+L4
+Vo<OK?m;=LV_5?[[YS;^Z>2
+R8
+31
+Z140 !s108 1491228813.299000
+Z141 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Seven_Seg_Display_Out.vhd|
+Z142 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Seven_Seg_Display_Out.vhd|
+R12
+R13
+!s100 ziF:=a_FZd]h2UkfJB:8[0
+!i10b 1
+Abehavior
+R3
+R4
+DEx4 work 21 seven_seg_display_out 0 22 o<OK?m;=LV_5?[[YS;^Z>2
+l11
+L10
+V<Lm<MnAI3W`K5gjDIi8T?0
+R8
+31
+R140
+R141
+R142
+R12
+R13
+!s100 B6NF?zQO7z4MR3FKbBdgB0
+!i10b 1
+Ez_split
+R114
+R3
+R4
+R5
+Z143 8C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Z_split.vhd
+Z144 FC:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Z_split.vhd
 l0
 L4
 VgHZnAYQBhKIT?fTC>W:QS0
 R8
 31
-Z122 !s108 1491188374.285000
-Z123 !s90 -reportprogress|300|-93|-work|work|C:/Users/luke/Documents/ELEC374_RISC_Computer/Z_split.vhd|
-Z124 !s107 C:/Users/luke/Documents/ELEC374_RISC_Computer/Z_split.vhd|
+Z145 !s108 1491228808.199000
+Z146 !s90 -reportprogress|300|-93|-work|work|C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Z_split.vhd|
+Z147 !s107 C:/Users/andre/Documents/Queens 16-17/Comp Eng/ELEC 374/Project/Code/Z_split.vhd|
 R12
 R13
 !s100 ;Rh;Ieb[dO>l>VQAITI?23
@@ -735,9 +840,9 @@ L12
 V1XS]dGFIUlO8:6=[f3ETk1
 R8
 31
-R122
-R123
-R124
+R145
+R146
+R147
 R12
 R13
 !s100 AP24QQF_SYA70P]k8;iF=1

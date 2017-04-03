@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun Apr 02 22:33:48 2017
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Fitter Status : Successful - Mon Apr 03 10:08:05 2017
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : finalProject
 Top-level Entity Name : phase4
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 5,631 / 15,408 ( 37 % )
-    Total combinational functions : 5,357 / 15,408 ( 35 % )
-    Dedicated logic registers : 1,096 / 15,408 ( 7 % )
-Total registers : 1096
+Total logic elements : 5,650 / 15,408 ( 37 % )
+    Total combinational functions : 5,348 / 15,408 ( 35 % )
+    Dedicated logic registers : 1,089 / 15,408 ( 7 % )
+Total registers : 1089
 Total pins : 28 / 347 ( 8 % )
 Total virtual pins : 0
 Total memory bits : 16,384 / 516,096 ( 3 % )

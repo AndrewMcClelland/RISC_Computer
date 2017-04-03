@@ -58,9 +58,9 @@ architecture behavioral of control_unit is
 begin
 	process(clk, reset)
 	begin
-		if (reset = '1') then 
+		if (reset = '0') then 
 			present_state <= reset_statea;
-		elsif (stop = '1') then
+		elsif (stop = '0') then
 			present_state <= halt;
 		elsif (clk'event and clk = '1') then
 			case present_state is

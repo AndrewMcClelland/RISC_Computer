@@ -12,9 +12,9 @@
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
 
--- PROGRAM		"Quartus II 32-bit"
+-- PROGRAM		"Quartus II 64-Bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sun Apr 02 22:19:19 2017"
+-- CREATED		"Mon Apr 03 09:57:54 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 

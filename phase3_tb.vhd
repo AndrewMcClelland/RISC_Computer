@@ -9,6 +9,7 @@ END;
 ARCHITECTURE phase3_tb_arch OF phase3_tb IS
 
 		SIGNAL clk_tb : STD_LOGIC;
+		SIGNAL clk_in_tb : STD_LOGIC;
 		SIGNAL reset_tb : STD_LOGIC;
 		SIGNAL stop_tb : STD_LOGIC;
 		SIGNAL R0in_tb : STD_LOGIC;
@@ -114,15 +115,15 @@ ARCHITECTURE phase3_tb_arch OF phase3_tb IS
 		SIGNAL Zlow_in_tb : STD_LOGIC_VECTOR(31 DOWNTO 0);
 		SIGNAL Zlow_out_tb : STD_LOGIC_VECTOR(31 DOWNTO 0);
 		SIGNAL run_tb : STD_LOGIC;
-		SIGNAL Out_port_output_tb : STD_LOGIC_VECTOR(31 DOWNTO 0);
   
 --  TYPE State IS ();
 --  SIGNAL Present_state: State := defaultA;
  
  -- component instantiation of the datapath
- COMPONENT phase3
+ COMPONENT phase4
 	PORT (
-		clk :  IN  STD_LOGIC;
+		clk :  INOUT  STD_LOGIC;
+		clk_in : IN STD_LOGIC;
 		reset :  IN  STD_LOGIC;
 		stop :  IN  STD_LOGIC;
 		R0in :  INOUT  STD_LOGIC;
@@ -227,17 +228,18 @@ ARCHITECTURE phase3_tb_arch OF phase3_tb IS
 		Zhigh_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		Zlow_in :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		Zlow_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		run :  OUT  STD_LOGIC;
-		Out_port_output :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
+		run :  OUT  STD_LOGIC
+		--Out_port_output :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
 		
 				);
- END COMPONENT phase3;
+ END COMPONENT phase4;
 
  BEGIN
- DUT : phase3
+ DUT : phase4
 --port mapping: between the dut and the testbench signals
   PORT MAP (
-		clk => clk_tb,   
+		clk => clk_tb,
+		clk_in => clk_in_tb,
 		reset => reset_tb,    
 		stop => stop_tb,    
 		R0in => R0in_tb,    
@@ -342,20 +344,20 @@ ARCHITECTURE phase3_tb_arch OF phase3_tb IS
 		Zhigh_out => Zhigh_out_tb,   
 		Zlow_in => Zlow_in_tb,   
 		Zlow_out => Zlow_out_tb,   
-		run => run_tb, 
-		Out_port_output => Out_port_output_tb				
+		run => run_tb
+		--Out_port_output => Out_port_output_tb	
 			);
 
 			Clock_process: PROCESS
 			BEGIN
-				clk_tb <= '0', '1' after 10 ns;
+				clk_in_tb <= '0', '1' after 10 ns;
 				wait for 20 ns;
 			END PROCESS Clock_process;
 			
 			PROCESS
 			BEGIN
-				stop_tb <= '0';
-				reset_tb <= '1', '0' after 20 ns;
+				stop_tb <= '1';
+				reset_tb <= '0', '1' after 20 ns;
 				wait;
 			END PROCESS;
 		

@@ -10,20 +10,22 @@ entity clock_divider is
 end clock_divider;
 
 architecture Behavioral of clock_divider is
- signal temp: STD_LOGIC;
- signal count : integer := 1;
+    signal temporal: STD_LOGIC;
+    signal counter : integer range 0 to 24999999 := 0;
 begin
     frequency_divider: process (reset, clk_in) begin
         if (reset = '0') then
-            temp <= '0';
-            count <= 1;
+            temporal <= '0';
+            counter <= 0;
         elsif rising_edge(clk_in) then
-				count <= count + 1;
-            if (count = 1000) then			-- 1Hz
-                temp <= NOT(temp);
-                count <= 1;
+            if (counter = 24999999) then
+                temporal <= NOT(temporal);
+                counter <= 0;
+            else
+                counter <= counter + 1;
             end if;
         end if;
-		  clk_out <= temp;
     end process;
+    
+    clk_out <= temporal;
 end Behavioral;
