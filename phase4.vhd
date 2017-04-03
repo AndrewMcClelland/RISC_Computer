@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Sun Apr 02 18:13:00 2017"
+-- CREATED		"Sun Apr 02 22:19:19 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -27,7 +27,7 @@ ENTITY phase4 IS
 		reset :  IN  STD_LOGIC;
 		stop :  IN  STD_LOGIC;
 		clk_in :  IN  STD_LOGIC;
-		in_port_input :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		in_port_input :  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
 		run :  OUT  STD_LOGIC;
 		output1 :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0);
 		output2 :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
@@ -164,7 +164,7 @@ END COMPONENT;
 COMPONENT in_port_reg
 	PORT(clk : IN STD_LOGIC;
 		 clear : IN STD_LOGIC;
-		 q : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 q : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		 output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;

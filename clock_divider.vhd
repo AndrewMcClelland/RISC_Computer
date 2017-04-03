@@ -14,12 +14,12 @@ architecture Behavioral of clock_divider is
  signal count : integer := 1;
 begin
     frequency_divider: process (reset, clk_in) begin
-        if (reset = '1') then
+        if (reset = '0') then
             temp <= '0';
             count <= 1;
         elsif rising_edge(clk_in) then
 				count <= count + 1;
-            if (count = 25000000) then			-- 1Hz
+            if (count = 1000) then			-- 1Hz
                 temp <= NOT(temp);
                 count <= 1;
             end if;

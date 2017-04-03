@@ -12,9 +12,9 @@
 -- Altera or its authorized distributors.  Please refer to the 
 -- applicable agreement for further details.
 
--- PROGRAM		"Quartus II 64-Bit"
+-- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
--- CREATED		"Fri Mar 31 16:57:10 2017"
+-- CREATED		"Sun Apr 02 22:58:45 2017"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -97,7 +97,7 @@ ENTITY phase3 IS
 		BusMuxOut :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		C_sign_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		HI_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
-		in_port_input :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+		in_port_input :  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
 		In_port_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		IR_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		LO_out :  INOUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -264,7 +264,7 @@ END COMPONENT;
 COMPONENT in_port_reg
 	PORT(clk : IN STD_LOGIC;
 		 clear : IN STD_LOGIC;
-		 q : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 q : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		 output : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;

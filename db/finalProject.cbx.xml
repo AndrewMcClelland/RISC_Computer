@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="finalProject">
-		<CBX_INST_ENTRY INSTANCE_NAME="|phase4|ALU:b2v_inst3|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_01p.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|phase4|ALU:b2v_inst3|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|phase4|ALU:b2v_inst3|lpm_mult:Mult0" CBX_FILE_NAME="mult_r4t.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|phase4|ram_TA:b2v_inst2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_k7i1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase3|ram_TA:b2v_inst2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_k7i1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

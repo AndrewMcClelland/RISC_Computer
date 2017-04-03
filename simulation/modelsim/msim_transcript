@@ -200,3 +200,11 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 15000 ns
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7350 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7350 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7550 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 7550 ns  Iteration: 4  Instance: /phase3_tb/DUT/b2v_inst3

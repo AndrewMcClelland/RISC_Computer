@@ -53,6 +53,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 1192 152 1248 168))
 )
 (pin
 	(input)
@@ -69,12 +70,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 1192 168 1248 184))
 )
 (pin
 	(input)
 	(rect 232 912 424 928)
 	(text "INPUT" (rect 149 0 177 10)(font "Arial" (font_size 6)))
-	(text "in_port_input[31..0]" (rect 5 0 99 12)(font "Arial" ))
+	(text "in_port_input[7..0]" (rect 5 0 93 12)(font "Arial" ))
 	(pt 192 8)
 	(drawing
 		(line (pt 108 12)(pt 133 12))
@@ -85,6 +87,7 @@ applicable agreement for further details.
 		(line (pt 133 12)(pt 137 8))
 	)
 	(text "VCC" (rect 152 7 172 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 184 928 232 944))
 )
 (pin
 	(output)
@@ -117,6 +120,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1792 600 1840 616))
 )
 (pin
 	(bidir)
@@ -4054,8 +4058,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "q[31..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "q[31..0]" (rect 21 27 58 39)(font "Arial" ))
+		(text "q[7..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "q[7..0]" (rect 21 27 52 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
